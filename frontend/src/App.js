@@ -82,6 +82,16 @@ function App() {
             <p>Mon–Sat: 8AM – 6PM</p>
           </div>
         </div>
+
+        <div className="map-wrap" data-testid="contact-map">
+          <iframe
+            title="In & Out Smog Check location map"
+            src="https://www.google.com/maps?q=Orange+County,+California&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
       </section>
 
       <footer data-testid="site-footer">
