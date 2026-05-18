@@ -24,7 +24,13 @@ function App() {
               <a href="#services" className="primary" data-testid="hero-services-btn">
                 Our Services
               </a>
-              <a href="#contact" className="secondary" data-testid="hero-directions-btn">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="secondary"
+                data-testid="hero-directions-btn"
+              >
                 Get Directions
               </a>
             </div>
@@ -69,7 +75,7 @@ function App() {
         <div className="contact-box">
           <div data-testid="contact-location">
             <h3>Location</h3>
-            <p>Orange County, California</p>
+            <p>144 S Bradford Ave<br />Placentia, CA 92870</p>
           </div>
 
           <div data-testid="contact-phone">
@@ -86,7 +92,7 @@ function App() {
         <div className="map-wrap" data-testid="contact-map">
           <iframe
             title="In & Out Smog Check location map"
-            src="https://www.google.com/maps?q=Orange+County,+California&output=embed"
+            src="https://www.google.com/maps?q=144+S+Bradford+Ave,+Placentia,+CA+92870&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
