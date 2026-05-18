@@ -1,0 +1,171 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071321;
+color:white;
+}
+
+.hero{
+min-height:100vh;
+padding:20px 8%;
+background:linear-gradient(135deg,#081a2f,#0d2c52);
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-bottom:40px;
+}
+
+.logo{
+font-size:2rem;
+font-weight:900;
+}
+
+.logo span{
+display:block;
+color:#7fd4ff;
+}
+
+.btn{
+background:#7fd4ff;
+color:#00111f;
+padding:12px 22px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.text{
+max-width:550px;
+}
+
+.text h1{
+font-size:4rem;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.text p{
+font-size:1.2rem;
+line-height:1.7;
+margin-bottom:30px;
+color:#d8e8f7;
+}
+
+.buttons{
+display:flex;
+gap:15px;
+}
+
+.primary,.secondary{
+padding:14px 26px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.primary{
+background:#7fd4ff;
+color:#00111f;
+}
+
+.secondary{
+border:2px solid #7fd4ff;
+color:white;
+}
+
+.image-box img{
+max-width:520px;
+width:100%;
+filter:drop-shadow(0 0 30px rgba(127,212,255,.5));
+}
+
+.services{
+padding:90px 8%;
+text-align:center;
+background:#091b30;
+}
+
+.services h2{
+font-size:3rem;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#102946;
+padding:35px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:1.5rem;
+color:#7fd4ff;
+}
+
+.banner{
+padding:80px 8%;
+text-align:center;
+background:#7fd4ff;
+color:#00111f;
+font-size:2rem;
+font-weight:900;
+}
+
+.contact{
+padding:90px 8%;
+text-align:center;
+}
+
+.contact h2{
+font-size:3rem;
+margin-bottom:40px;
+}
+
+.contact-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.contact-box div{
+background:#102946;
+padding:30px;
+border-radius:20px;
+}
+
+footer{
+padding:25px;
+text-align:center;
+background:#050d18;
+color:#b9cce0;
+}
+
+@media(max-width:768px){
+.text h1{
+font-size:2.8rem;
+}
+}
