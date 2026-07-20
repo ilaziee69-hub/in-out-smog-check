@@ -23,8 +23,8 @@ export default function StarCertified() {
         <h1>STAR Certified · Test-Only Smog Station</h1>
         <p className="lead">
           Two credentials that matter — and we hold both. If your DMV renewal
-          notice says <em>"STAR Certified Station Required"</em> or <em>"Test-Only
-          Station,"</em> you’re in the right place. California BAR-licensed and
+          notice says <em>&ldquo;STAR Certified Station Required&rdquo;</em> or <em>&ldquo;Test-Only
+          Station,&rdquo;</em> you&rsquo;re in the right place. California BAR-licensed and
           proudly serving Placentia, Fullerton, Yorba Linda, Anaheim, and the
           rest of Orange County.
         </p>

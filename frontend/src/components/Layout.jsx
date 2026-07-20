@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import StickyMobileNav from "@/components/StickyMobileNav";
 
 const NAV = [
   { to: "/", label: "Home", exact: true },
@@ -106,6 +107,8 @@ export default function Layout({ children }) {
           Rights Reserved
         </div>
       </footer>
+
+      <StickyMobileNav />
     </>
   );
 }

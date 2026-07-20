@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
+import LocationVerify from "@/components/LocationVerify";
+import Reviews from "@/components/Reviews";
 
 const businessJsonLd = {
   "@context": "https://schema.org",
@@ -88,6 +90,8 @@ export default function Home() {
         </div>
       </header>
 
+      <LocationVerify />
+
       <section className="services" data-testid="services-section">
         <h2>Why Drivers Choose Us</h2>
         <div className="cards">
@@ -146,6 +150,8 @@ export default function Home() {
       <section className="banner" data-testid="banner-section">
         <h2>Drive In. Smog Done. Drive Out.</h2>
       </section>
+
+      <Reviews />
 
       <section id="contact" className="contact" data-testid="contact-section">
         <h2>Visit In & Out Smog Check</h2>
