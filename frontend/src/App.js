@@ -5,7 +5,7 @@ import "@/site.css";
 import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
 import StarCertified from "@/pages/StarCertified";
-import SantaAna from "@/pages/SantaAna";
+import Placentia from "@/pages/Placentia";
 import Fullerton from "@/pages/Fullerton";
 import Faq from "@/pages/Faq";
 import Contact from "@/pages/Contact";
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/star-certified-smog" element={<StarCertified />} />
-            <Route path="/santa-ana-smog-check" element={<SantaAna />} />
+            <Route path="/placentia-smog-check" element={<Placentia />} />
             <Route path="/fullerton-smog-check" element={<Fullerton />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />

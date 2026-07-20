@@ -7,7 +7,7 @@ const businessJsonLd = {
   name: "In & Out Smog Check",
   image: "https://download-hub-281.preview.emergentagent.com/og-image.jpg",
   url: "https://download-hub-281.preview.emergentagent.com/",
-  telephone: "+1-714-555-0000",
+  telephone: "+1-714-993-1660",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -20,9 +20,15 @@ const businessJsonLd = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "08:00",
-      closes: "18:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "08:00",
+      closes: "15:00",
     },
   ],
 };
@@ -31,8 +37,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="In & Out Smog Check | Fast STAR-Certified Smog Checks in Placentia, CA"
-        description="Fast, friendly, STAR-certified smog inspections at 144 S Bradford Ave, Placentia, CA 92870. Drive in. Smog done. Drive out. Open Mon–Sat, 8AM–6PM."
+        title="10-Minute Smog Check in Placentia, CA | STAR Certified Test-Only Station"
+        description="In and out in 10 minutes. STAR-Certified Test-Only smog station in Placentia at 144 S Bradford Ave. No repairs, no upsells — just honest DMV inspections. (714) 993-1660."
         path="/"
         jsonLd={businessJsonLd}
       />
@@ -40,26 +46,40 @@ export default function Home() {
       <header className="hero">
         <div className="hero-content">
           <div className="text">
-            <h1>Fast • Friendly • Certified Smog Checks</h1>
+            <p className="eyebrow" data-testid="hero-eyebrow">
+              STAR Certified · Test-Only Station
+            </p>
+            <h1>
+              10-Minute Smog Checks.<br />
+              <span className="accent">In. Out. Done.</span>
+            </h1>
             <p>
-              Quick inspections, honest service, and no long waits. Stop by In
-              & Out Smog Check in Placentia today — STAR-certified and trusted
-              by Orange County drivers.
+              The fastest, most honest smog check in Placentia. As a
+              STAR-Certified <strong>Test-Only</strong> station, we don’t sell
+              repairs — so there’s zero incentive to fail your car. Just plug
+              in, test, pass, and drive.
             </p>
             <div className="buttons">
-              <Link to="/star-certified-smog" className="primary" data-testid="hero-services-btn">
-                Our Services
-              </Link>
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="secondary"
+                className="primary"
                 data-testid="hero-directions-btn"
               >
-                Get Directions
+                Drive In Now
+              </a>
+              <a
+                href="tel:+17149931660"
+                className="secondary"
+                data-testid="hero-call-btn"
+              >
+                Call (714) 993-1660
               </a>
             </div>
+            <p className="hero-microcopy" data-testid="hero-microcopy">
+              Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM
+            </p>
           </div>
 
           <div className="image-box">
@@ -68,20 +88,29 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="services" className="services" data-testid="services-section">
+      <section className="services" data-testid="services-section">
         <h2>Why Drivers Choose Us</h2>
         <div className="cards">
-          <div className="card" data-testid="card-star-certified">
-            <h3>STAR Certified</h3>
-            <p>Trusted inspections that meet California BAR standards.</p>
+          <div className="card" data-testid="card-10min">
+            <h3>10-Minute Turnaround</h3>
+            <p>
+              Most inspections wrapped up in ten minutes flat. Your DMV
+              certificate is transmitted electronically before you leave the lot.
+            </p>
           </div>
-          <div className="card" data-testid="card-quick-service">
-            <h3>Quick Service</h3>
-            <p>Most smog checks completed fast so you can get back on the road.</p>
+          <div className="card" data-testid="card-test-only">
+            <h3>Test-Only, No Upsells</h3>
+            <p>
+              We only test — we don’t do repairs. That means no fake failures,
+              no “we found a problem,” no pressure. Just a straight pass or fail.
+            </p>
           </div>
-          <div className="card" data-testid="card-friendly-team">
-            <h3>Friendly Team</h3>
-            <p>Honest service with a clean, professional experience.</p>
+          <div className="card" data-testid="card-star">
+            <h3>STAR-Certified</h3>
+            <p>
+              Licensed by the California BAR to handle every STAR-directed
+              vehicle the DMV sends our way. If your notice says STAR — we’re it.
+            </p>
           </div>
         </div>
       </section>
@@ -104,12 +133,18 @@ export default function Home() {
           <div data-testid="contact-phone">
             <h3>Phone</h3>
             <p>
-              <a href="tel:+17145550000">(714) 555-0000</a>
+              <a href="tel:+17149931660">(714) 993-1660</a>
             </p>
           </div>
           <div data-testid="contact-hours">
             <h3>Hours</h3>
-            <p>Mon–Sat: 8AM – 6PM</p>
+            <p>
+              Mon – Fri: 8AM – 5PM
+              <br />
+              Sat: 8AM – 3PM
+              <br />
+              Sun: Closed
+            </p>
           </div>
         </div>
 

@@ -5,27 +5,28 @@ export default function StarCertified() {
   return (
     <>
       <Seo
-        title="STAR Certified Smog Check in Placentia, CA | In & Out Smog Check"
-        description="Need a STAR-certified smog check in Placentia? In & Out Smog Check is a California BAR-licensed STAR station serving Orange County drivers flagged by the DMV. Walk-ins welcome."
+        title="STAR Certified Test-Only Smog Station in Placentia, CA | In & Out Smog"
+        description="California BAR licensed STAR-Certified Test-Only smog station in Placentia. Zero repair upsells, honest inspections, DMV results transmitted electronically. (714) 993-1660."
         path="/star-certified-smog"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Service",
-          serviceType: "STAR Certified Smog Check",
+          serviceType: "STAR Certified Test-Only Smog Check",
           provider: { "@type": "AutomotiveBusiness", name: "In & Out Smog Check" },
           areaServed: "Orange County, California",
           description:
-            "STAR-certified smog inspections required by the California DMV for renewal, change of ownership, and out-of-state vehicles.",
+            "STAR-Certified Test-Only smog inspections required by the California DMV for renewal, change of ownership, and out-of-state vehicles.",
         }}
       />
 
       <section className="page-hero">
-        <h1>STAR Certified Smog Check</h1>
+        <h1>STAR Certified · Test-Only Smog Station</h1>
         <p className="lead">
-          If your DMV renewal notice says <em>“STAR Certified Station Required,”</em>
-          you’re in the right place. In & Out Smog Check is a fully licensed
-          California BAR STAR station serving Placentia, Fullerton, Yorba Linda,
-          Anaheim, and the rest of Orange County.
+          Two credentials that matter — and we hold both. If your DMV renewal
+          notice says <em>"STAR Certified Station Required"</em> or <em>"Test-Only
+          Station,"</em> you’re in the right place. California BAR-licensed and
+          proudly serving Placentia, Fullerton, Yorba Linda, Anaheim, and the
+          rest of Orange County.
         </p>
         <Link to="/contact" className="primary" data-testid="star-cta-visit">
           Visit Us Today
@@ -33,6 +34,16 @@ export default function StarCertified() {
       </section>
 
       <section className="prose">
+        <h2>What "Test-Only" Means for You</h2>
+        <p>
+          A Test-Only station is licensed by the California Bureau of Automotive
+          Repair to <strong>inspect vehicles only</strong> — we cannot legally
+          perform smog repairs. That’s a huge advantage for you: since we don’t
+          profit from fixing anything, we have zero incentive to fail your car.
+          You get an inspection that’s completely independent, with your result
+          transmitted electronically to the DMV the moment your test finishes.
+        </p>
+
         <h2>What is a STAR Certified Smog Station?</h2>
         <p>
           STAR is California’s program for high-performing smog test stations.
@@ -82,16 +93,17 @@ export default function StarCertified() {
         <h2>How Long Does It Take?</h2>
         <p>
           Most STAR smog checks at our Placentia shop are done in about{" "}
-          <strong>20–30 minutes</strong>. We’ll print your certificate and
-          electronically transmit your pass result to the California DMV the
-          same day — so you can renew your registration online immediately.
+          <strong>10 minutes</strong>. We print your receipt and{" "}
+          <strong>electronically transmit your pass result to the California DMV
+          in real time</strong>, so you can renew your registration online the
+          moment you drive off.
         </p>
 
         <h2>Pricing</h2>
         <p>
           Our STAR smog check is competitively priced and includes the state
           certificate fee. Cash, debit, and all major credit cards accepted.
-          Call <a href="tel:+17145550000">(714) 555-0000</a> for today’s rate.
+          Call <a href="tel:+17149931660">(714) 993-1660</a> for today’s rate.
         </p>
       </section>
     </>

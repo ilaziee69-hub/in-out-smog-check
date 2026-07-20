@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const NAV = [
   { to: "/", label: "Home", exact: true },
   { to: "/star-certified-smog", label: "STAR Certified" },
-  { to: "/santa-ana-smog-check", label: "Santa Ana" },
+  { to: "/placentia-smog-check", label: "Placentia" },
   { to: "/fullerton-smog-check", label: "Fullerton" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
@@ -54,10 +54,10 @@ export default function Layout({ children }) {
             ))}
             <a
               className="nav-cta"
-              href="tel:+17145550000"
+              href="tel:+17149931660"
               data-testid="nav-call-cta"
             >
-              Call (714) 555-0000
+              Call (714) 993-1660
             </a>
           </div>
         </nav>
@@ -71,7 +71,7 @@ export default function Layout({ children }) {
             <div className="logo small">
               IN & OUT <span>SMOG CHECK</span>
             </div>
-            <p>STAR-certified smog inspections in Placentia, CA.</p>
+            <p>STAR-Certified Test-Only smog station in Placentia, CA.</p>
           </div>
           <div>
             <h4>Visit</h4>
@@ -81,12 +81,13 @@ export default function Layout({ children }) {
               Placentia, CA 92870
             </p>
             <p>
-              <a href="tel:+17145550000">(714) 555-0000</a>
+              <a href="tel:+17149931660">(714) 993-1660</a>
             </p>
           </div>
           <div>
             <h4>Hours</h4>
-            <p>Mon – Sat: 8AM – 6PM</p>
+            <p>Mon – Fri: 8AM – 5PM</p>
+            <p>Sat: 8AM – 3PM</p>
             <p>Sunday: Closed</p>
           </div>
           <div>

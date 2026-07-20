@@ -5,13 +5,13 @@ export default function Contact() {
     <>
       <Seo
         title="Contact In & Out Smog Check | 144 S Bradford Ave, Placentia, CA"
-        description="Visit In & Out Smog Check at 144 S Bradford Ave, Placentia, CA 92870. Open Mon–Sat 8AM–6PM. Call (714) 555-0000 — walk-ins welcome, no appointment needed."
+        description="Visit In & Out Smog Check at 144 S Bradford Ave, Placentia, CA 92870. Open Mon–Fri 8–5, Sat 8–3. Call (714) 993-1660 — walk-ins welcome, no appointment needed."
         path="/contact"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AutomotiveBusiness",
           name: "In & Out Smog Check",
-          telephone: "+1-714-555-0000",
+          telephone: "+1-714-993-1660",
           address: {
             "@type": "PostalAddress",
             streetAddress: "144 S Bradford Ave",
@@ -44,15 +44,17 @@ export default function Contact() {
           <div data-testid="contact-phone">
             <h3>Phone</h3>
             <p>
-              <a href="tel:+17145550000">(714) 555-0000</a>
+              <a href="tel:+17149931660">(714) 993-1660</a>
             </p>
           </div>
           <div data-testid="contact-hours">
             <h3>Hours</h3>
             <p>
-              Mon – Sat: 8AM – 6PM
+              Mon – Fri: 8AM – 5PM
               <br />
-              Sunday: Closed
+              Sat: 8AM – 3PM
+              <br />
+              Sun: Closed
             </p>
           </div>
         </div>
@@ -69,7 +71,7 @@ export default function Contact() {
 
         <div className="cta-row">
           <a
-            href="tel:+17145550000"
+            href="tel:+17149931660"
             className="primary"
             data-testid="contact-call-btn"
           >
