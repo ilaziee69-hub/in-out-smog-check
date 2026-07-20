@@ -115,6 +115,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="heritage" data-testid="heritage-section">
+        <div className="heritage-inner">
+          <span className="heritage-badge">Since 1999</span>
+          <h2>
+            Been serving <span className="accent">Placentia, Yorba Linda,
+            Anaheim, Fullerton</span> and the surrounding area since 1999.
+          </h2>
+          <p>
+            Over two decades of honest, no-upsell smog inspections for Orange
+            County drivers. Same shop. Same integrity. Same fast turnaround.
+          </p>
+          <div className="heritage-stats">
+            <div className="stat" data-testid="stat-years">
+              <span className="stat-num">25+</span>
+              <span className="stat-label">Years in Business</span>
+            </div>
+            <div className="stat" data-testid="stat-cities">
+              <span className="stat-num">4+</span>
+              <span className="stat-label">Cities Served</span>
+            </div>
+            <div className="stat" data-testid="stat-time">
+              <span className="stat-num">~10<span className="stat-unit">min</span></span>
+              <span className="stat-label">Average Test Time</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="banner" data-testid="banner-section">
         <h2>Drive In. Smog Done. Drive Out.</h2>
       </section>
