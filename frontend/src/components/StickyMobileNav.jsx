@@ -1,8 +1,9 @@
+import { useState } from "react";
+
 /**
  * Sticky bottom mobile nav — Directions | Call | Hours
  * Hidden on ≥841px (desktop), always visible on mobile.
  */
-import { useState } from "react";
 
 const HOURS_TEXT = [
   ["Monday", "8AM – 5PM"],

@@ -1,25 +1,11 @@
-import Seo from "@/components/Seo";
-
 /**
  * "Make Sure You're at the Right Shop" — location verification section.
  * Designed to reduce accidental visits to nearby shops without naming them.
- * Emphasizes:
- *   - Exact street: S BRADFORD AVE (not Chapman)
- *   - Full address in large type
- *   - Google Maps embed pinned to our exact location
- *   - Photo slots (storefront / sign / driveway) — swap in real shots
- *   - Explicit "verify GPS" note
  */
 export default function LocationVerify() {
   const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
   const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
   const MAPS_DIR = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(ADDRESS)}`;
-
-  const photoSlots = [
-    { id: "storefront", icon: "🏢", label: "This is our building", tag: "Storefront" },
-    { id: "sign", icon: "🪧", label: "Look for this sign", tag: "Our Sign" },
-    { id: "driveway", icon: "🚗", label: "Pull in right here", tag: "Driveway" },
-  ];
 
   return (
     <section className="location-verify" data-testid="location-verify-section" id="verify">
@@ -88,19 +74,44 @@ export default function LocationVerify() {
           </div>
 
           <div className="lv-photos" data-testid="lv-photos">
-            {photoSlots.map((p) => (
-              <figure
-                key={p.id}
-                className="lv-photo"
-                data-testid={`lv-photo-${p.id}`}
-              >
-                <div className="lv-photo-inner">
-                  <span className="lv-photo-icon" aria-hidden="true">{p.icon}</span>
-                  <span className="lv-photo-tag">{p.tag}</span>
-                </div>
-                <figcaption>{p.label}</figcaption>
-              </figure>
-            ))}
+            <figure className="lv-photo" data-testid="lv-photo-storefront">
+              <div className="lv-photo-inner">
+                <img
+                  src="/photos/storefront.webp"
+                  alt="In & Out Smog Check storefront on S Bradford Ave in Placentia — white brick building with red-trim SMOG CHECK ONLY CENTER sign and STAR Certified badge"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="lv-photo-tag">Storefront</span>
+              </div>
+              <figcaption>This is our building</figcaption>
+            </figure>
+
+            <figure className="lv-photo" data-testid="lv-photo-sign">
+              <div className="lv-photo-inner">
+                <img
+                  src="/photos/sign.webp"
+                  alt="Close-up of In & Out Smog Check red 'SMOG CHECK ONLY CENTER' sign with STAR Certified badge visible from the street"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="lv-photo-tag">Our Sign</span>
+              </div>
+              <figcaption>Look for this sign</figcaption>
+            </figure>
+
+            <figure className="lv-photo" data-testid="lv-photo-driveway">
+              <div className="lv-photo-inner">
+                <img
+                  src="/photos/driveway.webp"
+                  alt="Wide concrete driveway and parking area at 144 S Bradford Ave — the view when pulling into In & Out Smog Check"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="lv-photo-tag">Driveway</span>
+              </div>
+              <figcaption>Pull in right here</figcaption>
+            </figure>
           </div>
         </div>
 
