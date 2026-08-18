@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Seo from "@/components/Seo";
+import Seo, { SITE_URL, OG_IMAGE } from "@/components/Seo";
 import LocationCallout from "@/components/LocationCallout";
 import LocationVerify from "@/components/LocationVerify";
 import SpeedTimeline from "@/components/SpeedTimeline";
@@ -13,8 +13,8 @@ const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "AutomotiveBusiness",
   name: "In & Out Smog Check",
-  image: "https://download-hub-281.preview.emergentagent.com/og-image.jpg",
-  url: "https://download-hub-281.preview.emergentagent.com/",
+  image: OG_IMAGE,
+  url: `${SITE_URL}/`,
   telephone: "+1-714-993-1660",
   priceRange: "$$",
   address: {

@@ -1,7 +1,17 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://download-hub-281.preview.emergentagent.com";
-const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+/**
+ * Site URL resolution priority:
+ *   1. REACT_APP_BACKEND_URL (set at build time — production/preview external URL)
+ *   2. window.location.origin (runtime fallback for local dev / preview)
+ *   3. Empty string (SSR-safe default; JSON-LD urls still parse)
+ */
+export const SITE_URL =
+  (typeof process !== "undefined" && process.env.REACT_APP_BACKEND_URL) ||
+  (typeof window !== "undefined" && window.location.origin) ||
+  "";
+
+export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 /**
  * Per-route SEO wrapper.

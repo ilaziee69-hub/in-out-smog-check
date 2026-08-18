@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Seo from "@/components/Seo";
+import Seo, { SITE_URL, OG_IMAGE } from "@/components/Seo";
 
 const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
 const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
@@ -45,8 +45,8 @@ const bizJsonLd = {
   "@context": "https://schema.org",
   "@type": "AutomotiveBusiness",
   name: "In & Out Smog Check",
-  image: "https://download-hub-281.preview.emergentagent.com/og-image.jpg",
-  url: "https://download-hub-281.preview.emergentagent.com/yorba-linda-smog-check",
+  image: OG_IMAGE,
+  url: `${SITE_URL}/yorba-linda-smog-check`,
   telephone: "+1-714-993-1660",
   priceRange: "$$",
   address: {
