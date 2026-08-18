@@ -946,3 +946,121 @@ a{color:#7fd4ff;}
   .nc-card{padding:20px;}
   .nc-name{font-size:1.1rem;}
 }
+
+/* =====================================================
+   Hero rating row (real 4.8★ · 160 reviews)
+   ===================================================== */
+.hero-rating{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-bottom:22px;
+  font-size:.95rem;color:#d8e8f7;
+  padding:6px 12px;border-radius:40px;
+  background:rgba(255,193,7,.10);
+  border:1px solid rgba(255,193,7,.30);
+}
+.hero-rating strong{color:#ffc107;font-weight:900;letter-spacing:.5px;}
+.hero-rating-stars{
+  color:#ffc107;letter-spacing:1px;
+  text-shadow:0 0 8px rgba(255,193,7,.4);
+}
+.hero-rating-sep{color:#8aa0b8;}
+
+/* =====================================================
+   Star row (reusable)
+   ===================================================== */
+.star-row{
+  display:inline-flex;gap:2px;line-height:1;
+  color:#3d4d64;
+  letter-spacing:1px;
+}
+.star-row .star.full{color:#ffc107;}
+.star-row .star.half{
+  background:linear-gradient(90deg, #ffc107 50%, #3d4d64 50%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* =====================================================
+   Reviews — Rating Card + Featured Review + Tags
+   ===================================================== */
+.rv-rating-card{
+  display:flex;align-items:center;gap:28px;
+  max-width:720px;margin:34px auto 40px;
+  padding:28px 34px;
+  background:linear-gradient(135deg, rgba(16,41,70,.7), rgba(9,27,50,.7));
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,193,7,.28);
+  border-radius:22px;
+  text-align:left;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+.rv-rating-num{
+  font-size:4.6rem;font-weight:900;
+  color:#ffc107;line-height:1;letter-spacing:-2px;
+  text-shadow:0 0 30px rgba(255,193,7,.3);
+  flex-shrink:0;
+}
+.rv-rating-meta{display:flex;flex-direction:column;gap:8px;flex:1;min-width:0;}
+.rv-rating-line{color:#d8e8f7;font-size:1rem;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.rv-rating-line strong{color:#fff;}
+.rv-rating-dot{color:#8aa0b8;}
+.rv-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.rv-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 10px;border-radius:40px;
+  background:rgba(127,212,255,.08);
+  border:1px solid rgba(127,212,255,.22);
+  color:#b9cce0;font-size:.78rem;font-weight:600;letter-spacing:.2px;
+}
+.rv-tag-count{
+  background:rgba(127,212,255,.2);color:#7fd4ff;
+  padding:1px 7px;border-radius:20px;font-size:.7rem;font-weight:800;
+}
+
+/* Featured review card */
+.rv-featured{
+  max-width:820px;margin:0 auto 44px;
+  padding:32px 36px;
+  background:linear-gradient(135deg, rgba(20,50,86,.6), rgba(9,27,50,.6));
+  border:1px solid rgba(127,212,255,.20);
+  border-radius:22px;
+  text-align:left;
+  position:relative;
+}
+.rv-featured::before{
+  content:"\201C";
+  position:absolute;top:-16px;left:24px;
+  font-size:5rem;line-height:1;
+  color:rgba(127,212,255,.35);
+  font-family:Georgia,serif;
+  pointer-events:none;
+}
+.rv-featured blockquote{margin:14px 0 22px;}
+.rv-featured blockquote p{
+  color:#fff;font-size:1.15rem;line-height:1.6;
+  margin:0;font-style:italic;
+}
+.rv-featured figcaption{
+  display:flex;align-items:center;gap:14px;
+  padding-top:16px;border-top:1px solid rgba(255,255,255,.06);
+}
+.rv-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg, #7fd4ff, #5cc6ff);
+  color:#00111f;font-weight:900;font-size:.95rem;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.rv-author{color:#fff;font-weight:800;font-size:.98rem;}
+.rv-when{color:#8aa0b8;font-size:.82rem;margin-top:2px;}
+
+@media(max-width:840px){
+  .rv-rating-card{
+    flex-direction:column;text-align:center;
+    padding:24px;gap:12px;
+  }
+  .rv-rating-meta{align-items:center;}
+  .rv-rating-num{font-size:3.6rem;}
+  .rv-featured{padding:26px 22px;margin-bottom:34px;}
+  .rv-featured blockquote p{font-size:1.02rem;}
+}

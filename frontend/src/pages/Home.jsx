@@ -24,6 +24,26 @@ const businessJsonLd = {
     postalCode: "92870",
     addressCountry: "US",
   },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "160",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Denise Radford" },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+      },
+      reviewBody:
+        "This smog test facility opened a few minutes before it was even supposed to. I was the second one in line and I was out of there less than 15 minutes. Just made my day.",
+    },
+  ],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -44,8 +64,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="10-Minute Smog Check in Placentia, CA | STAR Certified Test-Only Station"
-        description="In and out in 10 minutes. STAR-Certified Test-Only smog station in Placentia at 144 S Bradford Ave. No repairs, no upsells — just honest DMV inspections. (714) 993-1660."
+        title="10-Minute Smog Check in Placentia, CA | STAR Certified · 4.8★ (160 Reviews)"
+        description="4.8★ from 160 Google reviews. STAR-Certified Test-Only smog station in Placentia at 144 S Bradford Ave. In and out in 10 minutes. (714) 993-1660."
         path="/"
         jsonLd={businessJsonLd}
       />
@@ -57,6 +77,14 @@ export default function Home() {
             <p className="eyebrow" data-testid="hero-eyebrow">
               STAR Certified · Test-Only Station
             </p>
+            <div className="hero-rating" data-testid="hero-rating">
+              <span className="hero-rating-stars" aria-hidden="true">
+                ★★★★★
+              </span>
+              <strong>4.8</strong>
+              <span className="hero-rating-sep">·</span>
+              <span>160 Google reviews</span>
+            </div>
             <h1>
               10-Minute Smog Checks.<br />
               <span className="accent">In. Out. Done.</span>
