@@ -57,6 +57,9 @@ const bizJsonLd = {
     postalCode: "92870",
     addressCountry: "US",
   },
+  sameAs: [
+    "https://www.google.com/maps/search/?api=1&query=In+%26+Out+Smog+Check%2C+144+S+Bradford+Ave%2C+Placentia%2C+CA+92870",
+  ],
   areaServed: [
     { "@type": "City", name: "Yorba Linda" },
     { "@type": "City", name: "Placentia" },
@@ -92,12 +95,7 @@ export default function YorbaLinda() {
         title="Smog Check Yorba Linda, CA | STAR Certified | In & Out Smog Check"
         description="Fast STAR-Certified smog checks for Yorba Linda drivers. Test-only station in nearby Placentia — 3 to 5 miles west, most inspections completed in about 10 minutes. Walk-ins welcome. (714) 993-1660."
         path="/yorba-linda-smog-check"
-        jsonLd={bizJsonLd}
-      />
-      {/* FAQ schema in a second script tag via Helmet requires nesting; we inline manually */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        jsonLd={[bizJsonLd, faqJsonLd]}
       />
 
       <section className="page-hero" data-testid="yl-hero">

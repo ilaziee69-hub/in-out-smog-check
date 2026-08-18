@@ -1,0 +1,21 @@
+{
+  "summary": "Verified two schema refinements: (1) sameAs Google Business Profile URL added to AutomotiveBusiness JSON-LD on /, /yorba-linda-smog-check, /contact, /placentia-smog-check. (2) Yorba Linda FAQPage JSON-LD now rendered via react-helmet-async instead of dangerouslySetInnerHTML. Also confirmed static /index.html no longer contains inline AutomotiveBusiness JSON-LD. Regression sweep of iteration_1 and iteration_2 acceptance criteria all passed.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "react-helmet-async v3.0.0 currently side-effects <title>/<meta> into <head> but leaves the JSON-LD <script> tags rendered inline in the React tree (they appear under <main> in the live DOM, not in <head>). The refactor requirement 'moved to react-helmet-async' is satisfied (no dangerouslySetInnerHTML, single script per page, JSON valid, discoverable by crawlers) but the literal 'into <head>' phrasing is not achieved due to a library-level behavior. If strict head placement is needed, consider innerHTML prop or a HelmetProvider script sink upgrade. Non-blocking."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "n/a", "frontend": "100%"},
+  "seed_data_creation": "",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "All schema/regression checks executed via Playwright on live preview URL. Details:\n\nSAMEAS (all 4 pages have exactly one AutomotiveBusiness JSON-LD containing sameAs = ['https://www.google.com/maps/search/?api=1&query=In+%26+Out+Smog+Check%2C+144+S+Bradford+Ave%2C+Placentia%2C+CA+92870']):\n- / : 1 AutomotiveBusiness, sameAs OK, name/tel/address/aggregateRating 4.8/160/openingHoursSpecification/review all present\n- /yorba-linda-smog-check : 1 AutomotiveBusiness, sameAs OK, streetAddress + areaServed (Yorba Linda City) + aggregateRating 4.8/160 + openingHoursSpecification present. FAQPage: 1 script, 5 questions.\n- /contact : 1 AutomotiveBusiness, sameAs OK, streetAddress + tel present\n- /placentia-smog-check : 1 AutomotiveBusiness, sameAs OK, streetAddress present, areaServed Placentia\n- /faq : 1 FAQPage, 9 questions (>=8)\n\nSTATIC HTML SCRUB: curl of raw HTML shows 0 occurrences of 'AutomotiveBusiness'. PASS.\n\nHELMET RENDER: All JSON-LD scripts are emitted via <Seo>/<Helmet>. No dangerouslySetInnerHTML anywhere in /app/frontend/src/. However document.head.contains(script) === false; scripts render inside document.body > main (react-helmet-async v3 quirk with <script> child text). Non-blocking for SEO — crawlers parse both head and body ld+json.\n\nREGRESSION (home): Hero copy 'Fast, honest smog checks in Placentia.' PASS. card-10min copy PASS. 'Serving OC Since' 1999 PASS. No 'Valvoline plaza' PASS. Mascot src=/mascot.webp mix-blend-mode=screen PASS. Nav data-testid='nav-link-yorba-linda' present PASS. No prices found ($NN) anywhere. Home aggregateRating 4.8/160 in JSON-LD PASS.\n\nSITEMAP: /yorba-linda-smog-check present PASS.\n\nMOBILE (390x844): YL H1 legible ('Need a Smog Check Near Yorba Linda? Drive In Today.'), directions CTA height=58px (>=50px), sticky mobile nav visible on both YL and home. PASS.\n\nJSON validity: All ld+json scripts JSON.parse without errors on all 5 tested pages.",
+  "rca of the issue": "No blocking bugs found. Note: react-helmet-async v3 renders <script type='application/ld+json'> children inline in the component tree rather than side-effecting to document.head — this is library behavior and does not affect SEO discoverability, but if the main agent wants literal head placement, consider (a) upgrading/switching helmet lib, or (b) using an alternate injection approach."
+}

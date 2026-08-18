@@ -22,6 +22,9 @@ export default function Placentia() {
             postalCode: "92870",
             addressCountry: "US",
           },
+          sameAs: [
+            "https://www.google.com/maps/search/?api=1&query=In+%26+Out+Smog+Check%2C+144+S+Bradford+Ave%2C+Placentia%2C+CA+92870",
+          ],
         }}
       />
 
