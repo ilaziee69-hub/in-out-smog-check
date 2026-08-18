@@ -172,8 +172,7 @@ export default function LocationVerify() {
               <span className="lm-num">1</span>
               <div>
                 <strong>From E Chapman Ave</strong>, turn{" "}
-                <strong>south onto S Bradford Ave</strong> — not into the
-                Valvoline plaza.
+                <strong>south onto S Bradford Ave</strong>.
               </div>
             </li>
             <li>

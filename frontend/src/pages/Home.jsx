@@ -91,10 +91,10 @@ export default function Home() {
               <span className="accent">In. Out. Done.</span>
             </h1>
             <p>
-              The fastest, most honest smog check in Placentia. As a
-              STAR-Certified <strong>Test-Only</strong> station, we don&rsquo;t sell
-              repairs — so there&rsquo;s zero incentive to fail your car. Just plug
-              in, test, pass, and drive.
+              Fast, honest smog checks in Placentia. As a STAR-Certified{" "}
+              <strong>Test-Only</strong> station, we don&rsquo;t sell repairs —
+              so there&rsquo;s zero incentive to fail your car. Just plug in,
+              test, pass, and drive.
             </p>
             <div className="buttons">
               <a
@@ -139,7 +139,7 @@ export default function Home() {
           </div>
 
           <div className="image-box">
-            <img src="/mascot.png" alt="In & Out Smog Check mascot car" data-testid="hero-mascot-img" />
+            <img src="/mascot.webp" alt="In & Out Smog Check mascot car" data-testid="hero-mascot-img" />
           </div>
         </div>
       </header>
@@ -152,9 +152,9 @@ export default function Home() {
         <h2>Why Drivers Choose Us</h2>
         <div className="cards">
           <div className="card" data-testid="card-10min">
-            <h3>10-Minute Turnaround</h3>
+            <h3>~10-Minute Turnaround</h3>
             <p>
-              Most inspections wrapped up in ten minutes flat. Your DMV
+              Most inspections completed in about 10 minutes. Your DMV
               certificate is transmitted electronically before you leave the lot.
             </p>
           </div>
@@ -205,9 +205,9 @@ export default function Home() {
               <span className="stat-num">25+</span>
               <span className="stat-label">Years in Business</span>
             </div>
-            <div className="stat" data-testid="stat-cities">
-              <span className="stat-num">4+</span>
-              <span className="stat-label">Cities Served</span>
+            <div className="stat" data-testid="stat-since">
+              <span className="stat-num">1999</span>
+              <span className="stat-label">Serving OC Since</span>
             </div>
             <div className="stat" data-testid="stat-time">
               <span className="stat-num">~10<span className="stat-unit">min</span></span>
