@@ -186,9 +186,17 @@ export default function LocationVerify() {
             <li>
               <span className="lm-num">3</span>
               <div>
-                We&rsquo;re on the <strong>corner of Bradford &amp; Center St</strong>
-                {" "}— look for the red <strong>SMOG CHECK ONLY CENTER</strong>{" "}
-                sign and STAR Certified badge.
+                We&rsquo;re <strong>right next to Tony&rsquo;s Deli</strong> —
+                the well-known local sandwich shop. If you see Tony&rsquo;s red
+                &amp; white awning, you&rsquo;re here.
+              </div>
+            </li>
+            <li>
+              <span className="lm-num">4</span>
+              <div>
+                Look for the red <strong>SMOG CHECK ONLY CENTER</strong> sign
+                and STAR Certified badge at the{" "}
+                <strong>corner of Bradford &amp; Center St</strong>.
               </div>
             </li>
           </ul>
