@@ -4,6 +4,7 @@ import LocationCallout from "@/components/LocationCallout";
 import LocationVerify from "@/components/LocationVerify";
 import SpeedTimeline from "@/components/SpeedTimeline";
 import WhyFaster from "@/components/WhyFaster";
+import ShopGallery from "@/components/ShopGallery";
 import TrustBadges from "@/components/TrustBadges";
 import NearbyCities from "@/components/NearbyCities";
 import Reviews from "@/components/Reviews";
@@ -183,6 +184,9 @@ export default function Home() {
 
       {/* WHY WE'RE FASTER — 6-card grid */}
       <WhyFaster />
+
+      {/* THIS IS OUR SHOP — real photo gallery */}
+      <ShopGallery />
 
       {/* SINCE 1999 HERITAGE */}
       <section className="heritage" data-testid="heritage-section">

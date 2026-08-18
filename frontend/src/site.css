@@ -1064,3 +1064,88 @@ a{color:#7fd4ff;}
   .rv-featured{padding:26px 22px;margin-bottom:34px;}
   .rv-featured blockquote p{font-size:1.02rem;}
 }
+
+/* =====================================================
+   "This Is Our Shop" — real photo gallery
+   ===================================================== */
+.shop-gallery{
+  padding:100px 8%;
+  background:
+    radial-gradient(1000px 500px at 100% 0%, rgba(255,193,7,.05), transparent 60%),
+    #071c33;
+}
+.sg-inner{max-width:1200px;margin:0 auto;text-align:center;}
+.sg-eyebrow{
+  display:inline-block;padding:8px 18px;
+  border:1px solid rgba(255,193,7,.4);
+  background:rgba(255,193,7,.1);color:#ffc107;
+  border-radius:40px;font-weight:800;font-size:.82rem;
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;
+}
+.shop-gallery h2{
+  font-size:2.6rem;line-height:1.2;color:#fff;
+  margin-bottom:18px;letter-spacing:-.5px;
+}
+.shop-gallery h2 .accent{color:#7fd4ff;}
+.sg-lead{
+  font-size:1.1rem;color:#d8e8f7;max-width:680px;
+  margin:0 auto 50px;line-height:1.7;
+}
+
+/* 4-photo mosaic — inspection bay hero on the left, 3 stacked on the right */
+.sg-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  grid-template-rows:auto auto auto;
+  gap:16px;
+  text-align:left;
+}
+.sg-item{
+  margin:0;
+  position:relative;
+  border-radius:20px;overflow:hidden;
+  background:#0c223b;
+  border:1px solid rgba(127,212,255,.14);
+  transition:transform .3s, border-color .3s;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+.sg-item:hover{transform:translateY(-4px);border-color:rgba(127,212,255,.4);}
+.sg-item img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;
+  transition:transform .5s ease;
+}
+.sg-item:hover img{transform:scale(1.03);}
+.sg-large{
+  grid-row:1 / span 3;
+}
+.sg-large img{min-height:100%;}
+
+.sg-item figcaption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:22px 22px 20px;
+  background:linear-gradient(180deg, rgba(6,20,36,0) 0%, rgba(6,20,36,.88) 60%, rgba(6,20,36,.95) 100%);
+  color:#fff;
+  display:flex;flex-direction:column;gap:6px;
+}
+.sg-tag{
+  display:inline-block;width:fit-content;
+  font-size:.72rem;font-weight:800;letter-spacing:1.8px;
+  text-transform:uppercase;color:#00111f;
+  padding:5px 12px;border-radius:40px;
+  background:#7fd4ff;
+  margin-bottom:2px;
+}
+.sg-large .sg-tag{background:#ffc107;}
+.sg-caption-text{
+  font-size:.95rem;line-height:1.5;color:#e6f1fb;
+}
+
+@media(max-width:840px){
+  .shop-gallery{padding:70px 6%;}
+  .shop-gallery h2{font-size:1.9rem;}
+  .sg-grid{grid-template-columns:1fr;grid-template-rows:auto;}
+  .sg-large{grid-row:auto;}
+  .sg-item img{aspect-ratio:16/10;}
+  .sg-item figcaption{padding:18px;}
+}
