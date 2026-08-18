@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
 import LocationCallout from "@/components/LocationCallout";
 import LocationVerify from "@/components/LocationVerify";
+import SpeedTimeline from "@/components/SpeedTimeline";
+import WhyFaster from "@/components/WhyFaster";
+import TrustBadges from "@/components/TrustBadges";
+import NearbyCities from "@/components/NearbyCities";
 import Reviews from "@/components/Reviews";
 
 const businessJsonLd = {
@@ -84,6 +88,25 @@ export default function Home() {
             <p className="hero-microcopy" data-testid="hero-microcopy">
               Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM
             </p>
+
+            <div className="hero-badges" data-testid="hero-badges">
+              <div className="hero-badge" data-testid="hero-badge-10min">
+                <span className="hb-icon" aria-hidden="true">⚡</span>
+                <span>Most Visits ~10 Minutes</span>
+              </div>
+              <div className="hero-badge" data-testid="hero-badge-star">
+                <span className="hb-icon" aria-hidden="true">⭐</span>
+                <span>STAR Certified</span>
+              </div>
+              <div className="hero-badge" data-testid="hero-badge-walkins">
+                <span className="hb-icon" aria-hidden="true">🚗</span>
+                <span>Walk-Ins Welcome</span>
+              </div>
+              <div className="hero-badge" data-testid="hero-badge-dmv">
+                <span className="hb-icon" aria-hidden="true">📄</span>
+                <span>DMV Electronic Cert</span>
+              </div>
+            </div>
           </div>
 
           <div className="image-box">
@@ -91,6 +114,9 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* SPEED TIMELINE — reinforce the 10-minute promise right after the hero */}
+      <SpeedTimeline />
 
       {/* WHY DRIVERS CHOOSE US */}
       <section className="services" data-testid="services-section">
@@ -127,6 +153,9 @@ export default function Home() {
       {/* FULL LOCATION SECTION — illustrated map first, then warning, then Google Map, then Get Directions */}
       <LocationVerify />
 
+      {/* WHY WE'RE FASTER — 6-card grid */}
+      <WhyFaster />
+
       {/* SINCE 1999 HERITAGE */}
       <section className="heritage" data-testid="heritage-section">
         <div className="heritage-inner">
@@ -156,6 +185,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TRUST BADGES */}
+      <TrustBadges />
+
       {/* BANNER */}
       <section className="banner" data-testid="banner-section">
         <h2>Drive In. Smog Done. Drive Out.</h2>
@@ -163,6 +195,9 @@ export default function Home() {
 
       {/* REVIEWS */}
       <Reviews />
+
+      {/* NEARBY CITIES — local SEO */}
+      <NearbyCities />
 
       {/* CONTACT */}
       <section id="contact" className="contact" data-testid="contact-section">
