@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
+import LocationCallout from "@/components/LocationCallout";
 import LocationVerify from "@/components/LocationVerify";
 import Reviews from "@/components/Reviews";
 
@@ -45,6 +46,7 @@ export default function Home() {
         jsonLd={businessJsonLd}
       />
 
+      {/* HERO */}
       <header className="hero">
         <div className="hero-content">
           <div className="text">
@@ -57,8 +59,8 @@ export default function Home() {
             </h1>
             <p>
               The fastest, most honest smog check in Placentia. As a
-              STAR-Certified <strong>Test-Only</strong> station, we don’t sell
-              repairs — so there’s zero incentive to fail your car. Just plug
+              STAR-Certified <strong>Test-Only</strong> station, we don&rsquo;t sell
+              repairs — so there&rsquo;s zero incentive to fail your car. Just plug
               in, test, pass, and drive.
             </p>
             <div className="buttons">
@@ -90,8 +92,7 @@ export default function Home() {
         </div>
       </header>
 
-      <LocationVerify />
-
+      {/* WHY DRIVERS CHOOSE US */}
       <section className="services" data-testid="services-section">
         <h2>Why Drivers Choose Us</h2>
         <div className="cards">
@@ -105,20 +106,28 @@ export default function Home() {
           <div className="card" data-testid="card-test-only">
             <h3>Test-Only, No Upsells</h3>
             <p>
-              We only test — we don’t do repairs. That means no fake failures,
-              no “we found a problem,” no pressure. Just a straight pass or fail.
+              We only test — we don&rsquo;t do repairs. That means no fake failures,
+              no &ldquo;we found a problem,&rdquo; no pressure. Just a straight
+              pass or fail.
             </p>
           </div>
           <div className="card" data-testid="card-star">
             <h3>STAR-Certified</h3>
             <p>
               Licensed by the California BAR to handle every STAR-directed
-              vehicle the DMV sends our way. If your notice says STAR — we’re it.
+              vehicle the DMV sends our way. If your notice says STAR — we&rsquo;re it.
             </p>
           </div>
         </div>
       </section>
 
+      {/* NEW: TOP LOCATION CALLOUT — after services, before full location section */}
+      <LocationCallout />
+
+      {/* FULL LOCATION SECTION — illustrated map first, then warning, then Google Map, then Get Directions */}
+      <LocationVerify />
+
+      {/* SINCE 1999 HERITAGE */}
       <section className="heritage" data-testid="heritage-section">
         <div className="heritage-inner">
           <span className="heritage-badge">Since 1999</span>
@@ -147,12 +156,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BANNER */}
       <section className="banner" data-testid="banner-section">
         <h2>Drive In. Smog Done. Drive Out.</h2>
       </section>
 
+      {/* REVIEWS */}
       <Reviews />
 
+      {/* CONTACT */}
       <section id="contact" className="contact" data-testid="contact-section">
         <h2>Visit In & Out Smog Check</h2>
         <div className="contact-box">
@@ -180,16 +192,6 @@ export default function Home() {
               Sun: Closed
             </p>
           </div>
-        </div>
-
-        <div className="map-wrap" data-testid="contact-map">
-          <iframe
-            title="In & Out Smog Check location map"
-            src="https://www.google.com/maps?q=144+S+Bradford+Ave,+Placentia,+CA+92870&output=embed"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
         </div>
       </section>
     </>

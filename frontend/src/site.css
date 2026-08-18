@@ -512,3 +512,162 @@ a{color:#7fd4ff;}
   .lv-address-cta{width:100%;}
   .lv-address-cta .primary,.lv-address-cta .secondary{flex:1;text-align:center;}
 }
+
+/* =====================================================
+   Top-of-page LOCATION CALLOUT (after services)
+   ===================================================== */
+.loc-callout{
+  padding:44px 8%;
+  background:
+    linear-gradient(135deg, rgba(255,193,7,.10), rgba(255,193,7,.02)),
+    #0a2038;
+  border-top:1px solid rgba(255,193,7,.20);
+  border-bottom:1px solid rgba(255,193,7,.20);
+}
+.loc-callout-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:center;gap:24px;
+}
+.loc-callout-icon{
+  font-size:2.6rem;line-height:1;
+  filter:drop-shadow(0 0 12px rgba(255,193,7,.4));
+}
+.loc-callout-text h2{
+  font-size:1.5rem;line-height:1.3;color:#fff;
+  margin-bottom:6px;letter-spacing:-.3px;
+}
+.loc-callout-accent{color:#ffc107;}
+.loc-callout-text p{
+  color:#d8e8f7;font-size:1.02rem;line-height:1.55;margin:0;
+}
+.loc-callout-text .hl{color:#7fd4ff;background:rgba(127,212,255,.1);padding:1px 6px;border-radius:6px;}
+.loc-callout-text .not-us{color:#ff6b6b;letter-spacing:.5px;}
+.loc-callout-btn{
+  background:#ffc107;color:#111;
+  padding:16px 24px;border-radius:50px;
+  font-weight:800;text-decoration:none;font-size:.98rem;
+  white-space:nowrap;
+  box-shadow:0 8px 24px rgba(255,193,7,.25);
+  transition:transform .15s, box-shadow .15s, background .15s;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.loc-callout-btn:hover{
+  transform:translateY(-2px);
+  background:#ffcd38;
+  box-shadow:0 12px 32px rgba(255,193,7,.35);
+}
+
+@media(max-width:840px){
+  .loc-callout{padding:32px 6%;}
+  .loc-callout-inner{grid-template-columns:1fr;gap:16px;text-align:left;}
+  .loc-callout-icon{font-size:2.2rem;}
+  .loc-callout-text h2{font-size:1.25rem;}
+  .loc-callout-btn{width:100%;justify-content:center;padding:18px 20px;font-size:1rem;}
+}
+
+/* =====================================================
+   Illustrated map — used AS-IS, no crop/overlay
+   ===================================================== */
+.lv-illmap{
+  margin:50px 0 30px;
+  background:#0c223b;
+  border:1px solid rgba(127,212,255,.15);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+.lv-illmap picture, .lv-illmap img{
+  display:block;width:100%;height:auto;
+}
+.lv-illmap-caption{
+  padding:14px 20px;
+  font-size:.9rem;color:#b9cce0;
+  text-align:center;font-style:italic;
+  border-top:1px solid rgba(255,255,255,.05);
+  background:rgba(6,20,36,.6);
+}
+
+/* Warning banner directly below illustrated map */
+.lv-warning{
+  display:flex;align-items:flex-start;gap:14px;
+  background:linear-gradient(135deg, rgba(255,107,107,.15), rgba(255,107,107,.05));
+  border:1px solid rgba(255,107,107,.35);
+  border-radius:16px;
+  padding:18px 22px;
+  color:#ffe8e8;
+  margin-bottom:30px;
+  font-size:1.02rem;line-height:1.55;
+}
+.lv-warning-icon{font-size:1.6rem;line-height:1;flex-shrink:0;}
+.lv-warning strong{color:#fff;}
+
+/* Big directions CTA row */
+.lv-directions-row{
+  display:flex;gap:14px;flex-wrap:wrap;
+  margin:22px 0 40px;
+  justify-content:center;
+}
+.lv-directions-btn{
+  flex:1;min-width:280px;
+  background:linear-gradient(135deg, #7fd4ff, #5cc6ff);
+  color:#00111f;
+  padding:22px 30px;border-radius:20px;
+  text-decoration:none;
+  display:flex;align-items:center;gap:18px;
+  box-shadow:0 20px 50px rgba(127,212,255,.25);
+  transition:transform .15s, box-shadow .15s;
+}
+.lv-directions-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 25px 60px rgba(127,212,255,.35);
+}
+.lv-directions-icon{
+  font-size:2.4rem;line-height:1;flex-shrink:0;
+}
+.lv-directions-title{
+  display:block;font-weight:900;font-size:1.15rem;
+  line-height:1.25;letter-spacing:-.3px;
+}
+.lv-directions-sub{
+  display:block;font-size:.92rem;font-weight:600;
+  opacity:.72;margin-top:2px;
+}
+.lv-call-btn{
+  min-width:180px;
+  background:transparent;color:#fff;
+  border:2px solid rgba(127,212,255,.4);
+  padding:22px 26px;border-radius:20px;
+  text-decoration:none;font-weight:800;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  font-size:1.05rem;
+  transition:background .15s, border-color .15s;
+}
+.lv-call-btn:hover{
+  background:rgba(127,212,255,.08);
+  border-color:rgba(127,212,255,.7);
+}
+
+/* Address card compact style */
+.lv-verify-note-inline{
+  color:#d8e8f7;font-size:.92rem;
+  padding:8px 14px;background:rgba(127,212,255,.08);
+  border-radius:10px;border:1px dashed rgba(127,212,255,.25);
+}
+.lv-verify-note-inline strong{color:#7fd4ff;}
+
+@media(max-width:840px){
+  .lv-illmap{margin:32px 0 22px;border-radius:18px;}
+  .lv-warning{padding:16px 18px;font-size:.96rem;border-radius:14px;}
+  .lv-warning-icon{font-size:1.4rem;}
+  .lv-directions-row{margin:18px 0 28px;flex-direction:column;}
+  .lv-directions-btn, .lv-call-btn{
+    width:100%;min-width:0;
+    padding:20px 22px;border-radius:16px;
+    min-height:64px;  /* thumb-friendly */
+  }
+  .lv-directions-title{font-size:1.05rem;}
+  .lv-directions-icon{font-size:2rem;}
+  .lv-address-card{flex-direction:column;align-items:flex-start;}
+  .lv-verify-note-inline{width:100%;}
+}
