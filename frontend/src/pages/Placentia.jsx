@@ -120,6 +120,15 @@ export default function Placentia() {
           a quick call at{" "}
           <a href="tel:+17149931660">(714) 993-1660</a>.
         </p>
+
+        <h2>Serving Nearby Cities</h2>
+        <p>
+          We&rsquo;re Placentia&rsquo;s home smog shop, but we also serve
+          drivers coming in from{" "}
+          <Link to="/yorba-linda-smog-check">Yorba Linda</Link>,{" "}
+          <Link to="/fullerton-smog-check">Fullerton</Link>, and the rest of
+          North Orange County.
+        </p>
       </section>
     </>
   );

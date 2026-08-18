@@ -1305,3 +1305,39 @@ a{color:#7fd4ff;}
   /* Trust badges collapse to single column on very small screens */
   .tb-inner{grid-template-columns:1fr;}
 }
+
+/* Yorba Linda page-hero enhancements */
+.page-hero-eyebrow{
+  display:inline-block;padding:6px 14px;
+  border:1px solid rgba(127,212,255,.4);
+  background:rgba(127,212,255,.08);color:#7fd4ff;
+  border-radius:40px;font-weight:700;font-size:.78rem;
+  letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;
+}
+.page-hero-ctas{
+  display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;
+}
+
+/* Details/summary FAQ (used on YL page) */
+details.faq-item{padding:0;}
+details.faq-item summary{
+  list-style:none;cursor:pointer;
+  padding:22px 26px;color:#fff;font-weight:700;font-size:1.05rem;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+}
+details.faq-item summary::-webkit-details-marker{display:none;}
+details.faq-item summary:hover{background:rgba(127,212,255,.06);}
+details.faq-item[open] .faq-icon{transform:rotate(45deg);}
+details.faq-item .faq-icon{
+  transition:transform .2s;color:#7fd4ff;font-size:1.6rem;flex-shrink:0;line-height:1;
+}
+details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
+
+@media(max-width:840px){
+  .page-hero-ctas .primary, .page-hero-ctas .secondary{
+    width:100%;text-align:center;min-height:52px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  details.faq-item summary{padding:18px 20px;font-size:.98rem;}
+  details.faq-item .faq-a{padding:0 20px 18px;font-size:.94rem;}
+}

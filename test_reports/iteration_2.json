@@ -1,0 +1,23 @@
+{
+  "summary": "Comprehensive frontend testing of new Yorba Linda local-SEO landing page (/yorba-linda-smog-check). All 15 review requirements verified via live DOM/JSON-LD/HTTP inspection on desktop (1440x900) and mobile (390x844). 100% pass rate. No regressions on Home, Placentia, Fullerton, FAQ, Contact, or STAR pages.",
+  "backend_issues": { "critical": [], "minor": [] },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "YorbaLinda.jsx inlines a second <script type=application/ld+json> outside Helmet - works because React renders it into the DOM, but it will not be portalled to <head>. Google still reads JSON-LD from <body>, so acceptable, but consider using Helmet's script prop for consistency with other pages.",
+    "Note: the FAQ answer for question #1 uses non-breaking phrasing and the address block relies on em-dash characters. Consider adding a schema.org LocalBusiness sameAs field with Google Business Profile URL for stronger local SEO signal."
+  ],
+  "updated_files": [],
+  "success_rate": { "backend": "N/A (frontend-only)", "frontend": "100%" },
+  "test_credentials": "N/A",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "All Yorba Linda page requirements verified: route 200, SEO title/desc/canonical, AutomotiveBusiness JSON-LD (streetAddress=144 S Bradford Ave, locality=Placentia, areaServed includes Yorba Linda City), FAQPage JSON-LD with 5 questions, single H1 containing 'Yorba Linda' + 'Drive In Today', hero states 'not located in Yorba Linda' + '144 S Bradford Ave, Placentia, CA 92870', yl-directions-btn href uses Google Maps dir API with origin=Yorba Linda,CA (encoded as %20 not +) & destination=144 S Bradford Ave, yl-call-btn tel:+17149931660, 5 FAQ <details> items with item-0 open by default and item-2 toggle-on-click works, unique keywords (Nixon Presidential Library, Yorba Linda Blvd, Bryant Ranch, East Lake Village, Tony's Deli) all present, no dollar prices, cross-links to /placentia-smog-check /fullerton-smog-check /star-certified-smog /faq present under [data-testid=yl-cross-links], nav-link-yorba-linda works and navigates to page, Placentia+Fullerton pages both contain <a href='/yorba-linda-smog-check'>, nc-card-yorba-linda on homepage is <Link> (A tag with relative href), sitemap.xml 200 and includes /yorba-linda-smog-check, homepage retains 4.8/160, H1s unique across all 3 city pages, YL lead paragraph unique. Mobile: H1 35.2px, CTA buttons height 58/62px (>=50), buttons 327px wide within 390 viewport (~84% - full container width with padding), sticky mobile nav visible. All other pages (/, /faq, /contact, /star-certified-smog, /placentia-smog-check, /fullerton-smog-check) return 200 with expected H1s.",
+  "rca of the issue": "No issues found."
+}

@@ -57,17 +57,15 @@ export default function NearbyCities() {
             <div className="nc-note">5 min east</div>
             <span className="nc-arrow" aria-hidden="true">→</span>
           </Link>
-          <a
-            href={dirUrl("Yorba Linda")}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/yorba-linda-smog-check"
             className="nc-card"
             data-testid="nc-card-yorba-linda"
           >
             <div className="nc-name">Yorba Linda</div>
             <div className="nc-note">10 min north</div>
             <span className="nc-arrow" aria-hidden="true">→</span>
-          </a>
+          </Link>
           <a
             href={dirUrl("Brea")}
             target="_blank"

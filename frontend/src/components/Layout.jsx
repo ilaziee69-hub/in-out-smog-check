@@ -7,6 +7,7 @@ const NAV = [
   { to: "/star-certified-smog", label: "STAR Certified" },
   { to: "/placentia-smog-check", label: "Placentia" },
   { to: "/fullerton-smog-check", label: "Fullerton" },
+  { to: "/yorba-linda-smog-check", label: "Yorba Linda" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
 ];

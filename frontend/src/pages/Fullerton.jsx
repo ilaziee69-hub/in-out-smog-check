@@ -80,6 +80,15 @@ export default function Fullerton() {
           Just an honest pass-or-fail smog inspection at a fair price — and a
           friendly team that explains exactly what your DMV notice needs.
         </p>
+
+        <h2>Serving Neighboring Cities Too</h2>
+        <p>
+          Coming from a different North Orange County city? We have dedicated
+          guides for <Link to="/placentia-smog-check">Placentia</Link> and{" "}
+          <Link to="/yorba-linda-smog-check">Yorba Linda</Link> drivers as well.
+          Or read the <Link to="/star-certified-smog">STAR Certified Test-Only</Link>{" "}
+          guide if your DMV notice requires it.
+        </p>
       </section>
     </>
   );
