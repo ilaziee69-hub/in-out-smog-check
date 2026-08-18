@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation, useNavigationType } from "react-router-dom";
 import { useEffect, useState } from "react";
 import StickyMobileNav from "@/components/StickyMobileNav";
 
@@ -14,10 +14,21 @@ const NAV = [
 
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
+  const { pathname, hash } = useLocation();
+  const navType = useNavigationType(); // "PUSH" | "REPLACE" | "POP"
 
+  // Scroll to the top of the new page on every new navigation.
+  // - Skip POP (browser Back/Forward) so history scroll position is preserved.
+  // - Skip when the URL has a hash (#anchor) so in-page anchor scroll works.
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, [children]);
+    if (navType === "POP") return;
+    if (hash) return;
+    // Belt-and-suspenders for iOS Safari, which can ignore window.scrollTo on
+    // the root and needs body / documentElement scrollTop reset explicitly.
+    window.scrollTo(0, 0);
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+  }, [pathname, hash, navType]);
 
   return (
     <>
