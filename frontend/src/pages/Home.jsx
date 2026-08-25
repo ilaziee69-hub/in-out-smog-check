@@ -68,8 +68,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="10-Minute Smog Check in Placentia, CA | STAR Certified · 4.8★ (160 Reviews)"
-        description="4.8★ from 160 Google reviews. STAR-Certified Test-Only smog station in Placentia at 144 S Bradford Ave. In and out in 10 minutes. (714) 993-1660."
+        title="Fast Smog Check Placentia | STAR Certified | In & Out Smog"
+        description="Fast STAR-certified smog checks in Placentia. Test-only station, walk-ins welcome, and most newer vehicles are finished quickly. Serving Placentia and nearby Orange County."
         path="/"
         jsonLd={businessJsonLd}
       />

@@ -92,8 +92,8 @@ export default function YorbaLinda() {
   return (
     <>
       <Seo
-        title="Smog Check Yorba Linda, CA | STAR Certified | In & Out Smog Check"
-        description="Fast STAR-Certified smog checks for Yorba Linda drivers. Test-only station in nearby Placentia — 3 to 5 miles west, most inspections completed in about 10 minutes. Walk-ins welcome. (714) 993-1660."
+        title="Yorba Linda Smog Check | Fast STAR Station Near You"
+        description="Need a smog check near Yorba Linda? Visit In & Out Smog in nearby Placentia for fast STAR-certified smog testing, walk-in service, and no repair-shop upselling."
         path="/yorba-linda-smog-check"
         jsonLd={[bizJsonLd, faqJsonLd]}
       />
