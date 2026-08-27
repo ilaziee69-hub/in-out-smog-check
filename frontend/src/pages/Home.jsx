@@ -69,7 +69,7 @@ export default function Home() {
     <>
       <Seo
         title="Fast Smog Check Placentia | STAR Certified | In & Out Smog"
-        description="Fast STAR-certified smog checks in Placentia. Test-only station, walk-ins welcome, and most newer vehicles are finished quickly. Serving Placentia and nearby Orange County."
+        description="Fast STAR-certified smog checks in Placentia, CA. In & Out Smog Check offers quick, convenient emissions testing for local drivers."
         path="/"
         jsonLd={businessJsonLd}
       />
@@ -89,10 +89,13 @@ export default function Home() {
               <span className="hero-rating-sep">·</span>
               <span>160 Google reviews</span>
             </div>
-            <h1>
-              10-Minute Smog Checks.<br />
-              <span className="accent">In. Out. Done.</span>
+            <h1 className="hero-h1" data-testid="hero-h1">
+              STAR-Certified Smog Check in Placentia, CA
             </h1>
+            <p className="hero-headline" data-testid="hero-headline">
+              <span className="hero-headline-line">10-Minute Smog Checks.</span>
+              <span className="accent">In. Out. Done.</span>
+            </p>
             <p>
               Fast, honest smog checks in Placentia. As a STAR-Certified{" "}
               <strong>Test-Only</strong> station, we don&rsquo;t sell repairs —
@@ -219,6 +222,47 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* SEO CONTENT — Fast, Convenient Smog Checks in Placentia */}
+      <section className="seo-content" data-testid="seo-content-section" aria-labelledby="seo-content-heading">
+        <div className="seo-content-inner">
+          <h2 id="seo-content-heading" data-testid="seo-content-heading">
+            Fast, Convenient Smog Checks in Placentia
+          </h2>
+          <p>
+            In &amp; Out Smog Check provides fast and convenient smog testing
+            for drivers in Placentia and nearby communities. Our shop is a
+            licensed STAR Station, so we can inspect vehicles that require a
+            STAR-certified smog check as well as vehicles needing a standard
+            emissions inspection.
+          </p>
+          <p>
+            We focus on making the smog check process simple and efficient.
+            Customers can bring in their cars, trucks, SUVs, hybrids, and
+            other eligible vehicles for emissions testing without unnecessary
+            delays. Our goal is to help local drivers complete their required
+            California smog inspection and get back on the road quickly.
+          </p>
+          <p>
+            Our shop is located on S Bradford Ave in Placentia, making us
+            convenient for customers coming from Placentia, Yorba Linda,
+            Fullerton, Anaheim, Brea, and surrounding Orange County
+            communities.
+          </p>
+          <p>
+            In &amp; Out Smog Check has served local drivers for many years
+            and is known for quick service and a straightforward smog check
+            experience. If your DMV registration renewal requires a smog
+            inspection or specifically directs you to a STAR Station, we can
+            help.
+          </p>
+          <p>
+            Visit In &amp; Out Smog Check for fast, professional smog testing
+            in Placentia, California.
+          </p>
+        </div>
+      </section>
+
 
       {/* TRUST BADGES */}
       <TrustBadges />
