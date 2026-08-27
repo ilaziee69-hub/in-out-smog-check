@@ -1,13 +1,15 @@
 import { Helmet } from "react-helmet-async";
 
 /**
- * Site URL resolution priority:
- *   1. REACT_APP_BACKEND_URL (set at build time — production/preview external URL)
- *   2. window.location.origin (runtime fallback for local dev / preview)
- *   3. Empty string (SSR-safe default; JSON-LD urls still parse)
+ * Site URL resolution priority (CRA-safe):
+ *   1. process.env.REACT_APP_BACKEND_URL — CRA inlines this as a string at build
+ *      time regardless of `typeof process`, so this is the source of truth in
+ *      both browser and prerender.
+ *   2. window.location.origin — dev/preview fallback only.
+ *   3. "" — SSR-safe default.
  */
 export const SITE_URL =
-  (typeof process !== "undefined" && process.env.REACT_APP_BACKEND_URL) ||
+  process.env.REACT_APP_BACKEND_URL ||
   (typeof window !== "undefined" && window.location.origin) ||
   "";
 
