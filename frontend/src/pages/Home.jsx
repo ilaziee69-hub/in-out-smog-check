@@ -164,6 +164,16 @@ export default function Home() {
               certificate is transmitted electronically before you leave the lot.
             </p>
           </div>
+          <div className="card" data-testid="card-since-1999">
+            <h3>Serving Placentia Since 1999</h3>
+            <p>
+              Family-run and part of the Placentia community since 1999. I
+              joined my uncle as his partner in 2007 and later took over when
+              he retired. We&rsquo;ve kept the same focus ever since: fast,
+              straightforward smog checks and taking care of our local
+              customers.
+            </p>
+          </div>
           <div className="card" data-testid="card-test-only">
             <h3>Test-Only, No Upsells</h3>
             <p>
