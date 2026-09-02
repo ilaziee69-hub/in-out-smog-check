@@ -1,4 +1,3 @@
-import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "@/site.css";
 
@@ -14,22 +13,20 @@ import NotFound from "@/pages/NotFound";
 
 function App() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/star-certified-smog" element={<StarCertified />} />
-            <Route path="/placentia-smog-check" element={<Placentia />} />
-            <Route path="/fullerton-smog-check" element={<Fullerton />} />
-            <Route path="/yorba-linda-smog-check" element={<YorbaLinda />} />
-            <Route path="/faq" element={<Faq />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </HelmetProvider>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/star-certified-smog" element={<StarCertified />} />
+          <Route path="/placentia-smog-check" element={<Placentia />} />
+          <Route path="/fullerton-smog-check" element={<Fullerton />} />
+          <Route path="/yorba-linda-smog-check" element={<YorbaLinda />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

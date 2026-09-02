@@ -122,7 +122,14 @@ async function extractTruthTags(page) {
 
 /**
  * Rewrite the head of the captured HTML with clean unique tags built from
- * the truth values extracted from the DOM.
+ * the truth values extracted from the DOM. With React 19 native head
+ * hoisting, duplicates are rare — but we defensively re-emit clean tags so
+ * that head order and content match the truth extracted from the live DOM.
+ *
+ * IMPORTANT: JSON-LD scripts are rendered INLINE by React 19 (they are not
+ * hoisted). Prerender leaves them exactly where React put them in the body
+ * so that client hydration matches. Google reads JSON-LD from anywhere in
+ * the document; head vs body placement is semantically equivalent.
  */
 function rewriteHead(html, truth) {
   const managedSelectors = [
@@ -131,26 +138,16 @@ function rewriteHead(html, truth) {
     /<link\s+[^>]*rel=["']canonical["'][^>]*>/gi,
     /<meta\s+[^>]*property=["']og:[^"']+["'][^>]*>/gi,
     /<meta\s+[^>]*name=["']twitter:[^"']+["'][^>]*>/gi,
-    /<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi,
   ];
 
   const headMatch = html.match(/<head>([\s\S]*?)<\/head>/);
   if (!headMatch) return html;
   let head = headMatch[1];
 
-  // Strip all managed tags from HEAD — we're going to re-emit them clean.
+  // Strip all managed head tags — we'll re-emit them cleanly.
+  // (JSON-LD scripts are NOT touched — they belong in body with the React
+  //  tree and stripping them would break hydration.)
   for (const re of managedSelectors) head = head.replace(re, "");
-
-  // Helmet also renders <script type="application/ld+json"> tags in the body
-  // (wherever they were placed in JSX). Strip ALL body-level ld+json scripts
-  // so the head-emitted ones are the only source of truth.
-  const jsonScriptRe =
-    /<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi;
-  html = html.replace(jsonScriptRe, (m, offset) => {
-    // Only strip from body (offset past </head>)
-    const headEnd = html.indexOf("</head>");
-    return offset > headEnd ? "" : m;
-  });
 
   const esc = (s) =>
     String(s || "")
@@ -169,13 +166,89 @@ function rewriteHead(html, truth) {
     clean.push(`<meta property="${esc(k)}" content="${esc(v)}">`);
   for (const [k, v] of Object.entries(truth.twitter || {}))
     clean.push(`<meta name="${esc(k)}" content="${esc(v)}">`);
-  for (const js of truth.jsonLd || [])
-    clean.push(`<script type="application/ld+json">${js}</script>`);
 
   // Insert cleaned tags at end of head (before </head>).
   head = head.trimEnd() + "\n" + clean.join("\n") + "\n";
 
   return html.replace(headMatch[0], `<head>${head}</head>`);
+}
+
+/**
+ * Registers @babel/register (with CSS/asset stubs) so we can require the
+ * React source tree in Node and call renderToString for hydration-safe body
+ * HTML. Called lazily so that non-SSR use of this file (if any) still works.
+ */
+function ensureBabel() {
+  if (ensureBabel._done) return;
+  require("@babel/register")({
+    presets: [
+      ["@babel/preset-env", { targets: { node: "current" } }],
+      ["@babel/preset-react", { runtime: "automatic" }],
+    ],
+    extensions: [".js", ".jsx"],
+    // Only transpile /app/frontend/src (the app tree) and its Seo/Layout deps.
+    only: [/\/app\/frontend\/src\//],
+    cache: false,
+  });
+  require.extensions[".css"] = () => ({});
+  require.extensions[".webp"] = () => "";
+  require.extensions[".png"] = () => "";
+  require.extensions[".jpg"] = () => "";
+  require.extensions[".svg"] = () => "";
+  const Module = require("module");
+  const origResolve = Module._resolveFilename;
+  Module._resolveFilename = function (r, p, ...rest) {
+    if (r && r.startsWith("@/")) r = "/app/frontend/src/" + r.slice(2);
+    return origResolve.call(this, r, p, ...rest);
+  };
+  ensureBabel._done = true;
+}
+
+/**
+ * Render the app tree for a given route to a hydration-safe HTML string
+ * using ReactDOMServer.renderToString. This preserves React 19 hydration
+ * comment markers (`<!-- -->`) between adjacent JSX text nodes — which is
+ * what a client puppeteer capture cannot produce (browsers serialize DOM
+ * without those markers, and the resulting HTML fails hydration).
+ *
+ * Returns the raw #root inner HTML for the given route.
+ */
+function renderRouteBody(route) {
+  ensureBabel();
+  const React = require("react");
+  const { renderToString } = require("react-dom/server");
+  const RRD = require("react-router-dom");
+  const Layout = require("/app/frontend/src/components/Layout.jsx").default;
+  const Home = require("/app/frontend/src/pages/Home.jsx").default;
+  const StarCertified = require("/app/frontend/src/pages/StarCertified.jsx").default;
+  const Placentia = require("/app/frontend/src/pages/Placentia.jsx").default;
+  const Fullerton = require("/app/frontend/src/pages/Fullerton.jsx").default;
+  const YorbaLinda = require("/app/frontend/src/pages/YorbaLinda.jsx").default;
+  const Faq = require("/app/frontend/src/pages/Faq.jsx").default;
+  const Contact = require("/app/frontend/src/pages/Contact.jsx").default;
+  const NotFound = require("/app/frontend/src/pages/NotFound.jsx").default;
+
+  const tree = React.createElement(
+    RRD.StaticRouter,
+    { location: route },
+    React.createElement(
+      Layout,
+      null,
+      React.createElement(
+        RRD.Routes,
+        null,
+        React.createElement(RRD.Route, { path: "/", element: React.createElement(Home) }),
+        React.createElement(RRD.Route, { path: "/star-certified-smog", element: React.createElement(StarCertified) }),
+        React.createElement(RRD.Route, { path: "/placentia-smog-check", element: React.createElement(Placentia) }),
+        React.createElement(RRD.Route, { path: "/fullerton-smog-check", element: React.createElement(Fullerton) }),
+        React.createElement(RRD.Route, { path: "/yorba-linda-smog-check", element: React.createElement(YorbaLinda) }),
+        React.createElement(RRD.Route, { path: "/faq", element: React.createElement(Faq) }),
+        React.createElement(RRD.Route, { path: "/contact", element: React.createElement(Contact) }),
+        React.createElement(RRD.Route, { path: "*", element: React.createElement(NotFound) })
+      )
+    )
+  );
+  return renderToString(tree);
 }
 
 async function main() {
@@ -217,6 +290,28 @@ async function main() {
       await page.close();
 
       html = rewriteHead(html, truth);
+
+      // Replace the puppeteer-captured #root body with a React SSR
+      // renderToString output for the same route. This is what makes the
+      // prerendered HTML hydration-safe: renderToString emits React 19's
+      // text-node comment markers (`<!-- -->`) between adjacent JSX text
+      // nodes, which a client puppeteer capture cannot preserve (browser
+      // DOM serialization merges them into single text nodes, causing
+      // hydration `text` mismatches on the client).
+      try {
+        const ssrBody = renderRouteBody(route);
+        // The React SSR output for our tree begins with <div class="site-nav-wrap"> ...
+        // We wrap it back in <div id="root"> ... </div> before replacing.
+        html = html.replace(
+          /<div id="root">[\s\S]*?<\/div>(\s*(?:<script|<\/body>))/,
+          `<div id="root">${ssrBody}</div>$1`
+        );
+      } catch (e) {
+        console.warn(
+          `[prerender] SSR body render failed for ${route}: ${e.message}. ` +
+            `Falling back to puppeteer-captured body (may cause hydration mismatch).`
+        );
+      }
 
       // Ensure any accidental local origin references are rewritten too.
       const LOCAL = `http://127.0.0.1:${PORT}`;
