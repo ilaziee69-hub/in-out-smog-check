@@ -93,7 +93,7 @@ export default function YorbaLinda() {
     <>
       <Seo
         title="Yorba Linda Smog Check | Fast STAR Station Near You"
-        description="Need a smog check near Yorba Linda? Visit In & Out Smog in nearby Placentia for fast STAR-certified smog testing, walk-in service, and no repair-shop upselling."
+        description="Need a smog check near Yorba Linda? Visit our nearby Placentia STAR Test-Only station for fast service, upfront pricing, and no repair upsells."
         path="/yorba-linda-smog-check"
         jsonLd={[bizJsonLd, faqJsonLd]}
       />

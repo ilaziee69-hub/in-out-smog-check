@@ -6,7 +6,7 @@ export default function Placentia() {
     <>
       <Seo
         title="Placentia Smog Check | STAR Test-Only | In & Out Smog"
-        description="Placentia's go-to STAR-Certified Test-Only smog station at 144 S Bradford Ave. Walk-ins welcome, most cars done in 10 minutes. Mon–Fri 8–5, Sat 8–3. (714) 993-1660."
+        description="Fast STAR-certified Test-Only smog checks in Placentia. Walk-ins welcome, upfront pricing, no repair upsells, and one free retest within 30 days."
         path="/placentia-smog-check"
         jsonLd={{
           "@context": "https://schema.org",

@@ -57,7 +57,7 @@ export default function Faq() {
     <>
       <Seo
         title="Smog Check FAQ | DMV, STAR & Exemptions | In & Out Smog"
-        description="Placentia smog check FAQ: how the DMV gets your result, which vehicles are exempt, Test-Only benefits, cost, and what to do if your car fails. (714) 993-1660."
+        description="Get answers about California smog checks, STAR requirements, pricing, exemptions, failed tests, free retests, and what to expect during your inspection."
         path="/faq"
         jsonLd={jsonLd}
       />

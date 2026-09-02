@@ -6,7 +6,7 @@ export default function StarCertified() {
     <>
       <Seo
         title="STAR Test-Only Smog Check | Placentia, CA | In & Out Smog"
-        description="California BAR licensed STAR-Certified Test-Only smog station in Placentia. Zero repair upsells, honest inspections, DMV results transmitted electronically. (714) 993-1660."
+        description="Need a STAR smog check in Placentia? Visit our STAR-certified Test-Only station for fast service, upfront pricing, and no repair upsells."
         path="/star-certified-smog"
         jsonLd={{
           "@context": "https://schema.org",

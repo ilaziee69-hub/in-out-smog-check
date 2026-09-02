@@ -5,7 +5,7 @@ export default function Contact() {
     <>
       <Seo
         title="Contact In & Out Smog Check | Placentia, CA"
-        description="Visit In & Out Smog Check at 144 S Bradford Ave, Placentia, CA 92870. Open Mon–Fri 8–5, Sat 8–3. Call (714) 993-1660 — walk-ins welcome, no appointment needed."
+        description="Contact In & Out Smog Check in Placentia for hours, directions, phone information, upfront pricing, and fast walk-in STAR smog inspections."
         path="/contact"
         jsonLd={{
           "@context": "https://schema.org",
