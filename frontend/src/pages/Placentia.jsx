@@ -32,8 +32,8 @@ export default function Placentia() {
         <h1>Placentia Smog Check</h1>
         <p className="lead">
           Your neighborhood STAR-certified smog station — right here on
-          S Bradford Ave. Honest pass-or-fail inspections, no long lines, and
-          friendly faces who actually live and work in Placentia.
+          S Bradford Ave. Honest pass-or-fail inspections, no repair upsells,
+          and friendly service from a local shop serving Placentia since 1999.
         </p>
         <a
           className="primary"
