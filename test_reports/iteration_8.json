@@ -1,0 +1,25 @@
+{
+  "summary": "Final frontend visual-regression pass on preview host after emptying the CRA <noscript> fallback. Verified raw HTML + DOM for 7 routes (zero 'enable JavaScript' occurrences, noscript innerHTML === ''), Fullerton desktop/mobile polish (card h3 alignment, mobile h2 23.2px, sticky nav), Yorba Linda & Placentia desktop+mobile contracts, homepage regression, and SPA cross-page navigation. 100% pass, no regressions found.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [],
+  "updated_files": [],
+  "success_rate": {"backend": "not tested (frontend-only request)", "frontend": "100%"},
+  "seed_data_creation": "none",
+  "should_call_test_agent_after_fix": false,
+  "should_main_agent_self_test": false,
+  "detailed_results": {
+    "noscript_removal": "curl raw HTML for /, /fullerton-smog-check, /yorba-linda-smog-check, /placentia-smog-check, /star-certified-smog, /faq, /contact => grep -c 'enable JavaScript' = 0 on all 7. In-DOM check on all 7 routes: noscript innerHTML === '' and outerHTML of documentElement contains no 'enable JavaScript'.",
+    "fullerton_desktop_1440x900": "Single H1 'Fullerton Smog Check'; [data-testid=fullerton-aeo] visible; .prose .cards .card h3 offsetHeights = [108,108,108] (min-height computed 107.52px = calc(3*1.6em)) -> max delta 0px (<=2px PASS); card <p> getBoundingClientRect().top = [1426.31, 1426.31, 1426.30] -> delta 0.01px, paragraphs aligned; .prose h2 font-size 30.4px; scrollWidth 1440 == clientWidth 1440 (no horizontal scroll); sticky mobile nav element present but visible=false on desktop (correctly hidden).",
+    "fullerton_mobile_390x844": "First .prose h2 computed font-size = 23.2px (1.45rem, 23.68% smaller than desktop 30.4px) PASS; card h3 min-height = 0px on all three with natural heights [59,59,29]; cards stacked (identical left offsets 23px); scrollWidth 390 == clientWidth 390; sticky bottom nav visible with Directions / Call / Hours.",
+    "yorba_linda": "Desktop+mobile: H1 'Need a Smog Check Near Yorba Linda? Drive In Today.' present exactly once; exactly 5 .faq-item; links to /fullerton-smog-check present (anchor texts: 'Fullerton', 'Fullerton Smog Check', 'Fullerton'); no horizontal scroll (1440/1440, 390/390); .prose h2 font-size 30.4px desktop / 23.2px mobile; zero console/page errors.",
+    "placentia": "Desktop+mobile: H1 'Placentia Smog Check' exactly once; links to /fullerton-smog-check present with anchor text including 'smog check near Fullerton'; no horizontal scroll; .prose h2 30.4px desktop / 23.2px mobile; zero console errors. Note: 0 .faq-item elements on this page (not part of the stated contract, informational only).",
+    "homepage": "H1 hero eyebrow/heading 'STAR-Certified Smog Check in Placentia, CA' renders; 'Serving Placentia Since 1999' heritage text present; no horizontal scroll; no console errors; layout visually unchanged (screenshot reviewed).",
+    "spa_navigation": "From /placentia-smog-check clicked anchor to /fullerton-smog-check -> landed on /fullerton-smog-check with H1 'Fullerton Smog Check' and window.__spa sentinel still true (no full reload). Then clicked 'Yorba Linda' anchor from Fullerton nearby-cities section -> landed on /yorba-linda-smog-check with correct H1, sentinel still true (SPA nav confirmed).",
+    "console_errors": "Zero console errors and zero pageerrors across all routes and viewports tested."
+  },
+  "context_for_next_testing_agent": "SITE IS DEPLOY-READY. Iteration 8 confirmed: the emptied <noscript> in /app/frontend/public/index.html introduced no regressions ('enable JavaScript' fully absent from raw HTML and DOM on all 7 routes), the Fullerton polish holds (desktop card h3 all 108px, paragraph tops identical at 1426.31px; mobile .prose h2 = 23.2px vs desktop 30.4px), all city-page SEO/content contracts (H1 uniqueness, 5 YL FAQs, reciprocal internal links) intact, SPA navigation works without full reloads, and there are no console errors or horizontal scroll on 1440x900 or 390x844. No open issues; nothing pending for the developer agent. Production domain was intentionally not tested (awaits redeploy).",
+  "rca_of_the_issue": "N/A - no issues found."
+}

@@ -33,6 +33,7 @@
 - **Fullerton SEO/AEO rewrite** (iteration_6 60/60 pass): CSUF context, AEO answer block with `data-testid='fullerton-aeo'`, three service cards, driving-directions ordered list, reciprocal internal links from Placentia + Yorba Linda, exact 145-char meta description.
 - **Mobile H2 sizing polish** (iteration_7): `.prose h2` at ≤420px raised from 1.3rem → 1.45rem (23.2px, ~23.7% smaller than desktop 30.4px — within 20-25% target).
 - **Desktop card heading equalization** (iteration_7): added `.prose .cards .card h3 { min-height: calc(3 * 1.6em) }` inside `@media(min-width:841px)` — all three Fullerton service card headings now equal ~108px, paragraph start-points aligned at exact same Y (1426px). Mobile stack unaffected (min-height:0).
+- **CRA fallback text removal** (iteration_8): emptied `<noscript>` in `public/index.html` — the literal "You need to enable JavaScript to run this app." now returns zero occurrences in raw HTML on all 7 routes (`/`, `/star-certified-smog`, `/placentia-smog-check`, `/fullerton-smog-check`, `/yorba-linda-smog-check`, `/faq`, `/contact`). Full crawlable prerendered content still intact. Iteration_8 final visual regression 100% pass across desktop 1440x900 + mobile 390x844: no console errors, no horizontal scroll, SPA nav preserved.
 
 ## SEO
 - react-helmet-async per-route tags
