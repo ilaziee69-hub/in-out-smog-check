@@ -27,7 +27,12 @@
 14. Sticky mobile bottom nav (📍 Directions · 📞 Call · ⏰ Hours)
 
 ## Pages
-- `/` Home · `/star-certified-smog` · `/placentia-smog-check` · `/fullerton-smog-check` · `/faq` · `/contact` · 404
+- `/` Home · `/star-certified-smog` · `/placentia-smog-check` · `/fullerton-smog-check` · `/yorba-linda-smog-check` · `/faq` · `/contact` · 404
+
+## Recent Changes (Feb 2026)
+- **Fullerton SEO/AEO rewrite** (iteration_6 60/60 pass): CSUF context, AEO answer block with `data-testid='fullerton-aeo'`, three service cards, driving-directions ordered list, reciprocal internal links from Placentia + Yorba Linda, exact 145-char meta description.
+- **Mobile H2 sizing polish** (iteration_7): `.prose h2` at ≤420px raised from 1.3rem → 1.45rem (23.2px, ~23.7% smaller than desktop 30.4px — within 20-25% target).
+- **Desktop card heading equalization** (iteration_7): added `.prose .cards .card h3 { min-height: calc(3 * 1.6em) }` inside `@media(min-width:841px)` — all three Fullerton service card headings now equal ~108px, paragraph start-points aligned at exact same Y (1426px). Mobile stack unaffected (min-height:0).
 
 ## SEO
 - react-helmet-async per-route tags

@@ -216,6 +216,11 @@ a{color:#7fd4ff;}
   display:flex;align-items:center;justify-content:center;font-size:.9rem;
 }
 .prose .cards{margin:20px 0 30px;}
+/* Keep prose service-card headings aligned when copy wraps to 2-3 lines (desktop only).
+   Uses em so it tracks the h3's actual computed line-height. */
+@media(min-width:841px){
+  .prose .cards .card h3{min-height:calc(3 * 1.6em);}
+}
 
 /* ---------- FAQ ---------- */
 .faq-list{display:flex;flex-direction:column;gap:14px;}
@@ -1385,4 +1390,35 @@ details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
   .seo-content{padding:56px 6%;}
   .seo-content h2{font-size:1.55rem;margin-bottom:20px;}
   .seo-content p{font-size:1rem;line-height:1.7;margin-bottom:16px;}
+}
+
+/* =====================================================
+   Fullerton (& sub-page) AEO answer block + mobile H2 trim
+   ===================================================== */
+.aeo-answer{
+  background:linear-gradient(135deg, rgba(127,212,255,.08), rgba(127,212,255,.02));
+  border:1px solid rgba(127,212,255,.22);
+  border-left:4px solid #7fd4ff;
+  border-radius:14px;
+  padding:22px 26px;
+  margin:0 0 40px;
+}
+.aeo-answer p{
+  margin:0;color:#e6f1fb;font-size:1.02rem;line-height:1.7;
+}
+.aeo-answer strong{color:#fff;}
+
+/* Reduce mobile H2 headings on sub-pages to keep them readable, not dominant */
+@media(max-width:840px){
+  .prose h2{
+    font-size:1.45rem;
+    line-height:1.25;
+    margin:38px 0 14px;
+  }
+  .prose h2:first-child{margin-top:0;}
+  .aeo-answer{padding:18px 20px;margin-bottom:30px;}
+  .aeo-answer p{font-size:.98rem;line-height:1.65;}
+}
+@media(max-width:420px){
+  .prose h2{font-size:1.45rem;}
 }

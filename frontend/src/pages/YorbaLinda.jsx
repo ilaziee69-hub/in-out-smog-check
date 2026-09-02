@@ -261,7 +261,7 @@ export default function YorbaLinda() {
           </li>
           <li>
             <Link to="/fullerton-smog-check">Fullerton Smog Check</Link>{" "}
-            &mdash; 5 minutes west
+            &mdash; 5 minutes west, including the CSUF and east Fullerton area
           </li>
           <li>
             <Link to="/star-certified-smog">STAR Certified Test-Only</Link>{" "}

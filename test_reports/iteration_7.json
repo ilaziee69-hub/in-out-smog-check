@@ -1,0 +1,26 @@
+{
+  "summary": "Frontend-only verification of iteration_7 polish pass on /fullerton-smog-check (preview URL). 15/16 checks pass: title, meta description length (145), single H1, all 6 required AEO/section headings, data-testid='fullerton-aeo', 3 unchanged service-card headings, mobile .prose h2 = 23.2px vs desktop 30.4px (23.7% smaller — inside 20-25% target), min-height correctly NOT applied on mobile (computed min-height 0px, h3 heights 59/59/29), no horizontal overflow at 390px or 1440px, sticky mobile nav (Directions/Call/Hours) present, SPA click-through from third service card to /star-certified-smog works with no reload, reciprocal /fullerton-smog-check anchors present on Placentia (3) and Yorba Linda (3), and all 6 regression routes render expected H1s with zero console errors (homepage heritage card 'Serving Placentia Since 1999' present). ONE real failure: desktop card h3 heights are NOT equalized (108/108/87 -> 21px diff) because the new min-height rule assumes line-height 1.3 while the computed line-height is 1.6.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "site.css line 221 (.prose .cards .card h3 desktop min-height)", "issue": "min-height:calc(1.4rem * 1.3 * 3) = 87.36px, but computed line-height for .card h3 is 35.84px (1.6), so a 3-line heading is ~107.5px. Cards 1 & 2 (3-line headings) measure 108px while card 3 ('STAR-Certified Test-Only', 2 lines) is clamped to only 87px -> paragraph start-points still misaligned by ~20px (measured p tops: 1426/1426/1406). Fix: min-height:calc(1.4rem * 1.6 * 3) (~107.5px) or 108px.", "selector": ".prose .cards .card h3", "priority": "MEDIUM"}
+    ],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "/fullerton-smog-check desktop services cards", "issues": ["Third card body text starts ~20px higher than the first two (see min-height bug above); everything else visually clean"]}
+    ]
+  },
+  "test_report_links": [],
+  "action_items": ["Update /app/frontend/src/site.css desktop rule to min-height:calc(1.4rem * 1.6 * 3) so all three .prose card h3 blocks equal ~108px and paragraph start-points align (no copy changes needed)"],
+  "critical_code_review_comments": [
+    "min-height calc hardcodes a 1.3 line-height that does not match the actual computed 1.6; prefer min-height:calc(3 * 1.6em) so it tracks the element's own font metrics.",
+    "Informational (not a bug): canonical/og:url are derived from REACT_APP_BACKEND_URL in Seo.jsx, so on the preview host canonical renders https://download-hub-281.preview.emergentagent.com/fullerton-smog-check. Path is correct; the production domain will only appear in a prod build with the prod env value."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "not tested (frontend-only request)", "frontend": "94% (15/16 checks)"},
+  "seed_data_creation": "none",
+  "should_call_test_agent_after_fix": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Mobile H2 polish item (a) is verified PASS at 23.2px / 23.7% smaller than desktop 30.4px. Polish item (b) desktop h3 equalization FAILED only due to the 1.3 vs 1.6 line-height factor in the min-height calc; after changing to 1.6 (or 3*1.6em) re-measure offsetHeight of .prose .cards .card h3 at 1440x900 (expect ~108/108/108) and confirm mobile computed min-height stays 0px at 390px.",
+  "rca_of_the_issue": "site.css:221 sets .prose .cards .card h3{min-height:calc(1.4rem * 1.3 * 3)} = 87.36px. Actual computed line-height on that heading is 35.84px (1.6x of 22.4px font), so three wrapped lines occupy ~107.5px. The min-height therefore only pads the shortest (2-line) heading to 87px, leaving a 21px mismatch against the two 3-line headings."
+}

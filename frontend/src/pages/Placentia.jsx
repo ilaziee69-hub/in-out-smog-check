@@ -128,9 +128,10 @@ export default function Placentia() {
         <p>
           We&rsquo;re Placentia&rsquo;s home smog shop, but we also serve
           drivers coming in from{" "}
-          <Link to="/yorba-linda-smog-check">Yorba Linda</Link>,{" "}
-          <Link to="/fullerton-smog-check">Fullerton</Link>, and the rest of
-          North Orange County.
+          <Link to="/yorba-linda-smog-check">Yorba Linda</Link> and folks who
+          need a{" "}
+          <Link to="/fullerton-smog-check">smog check near Fullerton</Link>,
+          including the Cal State Fullerton area.
         </p>
       </section>
     </>
