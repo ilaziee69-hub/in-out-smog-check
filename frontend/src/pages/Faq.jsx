@@ -56,7 +56,7 @@ export default function Faq() {
   return (
     <>
       <Seo
-        title="Smog Check FAQ | DMV Transmission, Exemptions & Cost — In & Out Smog Check"
+        title="Smog Check FAQ | DMV, STAR & Exemptions | In & Out Smog"
         description="Placentia smog check FAQ: how the DMV gets your result, which vehicles are exempt, Test-Only benefits, cost, and what to do if your car fails. (714) 993-1660."
         path="/faq"
         jsonLd={jsonLd}

@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact In & Out Smog Check | 144 S Bradford Ave, Placentia, CA"
+        title="Contact In & Out Smog Check | Placentia, CA"
         description="Visit In & Out Smog Check at 144 S Bradford Ave, Placentia, CA 92870. Open Mon–Fri 8–5, Sat 8–3. Call (714) 993-1660 — walk-ins welcome, no appointment needed."
         path="/contact"
         jsonLd={{
