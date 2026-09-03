@@ -9,6 +9,7 @@ import Fullerton from "@/pages/Fullerton";
 import YorbaLinda from "@/pages/YorbaLinda";
 import Faq from "@/pages/Faq";
 import Contact from "@/pages/Contact";
+import Pricing from "@/pages/Pricing";
 import NotFound from "@/pages/NotFound";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/yorba-linda-smog-check" element={<YorbaLinda />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/smog-check-pricing" element={<Pricing />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

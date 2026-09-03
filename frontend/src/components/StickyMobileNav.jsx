@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
- * Sticky bottom mobile nav — Directions | Call | Hours
+ * Sticky bottom mobile nav — Directions | Call | Pricing | Hours
  * Hidden on ≥841px (desktop), always visible on mobile.
+ * Call remains the visual primary action.
  */
 
 const HOURS_TEXT = [
@@ -39,6 +41,14 @@ export default function StickyMobileNav() {
           <span className="smn-icon" aria-hidden="true">📞</span>
           <span className="smn-label">Call</span>
         </a>
+        <Link
+          to="/smog-check-pricing"
+          className="smn-item"
+          data-testid="smn-pricing"
+        >
+          <span className="smn-icon" aria-hidden="true">💲</span>
+          <span className="smn-label">Pricing</span>
+        </Link>
         <button
           type="button"
           className="smn-item"

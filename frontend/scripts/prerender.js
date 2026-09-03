@@ -55,6 +55,7 @@ const ROUTES = [
   "/",
   "/star-certified-smog",
   "/placentia-smog-check",
+  "/smog-check-pricing",
   "/fullerton-smog-check",
   "/yorba-linda-smog-check",
   "/faq",
@@ -110,6 +111,7 @@ function renderRoute(route) {
   const YorbaLinda = require(path.join(ROOT, "src/pages/YorbaLinda.jsx")).default;
   const Faq = require(path.join(ROOT, "src/pages/Faq.jsx")).default;
   const Contact = require(path.join(ROOT, "src/pages/Contact.jsx")).default;
+  const Pricing = require(path.join(ROOT, "src/pages/Pricing.jsx")).default;
   const NotFound = require(path.join(ROOT, "src/pages/NotFound.jsx")).default;
 
   let captured = null;
@@ -135,6 +137,7 @@ function renderRoute(route) {
         React.createElement(RRD.Route, { path: "/yorba-linda-smog-check", element: React.createElement(YorbaLinda) }),
         React.createElement(RRD.Route, { path: "/faq", element: React.createElement(Faq) }),
         React.createElement(RRD.Route, { path: "/contact", element: React.createElement(Contact) }),
+        React.createElement(RRD.Route, { path: "/smog-check-pricing", element: React.createElement(Pricing) }),
         React.createElement(RRD.Route, { path: "*", element: React.createElement(NotFound) })
       )
     )

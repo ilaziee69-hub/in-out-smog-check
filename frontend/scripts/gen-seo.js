@@ -17,6 +17,7 @@ const ROUTES = [
   { path: "/", priority: "1.0" },
   { path: "/star-certified-smog", priority: "0.9" },
   { path: "/placentia-smog-check", priority: "0.9" },
+  { path: "/smog-check-pricing", priority: "0.9" },
   { path: "/fullerton-smog-check", priority: "0.8" },
   { path: "/yorba-linda-smog-check", priority: "0.8" },
   { path: "/faq", priority: "0.7" },

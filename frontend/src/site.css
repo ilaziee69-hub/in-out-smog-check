@@ -424,7 +424,7 @@ a{color:#7fd4ff;}
   padding:10px env(safe-area-inset-right,10px)
           calc(10px + env(safe-area-inset-bottom,0px))
           env(safe-area-inset-left,10px);
-  gap:8px;
+  gap:6px;
   box-shadow:0 -10px 30px rgba(0,0,0,.4);
 }
 .smn-item{
@@ -1269,10 +1269,11 @@ a{color:#7fd4ff;}
   .nc-card{padding:22px;min-height:88px;}
   .nc-name{font-size:1.15rem;}
 
-  /* Sticky mobile nav: bigger tap zone */
-  .smn-item{padding:10px 4px;min-height:56px;}
-  .smn-icon{font-size:1.5rem;}
-  .smn-label{font-size:.74rem;}
+  /* Sticky mobile nav: bigger tap zone; 4 items must fit on 390px without
+     horizontal scroll — trim padding a touch and let icons/labels shrink. */
+  .smn-item{padding:10px 2px;min-height:56px;}
+  .smn-icon{font-size:1.4rem;}
+  .smn-label{font-size:.7rem;}
 
   /* Speed Timeline mobile scale */
   .speed-timeline{padding:56px 6%;}
@@ -1422,3 +1423,116 @@ details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
 @media(max-width:420px){
   .prose h2{font-size:1.45rem;}
 }
+
+/* ============================================================
+   Pricing page (/smog-check-pricing)
+   Dark navy palette, focused on the featured $60 offer.
+   Uses --pn-red for the two required red highlights.
+   ============================================================ */
+:root{ --pn-red:#ff4b4b; --pn-red-hi:#ff6b6b; }
+
+.pricing-trustline,
+.pricing-reinforce{
+  color:#b9cce0;font-size:1rem;line-height:1.6;margin:0 auto;max-width:820px;
+}
+.pricing-reinforce{margin-top:6px;color:#7fd4ff;font-weight:600;}
+
+.pricing-body{padding-top:40px;}
+
+/* Featured price card */
+.price-featured{
+  position:relative;margin:0 auto 46px;max-width:640px;
+  background:linear-gradient(180deg,#0e2b4a 0%,#0a2140 100%);
+  border:1px solid rgba(127,212,255,.22);
+  border-radius:24px;padding:34px 34px 30px;
+  box-shadow:0 20px 60px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.06);
+  text-align:center;
+}
+.price-featured::before{
+  content:"";position:absolute;inset:0;border-radius:24px;pointer-events:none;
+  background:radial-gradient(circle at 50% 0%,rgba(127,212,255,.14),transparent 60%);
+}
+.pf-eyebrow{
+  color:#7fd4ff;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;font-size:.95rem;margin:0 0 8px;
+}
+.price-featured .pf-price{
+  font-family:"Playfair Display",Georgia,serif;
+  color:#fff;font-size:6.5rem;line-height:1;font-weight:700;
+  margin:6px 0 22px;letter-spacing:-2px;
+  text-shadow:0 2px 20px rgba(0,0,0,.35);
+}
+.pf-highlights{
+  list-style:none;margin:0 0 22px;padding:0;
+  display:flex;flex-direction:column;gap:10px;align-items:center;
+}
+.pf-highlights li{
+  color:var(--pn-red);font-weight:800;letter-spacing:.4px;
+  font-size:1.05rem;text-transform:uppercase;
+}
+.pf-highlights li span{color:var(--pn-red-hi);margin-right:6px;font-weight:900;}
+.pf-time{color:#d8e8f7;font-size:1rem;margin:0 0 4px;}
+.pf-sub{color:#8aa0b8;font-size:.9rem;margin:0 0 22px;}
+.pf-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.pf-actions .btn{min-width:140px;}
+
+/* Full pricing grid */
+.price-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:22px;margin:20px 0 30px;
+}
+.price-group{
+  background:#0c223b;border:1px solid rgba(127,212,255,.14);border-radius:16px;
+  padding:22px 24px;
+}
+.price-group h3{
+  color:#7fd4ff;font-size:1.15rem;margin:0 0 14px;
+  padding-bottom:10px;border-bottom:1px solid rgba(127,212,255,.14);
+}
+.price-group ul{list-style:none;margin:0;padding:0;}
+.price-row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+  padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.06);
+  color:#d8e8f7;
+}
+.price-row:last-child{border-bottom:0;}
+.pr-label{font-size:1rem;}
+.pr-price{color:#fff;font-weight:800;font-size:1.15rem;}
+.price-row.featured .pr-price{color:#7fd4ff;font-size:1.3rem;}
+
+/* Pricing notes with two red callouts */
+.pricing-notes{
+  list-style:none;margin:0 0 40px;padding:20px 24px;
+  background:rgba(255,75,75,.06);border:1px solid rgba(255,75,75,.28);
+  border-radius:14px;
+}
+.pricing-notes li{
+  color:#e6ecf5;line-height:1.6;padding:8px 0;font-size:1rem;
+}
+.pricing-notes .pn-red{
+  color:var(--pn-red);font-weight:800;letter-spacing:.3px;
+  text-transform:uppercase;
+}
+
+.pricing-footer-cta{
+  margin-top:36px;padding:22px 24px;
+  background:rgba(127,212,255,.06);border:1px solid rgba(127,212,255,.18);
+  border-radius:14px;color:#d8e8f7;font-size:1rem;line-height:1.7;
+}
+.pricing-footer-cta a{color:#7fd4ff;font-weight:700;}
+
+/* Pricing page mobile scale */
+@media(max-width:840px){
+  .price-featured{padding:28px 20px 24px;margin-bottom:36px;}
+  .price-featured .pf-price{font-size:5rem;margin:2px 0 16px;}
+  .pf-highlights li{font-size:.98rem;}
+  .pf-actions .btn{min-width:0;flex:1;}
+  .price-grid{grid-template-columns:1fr;gap:16px;}
+  .price-group{padding:18px 20px;}
+  .pricing-notes{padding:16px 18px;}
+}
+@media(max-width:420px){
+  .price-featured .pf-price{font-size:4.4rem;}
+  .pf-highlights li{font-size:.9rem;}
+}
+

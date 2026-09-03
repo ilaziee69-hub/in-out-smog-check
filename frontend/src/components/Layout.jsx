@@ -8,6 +8,7 @@ const NAV = [
   { to: "/placentia-smog-check", label: "Placentia" },
   { to: "/fullerton-smog-check", label: "Fullerton" },
   { to: "/yorba-linda-smog-check", label: "Yorba Linda" },
+  { to: "/smog-check-pricing", label: "Pricing" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
 ];
