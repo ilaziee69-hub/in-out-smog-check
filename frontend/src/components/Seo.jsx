@@ -66,6 +66,15 @@ export default function Seo({
 }) {
   const url = `${SITE_URL}${path}`;
 
+  // SSR-only hook: prerender.js (pure-Node ReactDOMServer.renderToString)
+  // sets globalThis.__CAPTURE_SEO__ before rendering each route so it can
+  // collect this route's SEO data (title / description / canonical / jsonLd)
+  // without needing a headless browser. Zero runtime cost in the browser
+  // because the sentinel is only defined during the Node build step.
+  if (typeof globalThis !== "undefined" && typeof globalThis.__CAPTURE_SEO__ === "function") {
+    globalThis.__CAPTURE_SEO__({ title, description, url, path, jsonLd });
+  }
+
   useEffect(() => {
     if (typeof document === "undefined") return;
     if (title) document.title = title;
