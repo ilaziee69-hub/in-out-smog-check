@@ -122,45 +122,60 @@ export default function LocationVerify() {
           </div>
         </div>
 
-        {/* 6) REAL PHOTOS */}
+        {/* 6) REAL PHOTOS — direction-critical, in the order a driver sees
+             them: intersection → landmark across the street → our building →
+             the bay you pull into. No duplicate photos on this page. */}
         <div className="lv-photos" data-testid="lv-photos">
+          <figure className="lv-photo" data-testid="lv-photo-bradford">
+            <div className="lv-photo-inner">
+              <img
+                src="/photos/bradford-center.jpg"
+                alt="Bradford Avenue and Center Street intersection in Old Town Placentia — the turn-off toward In & Out Smog Check"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="lv-photo-tag">BRADFORD &amp; CENTER</span>
+            </div>
+            <figcaption>Turn near this intersection</figcaption>
+          </figure>
+
+          <figure className="lv-photo" data-testid="lv-photo-farolito">
+            <div className="lv-photo-inner">
+              <img
+                src="/photos/el-farolito.jpg"
+                alt="View from In & Out Smog Check across Center Street toward the El Farolito landmark"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="lv-photo-tag">ACROSS FROM EL FAROLITO</span>
+            </div>
+            <figcaption>El Farolito is directly across the street</figcaption>
+          </figure>
+
           <figure className="lv-photo" data-testid="lv-photo-storefront">
             <div className="lv-photo-inner">
               <img
-                src="/photos/storefront.webp"
-                alt="In & Out Smog Check storefront on S Bradford Ave in Placentia — white brick building with red-trim SMOG CHECK ONLY CENTER sign and STAR Certified badge"
+                src="/photos/storefront.jpg"
+                alt="Wide exterior of In & Out Smog Check white brick building with the large red SMOG CHECK ONLY CENTER and STAR Certified sign at 144 S Bradford Ave"
                 loading="lazy"
                 decoding="async"
               />
-              <span className="lv-photo-tag">Storefront</span>
+              <span className="lv-photo-tag">STOREFRONT</span>
             </div>
-            <figcaption>This is our building</figcaption>
+            <figcaption>Look for the big red SMOG CHECK ONLY CENTER sign</figcaption>
           </figure>
 
-          <figure className="lv-photo" data-testid="lv-photo-sign">
+          <figure className="lv-photo" data-testid="lv-photo-bay">
             <div className="lv-photo-inner">
               <img
-                src="/photos/sign.webp"
-                alt="Close-up of the In & Out Smog Check red SMOG CHECK ONLY CENTER sign with STAR Certified badge"
+                src="/photos/inspection-bay.jpg"
+                alt="Interior of In & Out Smog Check STAR-certified Test-Only inspection bay at 144 S Bradford Ave, showing the emissions analyzer and dyno"
                 loading="lazy"
                 decoding="async"
               />
-              <span className="lv-photo-tag">Our Sign</span>
+              <span className="lv-photo-tag">INSPECTION BAY</span>
             </div>
-            <figcaption>Look for this sign</figcaption>
-          </figure>
-
-          <figure className="lv-photo" data-testid="lv-photo-driveway">
-            <div className="lv-photo-inner">
-              <img
-                src="/photos/driveway.webp"
-                alt="Wide concrete driveway and parking area at 144 S Bradford Ave — the view when pulling into In & Out Smog Check"
-                loading="lazy"
-                decoding="async"
-              />
-              <span className="lv-photo-tag">Driveway</span>
-            </div>
-            <figcaption>Pull in right here</figcaption>
+            <figcaption>Pull straight into the bay — you&rsquo;re here</figcaption>
           </figure>
         </div>
 

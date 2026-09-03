@@ -1117,7 +1117,7 @@ a{color:#7fd4ff;}
 .sg-grid{
   display:grid;
   grid-template-columns:1.4fr 1fr;
-  grid-template-rows:auto auto auto;
+  grid-template-rows:auto auto auto auto;
   gap:16px;
   text-align:left;
 }
@@ -1138,7 +1138,7 @@ a{color:#7fd4ff;}
 }
 .sg-item:hover img{transform:scale(1.03);}
 .sg-large{
-  grid-row:1 / span 3;
+  grid-row:1 / span 4;
 }
 .sg-large img{min-height:100%;}
 
