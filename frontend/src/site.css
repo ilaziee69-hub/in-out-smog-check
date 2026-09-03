@@ -1536,3 +1536,18 @@ details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
   .pf-highlights li{font-size:.9rem;}
 }
 
+/* Tighten the space above the featured $60 card on true mobile so the
+   customer reaches the price faster. Trust + reinforce lines stay intact,
+   only their vertical breathing room shrinks. No copy or layout changes,
+   scoped via :has() to the pricing hero only so other page-heroes are
+   unaffected. */
+@media(max-width:520px){
+  .page-hero:has(.pricing-trustline){padding:52px 6% 28px;}
+  .page-hero:has(.pricing-trustline) h1{margin-bottom:12px;}
+  .page-hero .lead:has(+ .pricing-trustline){margin-bottom:14px;font-size:1.05rem;}
+  .pricing-trustline{margin:0;font-size:.92rem;line-height:1.55;}
+  .pricing-reinforce{margin-top:8px;font-size:.92rem;}
+  .pricing-body{padding-top:20px;}
+  .price-featured{margin-top:0;}
+}
+
