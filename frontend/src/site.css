@@ -362,6 +362,16 @@ a{color:#7fd4ff;}
   50%{box-shadow:0 0 0 8px rgba(127,212,255,0);}
 }
 
+.lv-photos-header{
+  margin:44px 0 14px;text-align:center;
+}
+.lv-photos-header h3{
+  color:#fff;font-size:1.8rem;line-height:1.15;margin:0 0 8px;
+  font-family:"Playfair Display",Georgia,serif;letter-spacing:-.5px;
+}
+.lv-photos-header p{
+  color:#b9cce0;font-size:1rem;line-height:1.55;margin:0 auto;max-width:640px;
+}
 .lv-photos{display:grid;grid-template-columns:1fr;gap:14px;}
 .lv-photo{
   margin:0;background:#0c223b;
@@ -371,6 +381,14 @@ a{color:#7fd4ff;}
   transition:transform .2s, border-color .2s;
 }
 .lv-photo:hover{transform:translateY(-2px);border-color:rgba(127,212,255,.4);}
+/* Lead card — the storefront opens "How to Spot Us" as a wider hero tile.
+   Keeps the same 16/10 crop on mobile so nothing is cut off. */
+.lv-photo-lead .lv-photo-inner{aspect-ratio:16/10;}
+.lv-photo-lead{border-color:rgba(127,212,255,.28);}
+.lv-photo-lead .lv-photo-tag{
+  background:rgba(255,75,75,.92);border-color:rgba(255,255,255,.35);
+  color:#fff;font-size:.78rem;letter-spacing:1.6px;
+}
 .lv-photo-inner{
   position:relative;
   aspect-ratio:16/10;

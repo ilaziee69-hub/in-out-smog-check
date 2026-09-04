@@ -2,10 +2,15 @@
  * "Finding Us Is Easy" — full location section.
  * Order per spec:
  *   1) Illustrated map FIRST (image used AS-IS, no crop/redraw/overlay)
- *   2) Warning banner: OC Smog Shop by Valvoline is NOT us
+ *   2) Warning banner: OC Smog Lab by Valvoline is NOT us
  *   3) Google Map embed
  *   4) Large "Get Directions" CTA
- *   5) Address card + real storefront/sign/driveway photos + landmarks
+ *   5) Address card
+ *   6) Consolidated HOW TO SPOT US photo journey:
+ *      Storefront → Bradford & Center → Tony's Deli → El Farolito
+ *      → Senior Center / Old Library → California Licensed · STAR
+ *      → Bay Entrance
+ *   7) Step-by-step arrival list
  */
 export default function LocationVerify() {
   const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
@@ -34,19 +39,17 @@ export default function LocationVerify() {
           </p>
         </div>
 
-        {/* 1) ILLUSTRATED MAP — used exactly as provided, no cropping or overlay */}
+        {/* 1) ILLUSTRATED MAP — corrected v2, used exactly as provided.
+             Preserve full image (no crop/stretch/recolor). Aspect ratio held
+             so the El Farolito row and OC SMOG LAB warning at the top of
+             the map are never cut off. */}
         <figure className="lv-illmap" data-testid="lv-illmap">
-          <picture>
-            <source srcSet="/photos/illustrated-map.webp" type="image/webp" />
-            <img
-              src="/photos/illustrated-map.png"
-              alt="Illustrated street map of Bradford Ave and Chapman Ave in Placentia showing the exact location of In & Out Smog Check at Bradford & Center St. The map labels the Valvoline plaza (OC Smog Shop is NOT us), the church, fire station, Tony's Deli, El Farolito, and other nearby landmarks so drivers can identify the correct shop."
-              width="1402"
-              height="1122"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <img
+            src="/photos/illustrated-map-v2.png"
+            alt="Illustrated street map of Bradford Ave and Chapman Ave in Placentia showing the exact location of In & Out Smog Check at Bradford & Center St. The map labels the Valvoline plaza (OC Smog Lab is NOT us), the church, fire station, Tony's Deli, El Farolito, Senior Center, and other nearby landmarks so drivers can identify the correct shop."
+            loading="lazy"
+            decoding="async"
+          />
           <figcaption className="lv-illmap-caption">
             Our own illustrated map — showing exactly where to go.
           </figcaption>
@@ -56,7 +59,10 @@ export default function LocationVerify() {
         <div className="lv-warning" data-testid="lv-warning" role="note">
           <span className="lv-warning-icon" aria-hidden="true">⚠️</span>
           <div>
-            <strong>OC Smog Shop by Valvoline is NOT In &amp; Out Smog Check.</strong>
+            <strong>
+              OC Smog Lab by Valvoline is NOT us. We are In &amp; Out Smog
+              Check at Bradford &amp; Center.
+            </strong>
             {" "}Continue south on <strong>Bradford&nbsp;Ave</strong> to{" "}
             <strong>Center&nbsp;St</strong>.
           </div>
@@ -122,14 +128,35 @@ export default function LocationVerify() {
           </div>
         </div>
 
-        {/* 6) REAL PHOTOS — direction-critical, in the order a driver sees
-             them on approach: intersection → nearby landmarks → your block →
-             our signage → the bay entrance. No duplicate photos on this
-             page. Photos shown here are chosen to minimize overlap with the
-             site-wide "Real Photos" gallery (only Bradford & Center and
-             El Farolito appear in both, because they are essential turn
-             cues). */}
+        {/* 6) HOW TO SPOT US — one consolidated visual journey. Opens with
+             the wide storefront (replacing the old "This Is Our Shop"
+             section entirely), then walks the driver through the approach:
+             intersection → nearby landmarks → your block → our signage →
+             the bay entrance. No duplicate photos within this section. */}
+        <div className="lv-photos-header" data-testid="lv-how-to-spot-heading">
+          <h3>How to Spot Us</h3>
+          <p>
+            See our storefront, recognize the nearby landmarks, and pull into
+            the correct bay.
+          </p>
+        </div>
         <div className="lv-photos" data-testid="lv-photos">
+          <figure className="lv-photo lv-photo-lead" data-testid="lv-photo-storefront">
+            <div className="lv-photo-inner">
+              <img
+                src="/photos/storefront.jpg"
+                alt="Wide exterior of In & Out Smog Check white brick building with the large red SMOG CHECK ONLY CENTER and STAR Certified sign at 144 S Bradford Ave"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="lv-photo-tag">LOOK FOR OUR SHOP</span>
+            </div>
+            <figcaption>
+              Look for our white brick building with the large red SMOG CHECK
+              ONLY CENTER sign at 144 S Bradford Ave.
+            </figcaption>
+          </figure>
+
           <figure className="lv-photo" data-testid="lv-photo-bradford">
             <div className="lv-photo-inner">
               <img
@@ -213,43 +240,6 @@ export default function LocationVerify() {
             </div>
             <figcaption>Pull straight into the bay — you&rsquo;re here</figcaption>
           </figure>
-        </div>
-
-        {/* 7) STEP-BY-STEP LANDMARKS */}
-        <div className="lv-landmarks" data-testid="lv-landmarks">
-          <h3>How to spot us</h3>
-          <ul>
-            <li>
-              <span className="lm-num">1</span>
-              <div>
-                <strong>From E Chapman Ave</strong>, turn{" "}
-                <strong>south onto S Bradford Ave</strong>.
-              </div>
-            </li>
-            <li>
-              <span className="lm-num">2</span>
-              <div>
-                Continue south down Bradford past the notary, barber, and
-                flower shop.
-              </div>
-            </li>
-            <li>
-              <span className="lm-num">3</span>
-              <div>
-                We&rsquo;re <strong>right next to Tony&rsquo;s Deli</strong> —
-                the well-known local sandwich shop. If you see Tony&rsquo;s red
-                &amp; white awning, you&rsquo;re here.
-              </div>
-            </li>
-            <li>
-              <span className="lm-num">4</span>
-              <div>
-                Look for the red <strong>SMOG CHECK ONLY CENTER</strong> sign
-                and STAR Certified badge at the{" "}
-                <strong>corner of Bradford &amp; Center St</strong>.
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </section>

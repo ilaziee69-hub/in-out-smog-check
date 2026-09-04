@@ -32,7 +32,7 @@ export default function LocationCallout() {
           <p data-testid="loc-callout-body">
             We&rsquo;re at{" "}
             <strong className="hl">Bradford&nbsp;Ave &amp; Center&nbsp;St</strong>.
-            {" "}OC Smog Shop by Valvoline is{" "}
+            {" "}OC Smog Lab by Valvoline is{" "}
             <strong className="not-us">NOT&nbsp;us</strong>.
           </p>
         </div>
