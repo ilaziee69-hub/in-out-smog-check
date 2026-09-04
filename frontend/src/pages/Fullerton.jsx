@@ -32,13 +32,14 @@ export default function Fullerton() {
       </section>
 
       <section className="prose">
-        {/* AEO / featured-snippet answer block */}
+        {/* AEO / featured-snippet answer block — kept short so it doesn't
+            repeat the hero lead verbatim, while still answering "Is there a
+            STAR smog check near Fullerton?" for search snippets. */}
         <div className="aeo-answer" data-testid="fullerton-aeo">
           <p>
-            <strong>Looking for a STAR smog check near Fullerton?</strong>{" "}
-            In &amp; Out Smog Check is a STAR-certified Test-Only station in
-            neighboring Placentia, convenient to east Fullerton and Cal State
-            Fullerton via Chapman Ave. Walk-ins are welcome.
+            <strong>Yes — Fullerton drivers can get a STAR smog check just
+            minutes away in Placentia.</strong> Take Chapman Ave east and
+            you&rsquo;re here. Walk-ins welcome, no appointment needed.
           </p>
         </div>
 

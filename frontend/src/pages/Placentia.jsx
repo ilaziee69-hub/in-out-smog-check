@@ -74,7 +74,7 @@ export default function Placentia() {
             </p>
           </div>
           <div className="card">
-            <h3>Done in About 20 Minutes</h3>
+            <h3>Done in About 10 Minutes</h3>
             <p>
               Most Placentia smog checks are completed in about 10 minutes.
               Grab a coffee at Golden State Coffee Roasters across the way —

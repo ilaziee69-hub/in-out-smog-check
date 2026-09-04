@@ -1,0 +1,33 @@
+{
+  "summary": "Frontend-only verification of 6 surgical fixes on the prerendered build served from /app/frontend/build (http://127.0.0.1:5178). Verified: waiting-area mobile object-fit:contain geometry (whole source file rendered, no crop/stretch), inspection-bay object-fit:cover regression, /faq answers present in raw HTML (9 answers, 8 with hidden attr) + toggle behavior, Placentia '10 Minutes' heading, Fullerton dedup, STAR pricing CTA + link to /smog-check-pricing, JSON-LD schema audit on all 8 routes, alt-text audit of all 11 <img> tags, canonical/title regression, 8/8 routes 200 OK, zero console errors/pageerrors on all routes, zero 'OC Smog Shop' occurrences. 5 of 6 items fully pass; item 1 passes at the CSS/render level but the source photo itself (864x648 waiting-area.jpg) is already cropped above the chair legs/bases, so 'full chair legs visible' is NOT achievable with the current asset.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "WhatToExpect / wte-card-waiting", "issue": "Source asset limitation: /photos/waiting-area.jpg is 864x648 and is itself cropped just below the chair seats/armrests — chair legs and the steel base are not present in the file at all. Rendered card now shows 100% of the file (object-fit:contain, natRatio 1.3333 == boxRatio 1.3333, content box == container box, no letterbox, no distortion). To meet 'full chair legs/bases visible' an uncropped/taller original photo must be re-exported into public/photos.", "selector": "[data-testid=\"wte-card-waiting\"] img", "priority": "HIGH"},
+      {"component": "WhatToExpect badge", "issue": "The 'WAITING AREA' pill overlays the bottom-left chair (occludes part of the leftmost chair seat) on mobile. Cosmetic; consider moving the badge to the top-left or outside the image.", "selector": "[data-testid=\"wte-card-waiting\"] .wte-badge", "priority": "LOW"},
+      {"component": "Home img alt (waiting area)", "issue": "Alt text says 'four black customer chairs' — image indeed shows 4 chairs, but review notes mention 3; verify wording matches the intended photo.", "selector": "img[src='/photos/waiting-area.jpg']", "priority": "LOW"}
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": ["/app/tests/alt_audit.py"],
+  "action_items": [
+    "Re-export /app/frontend/public/photos/waiting-area.jpg from the true original (taller frame incl. chair legs/steel bases) — CSS is already correct (object-fit:contain on mobile); the current file cannot show legs because they were cropped out of the asset.",
+    "Optional: /star-certified-smog JSON-LD is @type Service with a nested AutomotiveBusiness provider (no standalone AutomotiveBusiness node). If the audit requires a top-level AutomotiveBusiness on that page, add one (avoid duplicating the Service).",
+    "Optional: /fullerton-smog-check has NO JSON-LD at all (0 ld+json blocks) while every other route has one — consider adding AutomotiveBusiness for parity.",
+    "Optional review: Home JSON-LD contains aggregateRating (4.8/160) plus one Review node; self-serve review/rating markup on a LocalBusiness is ignored/penalized by Google unless the reviews are genuinely displayed and sourced on-page. Yorba Linda also carries aggregateRating. Verify these numbers are real Google data before publishing.",
+    "Optional cleanup: ShopGallery code/CSS ('shop-gallery', 16 refs) is still bundled in /build/static though not rendered on any page — dead code."
+  ],
+  "critical_code_review_comments": [
+    "Faq.jsx renders every answer unconditionally with hidden={!isOpen} — crawler-visible and accessible; aria-expanded is set correctly. Good.",
+    "StarCertified.jsx pricing copy uses only prices present on /smog-check-pricing ($60 for 2000 & Newer cars, certificate fee included, one free retest within 30 days) — verified against the live pricing page markup (pricing-featured-price = $60). No invented prices.",
+    "site.css media query (max-width:840px) applies object-fit:contain only to the waiting card; bay card keeps cover — verified via computed style at 390px (contain) and 1700px (cover)."
+  ],
+  "updated_files": ["/app/tests/alt_audit.py"],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "92% (11/12 checks fully pass; waiting-area 'chair legs' blocked by source asset)"},
+  "seed_data_creation": "None",
+  "should_call_test_agent_after_fix": true,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Serve build: python3 -m http.server 5178 --directory /app/frontend/build (already verified build is newer than src). Detailed verified results: /faq raw HTML contains 9 'data-testid=\"faq-answer-' occurrences (grep -c returns 1 because HTML is minified to one line — use grep -o | wc -l), answers 1..8 carry hidden attr, answer-0 open by default, answer text present pre-click, toggle works both ways. placentia h3 == '<h3>Done in About 10 Minutes</h3>'. fullerton 'Looking for a STAR smog check near Fullerton' count = 0 and the AEO block starts with the required sentence. star-certified: 0 occurrences of 'for today\u2019s rate', contains 'See Full Smog Check Pricing' + href=\"/smog-check-pricing\" + $60 + 'certificate fee'; clicking star-see-pricing-btn navigates to /smog-check-pricing. Schema: Home 1 AutomotiveBusiness, faq FAQPage, placentia AutomotiveBusiness, yorba-linda AutomotiveBusiness+FAQPage (2 blocks), contact & pricing AutomotiveBusiness, star-certified Service(provider AutomotiveBusiness), fullerton none; no duplicates. Alt-text audit: 11 imgs, 0 missing/short. All 8 routes 200, zero console errors/pageerrors, sticky mobile nav (Directions|Call|Pricing|Hours) present on all routes, canonicals/titles unchanged, illustrated-map-v2.png referenced once, 0 'OC Smog Shop', 'OC Smog Lab' present on Home.",
+  "rca_of_the_issue": "Waiting-area 'cropped chairs' is not a CSS bug anymore: computed style is object-fit:contain and the image's natural aspect (864/648 = 1.3333) exactly matches the 4:3 container (349x261.8), so the entire file is displayed with no clipping or stretching. The chair legs/steel bases are absent from the JPG itself (verified by opening /app/frontend/build/photos/waiting-area.jpg and /app/frontend/public/photos/waiting-area.jpg — both 864x648, framed just below the seats). Fix requires a new source export, not a style change."
+}

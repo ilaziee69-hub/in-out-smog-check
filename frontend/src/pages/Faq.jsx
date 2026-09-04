@@ -90,11 +90,13 @@ export default function Faq() {
                   <span>{item.q}</span>
                   <span className="faq-icon">{isOpen ? "–" : "+"}</span>
                 </button>
-                {isOpen && (
-                  <div className="faq-a" data-testid={`faq-answer-${i}`}>
-                    {item.a}
-                  </div>
-                )}
+                <div
+                  className="faq-a"
+                  data-testid={`faq-answer-${i}`}
+                  hidden={!isOpen}
+                >
+                  {item.a}
+                </div>
               </div>
             );
           })}

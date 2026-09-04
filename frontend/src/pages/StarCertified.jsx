@@ -101,9 +101,24 @@ export default function StarCertified() {
 
         <h2>Pricing</h2>
         <p>
-          Our STAR smog check is competitively priced and includes the state
-          certificate fee. Cash, debit, and all major credit cards accepted.
-          Call <a href="tel:+17149931660">(714) 993-1660</a> for today’s rate.
+          We publish our full price list up front — every price includes the
+          state certificate fee, and every failed inspection comes with one
+          free retest within 30 days. Most 2000 &amp; newer cars are{" "}
+          <strong>$60</strong>; trucks, SUVs &amp; vans, older year ranges,
+          diesels, and RVs are listed in full on our pricing page.
+        </p>
+        <p>
+          <Link
+            to="/smog-check-pricing"
+            className="btn primary"
+            data-testid="star-see-pricing-btn"
+          >
+            See Full Smog Check Pricing
+          </Link>
+        </p>
+        <p>
+          Cash, debit, and all major credit cards accepted. Questions? Call{" "}
+          <a href="tel:+17149931660">(714) 993-1660</a>.
         </p>
       </section>
     </>
