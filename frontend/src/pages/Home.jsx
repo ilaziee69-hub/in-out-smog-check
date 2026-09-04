@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Seo, { SITE_URL, OG_IMAGE } from "@/components/Seo";
 import LocationCallout from "@/components/LocationCallout";
 import LocationVerify from "@/components/LocationVerify";
+import WhatToExpect from "@/components/WhatToExpect";
 import SpeedTimeline from "@/components/SpeedTimeline";
 import WhyFaster from "@/components/WhyFaster";
 import TrustBadges from "@/components/TrustBadges";
@@ -196,6 +197,9 @@ export default function Home() {
 
       {/* FULL LOCATION SECTION — illustrated map first, then warning, then Google Map, then Get Directions */}
       <LocationVerify />
+
+      {/* WHAT TO EXPECT WHEN YOU ARRIVE — two real photos (waiting area + bay) */}
+      <WhatToExpect />
 
       {/* WHY WE'RE FASTER — 6-card grid */}
       <WhyFaster />
