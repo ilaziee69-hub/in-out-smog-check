@@ -8,6 +8,36 @@ export default function Fullerton() {
         title="Fullerton Smog Check | STAR Test-Only | In & Out Smog"
         description="STAR-certified Test-Only smog checks for Fullerton drivers. In & Out Smog Check is in neighboring Placentia — walk-ins welcome, fast inspections."
         path="/fullerton-smog-check"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Fullerton Smog Check — STAR Certified Test-Only",
+          serviceType: "STAR Certified Test-Only Smog Check",
+          description:
+            "STAR-Certified Test-Only smog inspections for Fullerton, CA drivers. Performed at In & Out Smog Check in neighboring Placentia — no separate Fullerton location.",
+          provider: {
+            "@type": "AutomotiveBusiness",
+            name: "In & Out Smog Check",
+            telephone: "+1-714-993-1660",
+            url: "https://download-hub-281.preview.emergentagent.com/",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "144 S Bradford Ave",
+              addressLocality: "Placentia",
+              addressRegion: "CA",
+              postalCode: "92870",
+              addressCountry: "US",
+            },
+          },
+          areaServed: {
+            "@type": "City",
+            name: "Fullerton",
+            containedInPlace: {
+              "@type": "AdministrativeArea",
+              name: "California",
+            },
+          },
+        }}
       />
 
       <section className="page-hero">
