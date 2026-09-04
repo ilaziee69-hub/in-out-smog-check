@@ -1,0 +1,17 @@
+{
+  "summary": "Frontend-only bug verification of the WAITING AREA image crop fix, tested against the local static server (python3 -m http.server 5178 --directory /app/frontend/build). Verified computed object-position/object-fit on both What-to-Expect images at 390x844, captured card-level screenshots plus an A/B comparison against center-center, checked layout/copy/no-regression items, and confirmed all 8 prerendered routes return 200. All checks passed with zero console errors and zero page errors.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "CSS fix is a single scoped rule inside the mobile media query: [data-testid=\"wte-card-waiting\"] img{object-position:center 78%;} — correctly scoped, no effect on the bay card or desktop (verified computed 50% 50% at 1920px for both images)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "not tested (skipped per request)", "frontend": "100%"},
+  "seed_data_creation": "none",
+  "should_call_test_agent_after_fix": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "FIX VERIFIED — site is ready to publish. Evidence at 390x844 on local build server (http://127.0.0.1:5178): waiting img computed object-position '50% 78%', object-fit 'cover', transform 'none', rendered 349x218.125 (natural 864x648 -> no distortion). Bay img unchanged at '50% 50%' / cover / transform none / same 349x218.125 box, dyno + equipment still centered. Visual: BAR / SMOG CHECK RATES / customer-information signs remain fully visible along the top of the waiting-area frame, and the top edges of two black chair backs (plus a third partially) are clearly visible at the bottom; an A/B screenshot with object-position forced back to 50% 50% shows only slivers of the chair tops, confirming the 78% value materially increases chair visibility. Layout unchanged: wte-grid single column (351px) at 390px, two cards stacked; heading 'What to Expect When You Arrive'; captions verbatim ('Have a seat while we complete your smog inspection — most tests take about 10 minutes.' / 'Our STAR-certified Test-Only inspection bay and testing equipment.'); scrollWidth === clientWidth === 390 (no horizontal scroll). No other regressions: 0 occurrences of 'OC Smog Shop' in rendered HTML ('OC Smog Lab' present), sticky mobile nav order Directions | Call | Pricing | Hours, illustrated map still /photos/illustrated-map-v2.png, 'How to Spot Us' heading present. Desktop (1920) grid still 2 columns (539px 539px). All 8 prerendered routes (/, /star-certified-smog/, /placentia-smog-check/, /fullerton-smog-check/, /yorba-linda-smog-check/, /smog-check-pricing/, /faq/, /contact/) return 200. Zero console.error, zero pageerror, no React #418 hydration errors. Note: production domain was NOT tested (not redeployed) per instructions; build at /app/frontend/build already contains the fix (main.7d68e53e.css).",
+  "rca_of_the_issue": "Original mobile crop used default center center on a 16/10 cropped 4:3 photo, cutting off the chair backs at the bottom. Shifting object-position to center 78% moves the visible window down within the same box, keeping the wall signage in frame while exposing the chairs; no dimension or source-image change required."
+}

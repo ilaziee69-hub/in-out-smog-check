@@ -1620,6 +1620,11 @@ details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
 @media(max-width:840px){
   .what-to-expect{padding:50px 5% 20px;}
   .what-to-expect h2{font-size:1.9rem;margin-bottom:22px;}
+/* Waiting-area photo: shift the crop toward the bottom so more of the
+   chairs are visible on mobile while keeping the BAR / customer-information
+   signs on the wall in-frame. Only affects this one card. */
+[data-testid="wte-card-waiting"] img{object-position:center 78%;}
+
   .wte-grid{grid-template-columns:1fr;gap:16px;}
   .wte-photo{aspect-ratio:16/10;}
 }
