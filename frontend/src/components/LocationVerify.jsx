@@ -123,8 +123,12 @@ export default function LocationVerify() {
         </div>
 
         {/* 6) REAL PHOTOS — direction-critical, in the order a driver sees
-             them: intersection → landmark across the street → our building →
-             the bay you pull into. No duplicate photos on this page. */}
+             them on approach: intersection → nearby landmarks → your block →
+             our signage → the bay entrance. No duplicate photos on this
+             page. Photos shown here are chosen to minimize overlap with the
+             site-wide "Real Photos" gallery (only Bradford & Center and
+             El Farolito appear in both, because they are essential turn
+             cues). */}
         <div className="lv-photos" data-testid="lv-photos">
           <figure className="lv-photo" data-testid="lv-photo-bradford">
             <div className="lv-photo-inner">
@@ -137,6 +141,22 @@ export default function LocationVerify() {
               <span className="lv-photo-tag">BRADFORD &amp; CENTER</span>
             </div>
             <figcaption>Turn near this intersection</figcaption>
+          </figure>
+
+          <figure className="lv-photo" data-testid="lv-photo-tonys">
+            <div className="lv-photo-inner">
+              <img
+                src="/photos/tonys-deli.jpg"
+                alt="Tony's Deli storefront on Bradford Avenue in Placentia — a nearby landmark just north of In & Out Smog Check"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="lv-photo-tag">TONY&rsquo;S DELI</span>
+            </div>
+            <figcaption>
+              Tony&rsquo;s Deli is a nearby landmark just north of us on
+              Bradford Ave.
+            </figcaption>
           </figure>
 
           <figure className="lv-photo" data-testid="lv-photo-farolito">
@@ -152,28 +172,44 @@ export default function LocationVerify() {
             <figcaption>El Farolito is directly across the street</figcaption>
           </figure>
 
-          <figure className="lv-photo" data-testid="lv-photo-storefront">
+          <figure className="lv-photo" data-testid="lv-photo-senior">
             <div className="lv-photo-inner">
               <img
-                src="/photos/storefront.jpg"
-                alt="Wide exterior of In & Out Smog Check white brick building with the large red SMOG CHECK ONLY CENTER and STAR Certified sign at 144 S Bradford Ave"
+                src="/photos/senior-center.jpg"
+                alt="Placentia Senior Center / Old Library building near Bradford Avenue and Center Street, across from In & Out Smog Check"
                 loading="lazy"
                 decoding="async"
               />
-              <span className="lv-photo-tag">STOREFRONT</span>
+              <span className="lv-photo-tag">SENIOR CENTER / OLD LIBRARY</span>
             </div>
-            <figcaption>Look for the big red SMOG CHECK ONLY CENTER sign</figcaption>
+            <figcaption>
+              The Placentia Senior Center / Old Library is across from us near
+              Bradford &amp; Center.
+            </figcaption>
           </figure>
 
-          <figure className="lv-photo" data-testid="lv-photo-bay">
+          <figure className="lv-photo" data-testid="lv-photo-licensed">
             <div className="lv-photo-inner">
               <img
-                src="/photos/inspection-bay.jpg"
-                alt="Interior of In & Out Smog Check STAR-certified Test-Only inspection bay at 144 S Bradford Ave, showing the emissions analyzer and dyno"
+                src="/photos/licensed-bay-sign.jpg"
+                alt="California Licensed Smog Check and STAR Certified Test-Only signage at In & Out Smog Check, 144 S Bradford Ave"
                 loading="lazy"
                 decoding="async"
               />
-              <span className="lv-photo-tag">INSPECTION BAY</span>
+              <span className="lv-photo-tag">CALIFORNIA LICENSED &middot; STAR TEST-ONLY</span>
+            </div>
+            <figcaption>Confirm the California Licensed / STAR Test-Only signage</figcaption>
+          </figure>
+
+          <figure className="lv-photo" data-testid="lv-photo-bay-entrance">
+            <div className="lv-photo-inner">
+              <img
+                src="/photos/bay-entrance.jpg"
+                alt="Bay entrance at In & Out Smog Check, 144 S Bradford Ave in Placentia — where drivers pull in for their smog inspection"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="lv-photo-tag">BAY ENTRANCE</span>
             </div>
             <figcaption>Pull straight into the bay — you&rsquo;re here</figcaption>
           </figure>
