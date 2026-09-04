@@ -1620,10 +1620,15 @@ details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
 @media(max-width:840px){
   .what-to-expect{padding:50px 5% 20px;}
   .what-to-expect h2{font-size:1.9rem;margin-bottom:22px;}
-/* Waiting-area photo: shift the crop toward the bottom so more of the
-   chairs are visible on mobile while keeping the BAR / customer-information
-   signs on the wall in-frame. Only affects this one card. */
-[data-testid="wte-card-waiting"] img{object-position:center 78%;}
+/* Waiting-area photo: match the mobile card's aspect ratio to the source
+   photo's natural 4:3 so the whole scene is visible — full chair seats and
+   legs at the bottom, BAR / SMOG CHECK / customer-info signs at the top —
+   without cropping any part of the image. The bay card keeps 16:10.
+   Applied at ≤840px only so desktop 4:3 grid stays unchanged. */
+@media(max-width:840px){
+  [data-testid="wte-card-waiting"] .wte-photo{aspect-ratio:4/3;}
+  [data-testid="wte-card-waiting"] img{object-position:center center;}
+}
 
   .wte-grid{grid-template-columns:1fr;gap:16px;}
   .wte-photo{aspect-ratio:16/10;}
