@@ -58,5 +58,18 @@ a{color:var(--red)}
 [data-testid="lv-photo-licensed"] .lv-photo-inner img{object-position:center 42%!important}
 [data-testid="lv-photo-bay-entrance"] .lv-photo-inner img{object-position:center 38%!important}
 .wte-grid{gap:24px!important}.wte-card{border-radius:14px!important;overflow:hidden!important}.wte-photo{aspect-ratio:16/10!important;overflow:hidden!important;background:#f2f2f0!important}.wte-photo img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;filter:brightness(1.05) contrast(1.04) saturate(.9)!important}
+
+/* Final mobile polish: remove every remaining pale-blue/navy treatment. */
+.nc-eyebrow,.wf-eyebrow{background:#fff!important;border:1px solid #cfcfcb!important;color:var(--ink)!important;box-shadow:0 5px 16px rgba(0,0,0,.035)!important}
+.nc-lead,.wf-lead{color:#62666d!important;opacity:1!important}
+.wf-icon{filter:grayscale(1)!important;color:var(--ink)!important}
+.trust-badges{background:#fff!important;color:var(--ink)!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}
+.trust-badges .tb-inner{background:#fff!important}
+.trust-badges .tb-badge{background:#fff!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-top:3px solid #111!important;box-shadow:0 10px 26px rgba(0,0,0,.06)!important}
+.trust-badges .tb-title{color:var(--ink)!important}
+.trust-badges .tb-sub{color:#666a70!important}
+.trust-badges .tb-icon{filter:grayscale(1)!important}
+.trust-badges [data-testid="tb-since"] .tb-title{color:var(--red)!important}
+
 @media(max-width:980px){.lv-photos{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-@media(max-width:840px){.nav-links{background:#fff!important;border-top:1px solid var(--line)!important}.nav-toggle span{background:var(--ink)!important}.hero{padding-top:24px!important}.lv-photos{grid-template-columns:1fr!important}.lv-photo-inner{aspect-ratio:4/3!important}.heritage .stat{background:#fff!important}.banner{background:#fff!important}.contact-box>div{background:#fff!important;color:var(--ink)!important}}
+@media(max-width:840px){.nav-links{background:#fff!important;border-top:1px solid var(--line)!important}.nav-toggle span{background:var(--ink)!important}.hero{padding-top:24px!important}.lv-photos{grid-template-columns:1fr!important}.lv-photo-inner{aspect-ratio:4/3!important}.heritage .stat{background:#fff!important}.banner{background:#fff!important}.contact-box>div{background:#fff!important;color:var(--ink)!important}.trust-badges{background:#fff!important}}
