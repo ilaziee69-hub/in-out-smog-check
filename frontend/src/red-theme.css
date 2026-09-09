@@ -5,24 +5,24 @@ a{color:var(--red)}
 .site-nav-wrap{background:rgba(255,255,255,.97)!important;border-bottom:1px solid var(--line)!important;box-shadow:0 5px 22px rgba(0,0,0,.05);backdrop-filter:blur(10px)}
 .logo{color:var(--ink)!important}.logo span{color:var(--red)!important}
 .nav-link{color:#292b2f!important}.nav-link:hover,.nav-link.active{color:var(--red)!important}.nav-link.active:after{background:var(--red)!important}
-.nav-cta,.primary{background:var(--red)!important;color:#fff!important;border-color:var(--red)!important;box-shadow:0 8px 22px rgba(223,32,39,.18)}
-.nav-cta:hover,.primary:hover{background:var(--red-dark)!important}
-.secondary{background:#fff!important;color:var(--ink)!important;border:2px solid var(--ink)!important}
+.nav-cta,.primary,.loc-callout-btn,.lv-directions-btn,.rv-cta{background:var(--red)!important;color:#fff!important;border-color:var(--red)!important;box-shadow:0 8px 22px rgba(223,32,39,.18)!important}
+.nav-cta:hover,.primary:hover,.loc-callout-btn:hover,.lv-directions-btn:hover,.rv-cta:hover{background:var(--red-dark)!important}
+.secondary,.lv-call-btn{background:#fff!important;color:var(--ink)!important;border:2px solid var(--ink)!important}
 .hero{background:linear-gradient(135deg,#fff 0%,#fbfbfa 60%,#f3f3f1 100%)!important;color:var(--ink)!important;border-bottom:1px solid var(--line)}
 .hero:before{background:radial-gradient(circle,rgba(223,32,39,.09),transparent 66%)!important}
 .hero .eyebrow{color:var(--red)!important;border-color:rgba(223,32,39,.35)!important;background:#fff!important}
 .hero-rating{background:#fff!important;border:1px solid var(--line)!important;color:#24262a!important;box-shadow:0 6px 18px rgba(0,0,0,.05)}
-.hero-rating-stars,.accent{color:var(--red)!important}
+.hero-rating-stars,.accent,.star-row .star,.st-eyebrow,.wf-eyebrow,.rv-eyebrow,.nc-eyebrow,.lv-eyebrow,.loc-callout-accent,.not-us,.hl,.lv-pin,.nc-arrow{color:var(--red)!important}
 .hero h1,.hero-headline{color:var(--ink)!important;text-shadow:none!important}
 .hero .text>p:not(.eyebrow):not(.hero-headline):not(.hero-microcopy){color:#4e5156!important}
 .hero-microcopy{color:#666b70!important}
 .image-box{background:#fff!important;border:1px solid var(--line)!important;box-shadow:0 22px 55px rgba(0,0,0,.12)!important}
 .hero-badge{background:#fff!important;border:1px solid var(--line)!important;color:#26282c!important;box-shadow:0 7px 18px rgba(0,0,0,.05)}
-.services,.seo-content,.nearby-cities,.reviews-section,.location-verify,.what-to-expect,.why-faster{background:#fff!important;color:var(--ink)!important}
-.services h2,.seo-content h2,.nearby-cities h2,.reviews-section h2,.location-verify h2,.what-to-expect h2,.why-faster h2{color:var(--ink)!important}
-.card,.seo-content-inner,.city-card,.review-card,.expect-card,.reason-card,.location-card{background:#fff!important;color:var(--ink)!important;border:1px solid var(--line)!important;box-shadow:0 12px 30px rgba(0,0,0,.055)!important}
-.card h3,.city-card h3,.review-card h3,.expect-card h3,.reason-card h3{color:var(--ink)!important}
-.card p,.seo-content p,.city-card p,.review-card p,.expect-card p,.reason-card p{color:var(--muted)!important}
+.services,.seo-content,.nearby-cities,.reviews-section,.location-verify,.what-to-expect,.why-faster,.loc-callout{background:#fff!important;color:var(--ink)!important}
+.services h2,.seo-content h2,.nearby-cities h2,.reviews-section h2,.location-verify h2,.what-to-expect h2,.why-faster h2,.loc-callout h2{color:var(--ink)!important}
+.card,.seo-content-inner,.city-card,.review-card,.expect-card,.reason-card,.location-card,.wf-card,.rv-rating-card,.rv-featured,.rv-highlight,.nc-card,.lv-address-card,.lv-warning,.lv-map,.lv-photo,.wte-card{background:#fff!important;color:var(--ink)!important;border:1px solid var(--line)!important;box-shadow:0 12px 30px rgba(0,0,0,.055)!important}
+.card h3,.city-card h3,.review-card h3,.expect-card h3,.reason-card h3,.wf-card h3,.rv-highlight-tag,.nc-name{color:var(--ink)!important}
+.card p,.seo-content p,.city-card p,.review-card p,.expect-card p,.reason-card p,.wf-card p,.rv-highlight p,.nc-note,.lv-lead,.wte-card figcaption{color:var(--muted)!important}
 .speed-timeline,.heritage,.trust-strip{background:var(--charcoal)!important;color:#fff!important}
 .speed-timeline h2,.heritage h2,.trust-strip h2{color:#fff!important}
 .heritage .accent{color:#ff4b50!important}
@@ -30,4 +30,32 @@ a{color:var(--red)}
 .site-footer a{color:#fff!important}.site-footer .logo{color:#fff!important}.site-footer .logo span{color:#ff4b50!important}
 .sticky-mobile-nav{background:#fff!important;border-top:1px solid var(--line)!important;box-shadow:0 -8px 24px rgba(0,0,0,.09)!important}.smn-item{color:#202226!important}.smn-primary{background:var(--red)!important;color:#fff!important}
 .hours-sheet{background:#fff!important;color:var(--ink)!important}
-@media(max-width:840px){.nav-links{background:#fff!important;border-top:1px solid var(--line)!important}.nav-toggle span{background:var(--ink)!important}.hero{padding-top:24px!important}}
+
+/* Remove the old blue visual system completely. */
+.lv-photo-tag,.wte-tag,.lv-map-pill,.heritage-badge,.rv-tag{background:var(--red)!important;color:#fff!important;border-color:var(--red)!important}
+.lv-illmap-caption,.lv-photo figcaption{background:#111214!important;color:#fff!important;border-color:#111214!important}
+.lv-warning{border-left:4px solid var(--red)!important}
+.lv-warning-icon{color:var(--red)!important}
+.st-time,.st-dot{color:var(--red)!important;border-color:var(--red)!important}
+.st-dot{background:#fff!important}.st-dot.done{background:var(--red)!important;color:#fff!important}
+.st-track:before{background:linear-gradient(var(--red),#ececea)!important}
+.nc-card-home{border:2px solid var(--red)!important}
+.tb-badge{border-top:3px solid var(--red)!important}
+
+/* Make shop photos look polished instead of giant/raw. */
+.lv-photos{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important;align-items:start!important}
+.lv-photo,.lv-photo-lead{grid-column:auto!important;margin:0!important;border-radius:14px!important;overflow:hidden!important;background:#fff!important}
+.lv-photo-inner{aspect-ratio:4/3!important;overflow:hidden!important;background:#f2f2f0!important}
+.lv-photo-inner img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;display:block!important;filter:brightness(1.04) contrast(1.04) saturate(.94)!important}
+.lv-photo figcaption{padding:12px 14px!important;min-height:48px!important;font-size:14px!important;line-height:1.35!important}
+.lv-photo-tag{left:12px!important;bottom:12px!important;padding:7px 10px!important;border-radius:999px!important;font-size:11px!important;letter-spacing:.04em!important;box-shadow:0 4px 12px rgba(0,0,0,.2)!important}
+[data-testid="lv-photo-licensed"] .lv-photo-inner img{object-position:center 42%!important}
+[data-testid="lv-photo-bay-entrance"] .lv-photo-inner img{object-position:center 38%!important}
+
+.wte-grid{gap:24px!important}
+.wte-card{border-radius:14px!important;overflow:hidden!important}
+.wte-photo{aspect-ratio:16/10!important;overflow:hidden!important;background:#f2f2f0!important}
+.wte-photo img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;filter:brightness(1.04) contrast(1.04) saturate(.94)!important}
+
+@media(max-width:980px){.lv-photos{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:840px){.nav-links{background:#fff!important;border-top:1px solid var(--line)!important}.nav-toggle span{background:var(--ink)!important}.hero{padding-top:24px!important}.lv-photos{grid-template-columns:1fr!important}.lv-photo-inner{aspect-ratio:4/3!important}}
