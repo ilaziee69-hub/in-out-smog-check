@@ -8,5 +8,5 @@ const nextConfig = {
     return config;
   },
 };
-// Trigger Vercel deployment for nextjs-migration branch.
+// Trigger Vercel deployment after switching project framework to Next.js.
 module.exports = nextConfig;
