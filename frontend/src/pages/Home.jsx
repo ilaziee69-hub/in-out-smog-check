@@ -52,81 +52,62 @@ export default function Home() {
         jsonLd={businessJsonLd}
       />
 
-      <main className="new-home">
-        <section className="nh-hero" aria-labelledby="nh-title">
-          <div className="nh-hero-copy">
-            <p className="nh-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
-            <h1 id="nh-title">Fast. Honest.<br />Reliable Smog Checks<br />in <span>Placentia, CA.</span></h1>
-            <p className="nh-lead">Get in. Get out. No repairs, no upsells — just a fast, honest smog check from a team serving local drivers since 1999.</p>
-            <div className="nh-actions">
-              <a className="nh-btn nh-btn-red" href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870" target="_blank" rel="noopener noreferrer">🚗 Get a Smog Check →</a>
-              <Link className="nh-btn nh-btn-outline" to="/smog-check-pricing">View Prices</Link>
+      <main className="final-home">
+        <section className="fh-hero" aria-labelledby="fh-title">
+          <div className="fh-hero-copy">
+            <p className="fh-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
+            <h1 id="fh-title">Fast. Honest.<br />Reliable Smog Checks<br />in <span>Placentia, CA.</span></h1>
+            <p className="fh-lead">Get in. Get out. No repairs, no upsells — just a fast, honest smog check from a local shop serving drivers since 1999.</p>
+            <div className="fh-actions">
+              <a className="fh-btn fh-btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870" target="_blank" rel="noopener noreferrer">🚗 Get a Smog Check →</a>
+              <a className="fh-btn fh-btn-outline" href="tel:+17149931660">☎ Call Now</a>
             </div>
-            <div className="nh-mini-trust">
+            <div className="fh-mini-trust" aria-label="Quick service highlights">
               <span>★ STAR Certified Test-Only</span>
               <span>● Walk-Ins Welcome</span>
               <span>◷ Same-Day Service</span>
             </div>
           </div>
-          <div className="nh-hero-photo">
+          <div className="fh-hero-photo">
             <img src="/photos/storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" />
           </div>
         </section>
 
-        <section className="nh-trust-strip" aria-label="Why choose In & Out Smog Check">
+        <section className="fh-process-strip" aria-label="In and Out Smog Check highlights">
           <div><b>◷</b><span><strong>10 Minute</strong><small>Smog Checks</small></span></div>
-          <div><b>◆</b><span><strong>STAR Certified</strong><small>Test-Only</small></span></div>
-          <div><b>$</b><span><strong>Transparent</strong><small>Pricing</small></span></div>
+          <div><b>⌂</b><span><strong>Local & Family Owned</strong><small>Serving Placentia</small></span></div>
+          <div><b>▣</b><span><strong>DMV Certificate Sent</strong><small>Electronically</small></span></div>
           <div><b>●●●</b><span><strong>25+ Years</strong><small>in the Community</small></span></div>
         </section>
 
-        <section className="nh-overview">
-          <div className="nh-shop-photo">
-            <img src="/photos/inspection-bay.jpg" alt="In & Out Smog Check inspection bay" />
-          </div>
-          <div className="nh-copy-block">
-            <h2>Trusted in Placentia<br /><span>Since 1999.</span></h2>
-            <p>Fast, honest STAR-certified Test-Only smog checks with no repair upsells — just straightforward testing from a local shop you can trust.</p>
-            <Link className="nh-btn nh-btn-red" to="/placentia-smog-check">About Our Shop →</Link>
-          </div>
-          <div className="nh-flow-card">
-            <h3>Our 10-Minute Smog Check Flow</h3>
-            <div className="nh-flow-row">
-              <div><b>5</b><small>min</small><span>Vehicle / Visual Inspection</span></div>
-              <i>→</i>
-              <div><b>3</b><small>min</small><span>Smog Test / OBD-II</span></div>
-              <i>→</i>
-              <div><b>2</b><small>min</small><span>DMV Cert Sent</span></div>
-            </div>
-            <div className="nh-value-grid">
-              <span>♧<small>Cleaner Air</small></span>
-              <span>●<small>Local. Honest.</small></span>
-              <span>●●●<small>Trusted 25+ Years</small></span>
-            </div>
-          </div>
-        </section>
+        <section className="fh-main-grid">
+          <figure className="fh-bay-photo">
+            <img src="/photos/inspection-bay.jpg" alt="In & Out Smog Check inspection bay in Placentia" />
+            <figcaption>INSPECTION BAY</figcaption>
+          </figure>
 
-        <section className="nh-bottom-grid">
-          <div className="nh-price-panel">
-            <div className="nh-section-head">
-              <div><h2>Smog Check Prices</h2><p>Certificate fees included. No hidden fees.</p></div>
-              <Link className="nh-btn nh-btn-dark" to="/smog-check-pricing">View All Prices</Link>
+          <div className="fh-why-panel">
+            <div className="fh-why-copy">
+              <h2>Why Drivers Choose Us</h2>
+              <p>In & Out Smog Check provides fast, honest STAR-certified test-only smog checks in Placentia. We don’t sell repairs, so there’s no repair upsell — just straightforward testing, quick service, and a smooth experience from start to finish.</p>
+              <a className="fh-btn fh-btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870" target="_blank" rel="noopener noreferrer">Get a Smog Check →</a>
             </div>
-            <div className="nh-price-grid">
-              <div><span>🚗</span><small>2000 & newer Cars</small><strong>$60</strong></div>
-              <div><span>🚙</span><small>2000 & newer Trucks / SUVs / Vans</small><strong>$70</strong></div>
-              <div><span>⛽</span><small>Diesel</small><strong>$80</strong></div>
-              <div><span>🚐</span><small>RV</small><strong>$120</strong></div>
-            </div>
-          </div>
 
-          <div className="nh-find-card">
-            <div>
-              <h2>Find Us in Placentia</h2>
-              <p><b>📍</b> 144 S Bradford Ave<br />Placentia, CA 92870</p>
-              <a className="nh-btn nh-btn-red" href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870" target="_blank" rel="noopener noreferrer">Get Directions →</a>
+            <div className="fh-feature-grid">
+              <div><b>🛠</b><strong>No Repairs or Upsells</strong><small>Honest, test-only smog checks.</small></div>
+              <div><b>◷</b><strong>Fast 10-Minute Process</strong><small>Get in and out quickly.</small></div>
+              <div><b>🚗</b><strong>We Smog All Cars</strong><small>Cars of all years and types welcome.</small></div>
+              <div><b>●●●</b><strong>Trusted for 25+ Years</strong><small>Serving local drivers since 1999.</small></div>
             </div>
-            <img src="/photos/illustrated-map-v2.png" alt="Illustrated map showing In & Out Smog Check on Bradford Avenue in Placentia" />
+
+            <div className="fh-find-card">
+              <div>
+                <h3>Find Us in Placentia</h3>
+                <p>📍 144 S Bradford Ave<br />Placentia, CA 92870</p>
+                <a className="fh-btn fh-btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870" target="_blank" rel="noopener noreferrer">Get Directions →</a>
+              </div>
+              <img src="/photos/illustrated-map-v2.png" alt="Map showing In & Out Smog Check on Bradford Avenue in Placentia" />
+            </div>
           </div>
         </section>
       </main>
