@@ -46,31 +46,37 @@ export default function Home() {
       />
 
       <main className="final-home">
-        <section className="fh-hero" aria-labelledby="fh-title">
-          <div className="fh-hero-copy">
-            <p className="fh-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
-            <h1 id="fh-title">
-              Fast. Honest.<br />
-              Reliable Smog Checks<br />
-              in <span>Placentia, CA.</span>
-            </h1>
-            <p className="fh-lead">
-              Get in. Get out. No repairs, no upsells — just a fast, honest smog check from a local shop serving drivers since 1999.
-            </p>
-            <div className="fh-actions">
-              <a className="fh-btn fh-btn-primary" href={directionsUrl} target="_blank" rel="noopener noreferrer">
-                🚗 Get a Smog Check →
-              </a>
-              <a className="fh-btn fh-btn-outline" href="tel:+17149931660">☎ Call Now</a>
+        <section className="mock-hero" aria-labelledby="mock-title">
+          <div className="mock-copy">
+            <p className="mock-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
+            <div className="mock-rating" aria-label="4.8 stars from 160 Google reviews">
+              <span className="mock-stars">★★★★★</span>
+              <strong>4.8</strong>
+              <span>160 Google reviews</span>
             </div>
-            <div className="fh-mini-trust" aria-label="Quick service highlights">
-              <span>★ STAR Certified Test-Only</span>
-              <span>● Walk-Ins Welcome</span>
-              <span>◷ Same-Day Service</span>
+            <p className="mock-seo-line">STAR-Certified Smog Check in Placentia, CA</p>
+            <h1 id="mock-title">
+              <span>10-Minute Smog Checks.</span>
+              <span>In. Out. Done.</span>
+            </h1>
+            <p className="mock-lead">
+              Fast, honest smog checks in Placentia. As a STAR-Certified <strong>Test-Only</strong> station, we don’t sell repairs — so there’s zero incentive to fail your car. Just plug in, test, pass, and drive.
+            </p>
+            <div className="mock-actions">
+              <a className="mock-btn mock-btn-black" href={directionsUrl} target="_blank" rel="noopener noreferrer">Drive In Now</a>
+              <a className="mock-btn mock-btn-call" href="tel:+17149931660"><span>Call </span><strong>(714) 993-1660</strong></a>
+            </div>
+            <p className="mock-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
+            <div className="mock-badges" aria-label="Service highlights">
+              <span>⚡ Most Visits ~10 Minutes</span>
+              <span>★ STAR Certified</span>
+              <span>🚗 Walk-Ins Welcome</span>
+              <span>▣ DMV Electronic Cert</span>
+              <span>👥 Local Family Owned</span>
             </div>
           </div>
 
-          <div className="fh-hero-photo">
+          <div className="mock-photo-card">
             <img src="/photos/storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" />
           </div>
         </section>
