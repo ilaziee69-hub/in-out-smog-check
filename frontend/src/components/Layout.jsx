@@ -5,9 +5,11 @@ import StickyMobileNav from "@/components/StickyMobileNav";
 const NAV = [
   { to: "/", label: "Home", exact: true },
   { to: "/star-certified-smog", label: "STAR Certified" },
+  { to: "/placentia-smog-check", label: "Placentia" },
+  { to: "/fullerton-smog-check", label: "Fullerton" },
+  { to: "/yorba-linda-smog-check", label: "Yorba Linda" },
   { to: "/smog-check-pricing", label: "Pricing" },
   { to: "/faq", label: "FAQ" },
-  { to: "/placentia-smog-check", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -26,18 +28,10 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <div className="site-info-bar" aria-label="Business information">
-        <div className="site-info-bar-inner">
-          <span>📍 STAR Certified Test-Only Station</span>
-          <span>📍 144 S Bradford Ave, Placentia, CA 92870</span>
-          <span>◷ Mon–Fri 8AM–5PM · Sat 8AM–3PM</span>
-        </div>
-      </div>
-
       <div className="site-nav-wrap" data-testid="site-nav">
         <nav className="site-nav">
-          <Link to="/" className="logo logo-image-link" data-testid="nav-logo" aria-label="In & Out Smog Check home">
-            <img src="/mascot.webp" alt="In & Out Smog Check" className="brand-logo-img" />
+          <Link to="/" className="logo text-logo" data-testid="nav-logo" aria-label="In & Out Smog Check home">
+            IN & OUT SMOG CHECK
           </Link>
 
           <button
@@ -67,12 +61,8 @@ export default function Layout({ children }) {
                 {item.label}
               </NavLink>
             ))}
-            <a
-              className="nav-cta"
-              href="tel:+17149931660"
-              data-testid="nav-call-cta"
-            >
-              Call (714) 993-1660
+            <a className="nav-cta mock-nav-call" href="tel:+17149931660" data-testid="nav-call-cta">
+              <span>Call </span><strong>(714) 993-1660</strong>
             </a>
           </div>
         </nav>
@@ -83,19 +73,13 @@ export default function Layout({ children }) {
       <footer className="site-footer" data-testid="site-footer">
         <div className="footer-grid">
           <div>
-            <img src="/mascot.webp" alt="In & Out Smog Check" className="footer-brand-logo" />
+            <div className="footer-text-logo">IN & OUT SMOG CHECK</div>
             <p>STAR-Certified Test-Only smog station in Placentia, CA.</p>
           </div>
           <div>
             <h4>Visit</h4>
-            <p>
-              144 S Bradford Ave
-              <br />
-              Placentia, CA 92870
-            </p>
-            <p>
-              <a href="tel:+17149931660">(714) 993-1660</a>
-            </p>
+            <p>144 S Bradford Ave<br />Placentia, CA 92870</p>
+            <p><a href="tel:+17149931660">(714) 993-1660</a></p>
           </div>
           <div>
             <h4>Hours</h4>
@@ -107,9 +91,7 @@ export default function Layout({ children }) {
             <h4>Explore</h4>
             <ul>
               {NAV.map((n) => (
-                <li key={n.to}>
-                  <Link to={n.to}>{n.label}</Link>
-                </li>
+                <li key={n.to}><Link to={n.to}>{n.label}</Link></li>
               ))}
             </ul>
           </div>
