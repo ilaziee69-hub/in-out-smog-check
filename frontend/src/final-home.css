@@ -49,16 +49,55 @@
   .fh-hero{grid-template-columns:1fr 1fr}.fh-hero-copy{padding:40px 28px}.fh-main-grid{grid-template-columns:1fr}.fh-bay-photo{min-height:390px}.fh-why-panel{padding:0 6px}.fh-location{grid-template-columns:1fr 1fr}
 }
 
+/* Mobile: keep the old 4-button bar, but make the new homepage compact and visual. */
 @media(max-width:840px){
-  .site-info-bar{display:none}.brand-logo-img{width:92px;max-height:60px}
-  .fh-hero{grid-template-columns:1fr;min-height:auto}.fh-hero-copy{padding:30px 20px 24px}.fh-hero h1{font-size:44px}.fh-lead{font-size:17px}.fh-hero-photo{min-height:300px}.fh-hero-photo:before{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.2) 15%,transparent 36%)}
-  .fh-mini-trust{gap:12px;font-size:12px}.fh-actions{gap:10px}.fh-btn{min-height:46px;padding:0 18px}
-  .fh-process-strip{grid-template-columns:1fr 1fr;padding:4px 12px}.fh-process-strip>div{border-right:0;border-bottom:1px solid #333;padding:13px 10px}.fh-process-strip b{width:38px;height:38px;font-size:18px}.fh-process-strip strong{font-size:13px}.fh-process-strip small{font-size:10px}
-  .fh-main-grid{padding:18px 14px;gap:18px}.fh-bay-photo{min-height:280px}.fh-why-copy h2{font-size:34px}.fh-why-copy p{font-size:16px}.fh-feature-grid{grid-template-columns:1fr 1fr}.fh-feature-grid>div{min-height:112px;padding:13px}
-  .fh-location{grid-template-columns:1fr;margin:8px 14px 24px}.fh-location-copy{padding:22px}.fh-location-copy h2{font-size:31px}.fh-map-wrap{min-height:210px}
-  .footer-brand-logo{width:120px}
+  .site-info-bar{display:none}
+  .site-nav-wrap{min-height:auto!important}
+  .site-nav{min-height:74px!important;padding:8px 16px!important}
+  .brand-logo-img{width:86px!important;max-height:58px!important}
+
+  .fh-hero{display:flex;flex-direction:column;min-height:auto;border-bottom:0}
+  .fh-hero-photo{order:1;min-height:215px;height:215px;margin:0;background:#eee}
+  .fh-hero-photo:before{display:none}
+  .fh-hero-photo img{height:215px;object-position:center 46%;filter:saturate(.94) contrast(1.03) brightness(1.04)}
+  .fh-hero-copy{order:2;padding:20px 18px 18px}
+  .fh-kicker{font-size:11px;letter-spacing:.09em;margin-bottom:8px}
+  .fh-hero h1{font-size:36px;line-height:.98;letter-spacing:-.035em;margin-bottom:12px}
+  .fh-lead{font-size:15px;line-height:1.38;margin-bottom:16px}
+  .fh-actions{display:grid;grid-template-columns:1.35fr 1fr;gap:8px;margin-bottom:14px}
+  .fh-btn{min-height:44px;padding:0 12px;font-size:14px;border-radius:7px}
+  .fh-mini-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;font-size:10px;line-height:1.2}
+  .fh-mini-trust span{padding:8px 6px;border:1px solid #e2e2e2;border-radius:7px;text-align:center;background:#fff}
+
+  .fh-process-strip{grid-template-columns:1fr 1fr;padding:0 10px;min-height:auto}
+  .fh-process-strip>div{min-height:70px;border-right:0;border-bottom:1px solid #333;padding:10px 8px;gap:9px}
+  .fh-process-strip b{width:34px;height:34px;font-size:16px;border-width:2px}
+  .fh-process-strip strong{font-size:12px}.fh-process-strip small{font-size:9px;margin-top:2px}
+
+  .fh-main-grid{padding:16px 12px 14px;gap:14px}
+  .fh-bay-photo{min-height:235px;border-radius:8px}
+  .fh-bay-photo figcaption{top:10px;left:10px;font-size:10px;padding:6px 9px}
+  .fh-why-panel{padding:0;gap:12px}
+  .fh-why-copy h2{font-size:30px;margin-bottom:9px}
+  .fh-why-copy p{font-size:15px;line-height:1.42}
+  .fh-feature-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .fh-feature-grid>div{min-height:100px;padding:11px;column-gap:8px}
+  .fh-feature-grid b{font-size:20px}.fh-feature-grid strong{font-size:13px}.fh-feature-grid small{font-size:10px}
+  .fh-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+  .fh-location{grid-template-columns:1fr;margin:6px 12px 20px;min-height:auto}
+  .fh-location-copy{padding:18px}
+  .fh-location-copy h2{font-size:28px}.fh-location-copy p{font-size:14px}.fh-address{font-size:18px!important}
+  .fh-map-wrap{min-height:180px}
+  .footer-brand-logo{width:112px}
 }
 
 @media(max-width:520px){
-  .fh-hero h1{font-size:40px}.fh-process-strip{grid-template-columns:1fr 1fr}.fh-feature-grid{grid-template-columns:1fr}.fh-bay-photo{min-height:235px}.fh-location-copy h2{font-size:29px}
+  .fh-hero-photo,.fh-hero-photo img{height:195px;min-height:195px}
+  .fh-hero h1{font-size:34px}
+  .fh-actions{grid-template-columns:1fr 1fr}
+  .fh-process-strip{grid-template-columns:1fr 1fr}
+  .fh-feature-grid{grid-template-columns:1fr 1fr}
+  .fh-bay-photo{min-height:215px}
+  .fh-location-copy h2{font-size:27px}
 }
