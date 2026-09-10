@@ -85,8 +85,8 @@ export default function Home() {
             <img src="/photos/inspection-bay.jpg" alt="In & Out Smog Check inspection bay" />
           </div>
           <div className="nh-copy-block">
-            <h2>A Cleaner Air.<br /><span>A Brighter Tomorrow.</span></h2>
-            <p>At In & Out Smog Check, we help keep Placentia and surrounding communities on the road with fast, reliable smog checks. We’re a STAR-Certified Test-Only station, which means we don’t do repairs — just honest testing, done right.</p>
+            <h2>Trusted in Placentia<br /><span>Since 1999.</span></h2>
+            <p>Fast, honest STAR-certified Test-Only smog checks with no repair upsells — just straightforward testing from a local shop you can trust.</p>
             <Link className="nh-btn nh-btn-red" to="/placentia-smog-check">About Our Shop →</Link>
           </div>
           <div className="nh-flow-card">
