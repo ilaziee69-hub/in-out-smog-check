@@ -5,27 +5,20 @@ import StickyMobileNav from "@/components/StickyMobileNav";
 const NAV = [
   { to: "/", label: "Home", exact: true },
   { to: "/star-certified-smog", label: "STAR Certified" },
-  { to: "/placentia-smog-check", label: "Placentia" },
-  { to: "/fullerton-smog-check", label: "Fullerton" },
-  { to: "/yorba-linda-smog-check", label: "Yorba Linda" },
   { to: "/smog-check-pricing", label: "Pricing" },
   { to: "/faq", label: "FAQ" },
+  { to: "/placentia-smog-check", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
 
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
   const { pathname, hash } = useLocation();
-  const navType = useNavigationType(); // "PUSH" | "REPLACE" | "POP"
+  const navType = useNavigationType();
 
-  // Scroll to the top of the new page on every new navigation.
-  // - Skip POP (browser Back/Forward) so history scroll position is preserved.
-  // - Skip when the URL has a hash (#anchor) so in-page anchor scroll works.
   useEffect(() => {
     if (navType === "POP") return;
     if (hash) return;
-    // Belt-and-suspenders for iOS Safari, which can ignore window.scrollTo on
-    // the root and needs body / documentElement scrollTop reset explicitly.
     window.scrollTo(0, 0);
     if (document.documentElement) document.documentElement.scrollTop = 0;
     if (document.body) document.body.scrollTop = 0;
@@ -33,10 +26,18 @@ export default function Layout({ children }) {
 
   return (
     <>
+      <div className="site-info-bar" aria-label="Business information">
+        <div className="site-info-bar-inner">
+          <span>📍 STAR Certified Test-Only Station</span>
+          <span>📍 144 S Bradford Ave, Placentia, CA 92870</span>
+          <span>◷ Mon–Fri 8AM–5PM · Sat 8AM–3PM</span>
+        </div>
+      </div>
+
       <div className="site-nav-wrap" data-testid="site-nav">
         <nav className="site-nav">
-          <Link to="/" className="logo" data-testid="nav-logo">
-            IN & OUT <span>SMOG CHECK</span>
+          <Link to="/" className="logo logo-image-link" data-testid="nav-logo" aria-label="In & Out Smog Check home">
+            <img src="/mascot.webp" alt="In & Out Smog Check" className="brand-logo-img" />
           </Link>
 
           <button
@@ -82,9 +83,7 @@ export default function Layout({ children }) {
       <footer className="site-footer" data-testid="site-footer">
         <div className="footer-grid">
           <div>
-            <div className="logo small">
-              IN & OUT <span>SMOG CHECK</span>
-            </div>
+            <img src="/mascot.webp" alt="In & Out Smog Check" className="footer-brand-logo" />
             <p>STAR-Certified Test-Only smog station in Placentia, CA.</p>
           </div>
           <div>
@@ -116,8 +115,8 @@ export default function Layout({ children }) {
           </div>
         </div>
         <div className="footer-bottom">
-          © 2026 In & Out Smog Check · 144 S Bradford Ave, Placentia, CA 92870 · All
-          Rights Reserved
+          Test-Only · No Repairs · Fast Service<br />
+          © 2026 In & Out Smog Check · 144 S Bradford Ave, Placentia, CA 92870 · All Rights Reserved
         </div>
       </footer>
 
