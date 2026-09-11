@@ -4,6 +4,7 @@ import WhyFaster from "@/components/WhyFaster";
 import TrustBadges from "@/components/TrustBadges";
 import NearbyCities from "@/components/NearbyCities";
 import Reviews from "@/components/Reviews";
+import LocationVerify from "@/components/LocationVerify";
 import approvedStorefront from "@/approved-storefront";
 
 const businessJsonLd = {
@@ -135,6 +136,8 @@ export default function Home() {
             <img src="/photos/illustrated-map-v2.png" alt="Illustrated directions map to In & Out Smog Check on Bradford Avenue in Placentia" />
           </div>
         </section>
+
+        <LocationVerify />
 
         <WhatToExpect />
         <WhyFaster />
