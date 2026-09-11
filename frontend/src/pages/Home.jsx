@@ -1,4 +1,5 @@
 import Seo, { SITE_URL, OG_IMAGE } from "@/components/Seo";
+import approvedStorefront from "@/approved-storefront";
 
 const businessJsonLd = {
   "@context": "https://schema.org",
@@ -77,7 +78,7 @@ export default function Home() {
           </div>
 
           <div className="mock-photo-card">
-            <img src="/photos/storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" />
+            <img src={approvedStorefront} alt="In & Out Smog Check storefront in Placentia, California" />
           </div>
         </section>
 
