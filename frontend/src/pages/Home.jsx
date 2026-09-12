@@ -98,7 +98,7 @@ export default function Home() {
 
           <div className="fh-why-panel">
             <div className="fh-why-copy">
-              <p className="fh-eyebrow">WHY DRIVERS CHOOSE US</p>
+              <p className="fh-eyebrow" style={{ background: "#000", color: "#fff", opacity: 1 }}>WHY DRIVERS CHOOSE US</p>
               <h2 id="why-drivers-title">Fast service. Honest testing.</h2>
               <p>
                 We provide STAR-certified test-only smog checks with no repair upsells. Our goal is simple: get you in, tested, and back on the road quickly.
