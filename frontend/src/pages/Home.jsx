@@ -63,7 +63,7 @@ export default function Home() {
             <p className="mock-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
             <div className="mock-badges" aria-label="Service highlights"><span>⚡ Most Visits ~10 Minutes</span><span>★ STAR Certified</span><span>🚗 Walk-Ins Welcome</span><span>▣ DMV Electronic Cert</span><span>👥 Local Family Owned</span></div>
           </div>
-          <div className="mock-photo-card"><img src="/photos/approved-storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" /></div>
+          <div className="mock-photo-card"><img src="/photos/storefront-original-1147.jpg" width="1147" height="828" loading="eager" decoding="sync" alt="In & Out Smog Check storefront in Placentia, California" /></div>
         </section>
         <SpeedTimeline />
         <section className="fh-main-grid" aria-labelledby="why-drivers-title">
