@@ -6,9 +6,6 @@ import TrustBadges from "@/components/TrustBadges";
 import NearbyCities from "@/components/NearbyCities";
 import Reviews from "@/components/Reviews";
 import LocationVerify from "@/components/LocationVerify";
-import { STOREFRONT_HERO_DATA } from "@/data/storefrontHeroData";
-
-const HERO_IMAGE = STOREFRONT_HERO_DATA;
 
 const businessJsonLd = {
   "@context": "https://schema.org",
@@ -86,9 +83,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mock-photo-card">
-            <img src={HERO_IMAGE} alt="In & Out Smog Check storefront in Placentia, California" />
-          </div>
+          <div className="mock-photo-card" aria-hidden="true" />
         </section>
 
         <SpeedTimeline />
