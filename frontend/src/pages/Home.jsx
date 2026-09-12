@@ -83,7 +83,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mock-photo-card" aria-hidden="true" />
+          <div className="mock-photo-card">
+            <img src="/storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" />
+          </div>
         </section>
 
         <SpeedTimeline />
