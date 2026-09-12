@@ -7,8 +7,8 @@
   .mock-seo-line{grid-area:seo!important;font-size:14px!important;line-height:1.15!important;margin:3px 0 0!important}
   .mock-hero h1{grid-area:title!important;font-size:34px!important;line-height:.94!important;letter-spacing:-.045em!important;margin:0!important}
   .mock-lead{grid-area:lead!important;font-size:12.5px!important;line-height:1.34!important;margin:0!important}
-  .mock-photo-card{grid-area:photo!important;width:100%!important;border-radius:18px!important;padding:6px!important;margin-top:2px!important;background:#fff!important;overflow:hidden!important;height:auto!important;align-self:start!important}
-  .mock-photo-card img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;border-radius:12px!important;object-fit:contain!important;object-position:center center!important;background:#fff!important}
+  .mock-photo-card{grid-area:photo!important;width:100%!important;border-radius:18px!important;padding:6px!important;align-self:start!important;height:auto!important;min-height:0!important;margin-top:2px!important;background:#fff!important;display:block!important;overflow:hidden!important}
+  .mock-photo-card img{display:block!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto!important;border-radius:12px!important;object-fit:contain!important;object-position:center center!important;background:#fff!important}
   .mock-actions{grid-area:actions!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important;margin:2px 0 0!important}
   .mock-btn{min-height:44px!important;padding:0 10px!important;font-size:13px!important}
   .mock-hours{grid-area:hours!important;font-size:13px!important;margin:2px 0 0!important}
