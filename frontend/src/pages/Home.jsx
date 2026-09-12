@@ -6,7 +6,6 @@ import TrustBadges from "@/components/TrustBadges";
 import NearbyCities from "@/components/NearbyCities";
 import Reviews from "@/components/Reviews";
 import LocationVerify from "@/components/LocationVerify";
-import approvedStorefront from "@/approved-storefront";
 
 const businessJsonLd = {
   "@context": "https://schema.org",
@@ -85,7 +84,7 @@ export default function Home() {
           </div>
 
           <div className="mock-photo-card">
-            <img src={approvedStorefront} alt="In & Out Smog Check storefront in Placentia, California" />
+            <img src="/photos/storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" />
           </div>
         </section>
 
