@@ -120,19 +120,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="fh-location" aria-labelledby="find-us-title">
-          <div className="fh-location-copy">
-            <p className="fh-eyebrow">ONE PLACENTIA LOCATION</p>
-            <h2 id="find-us-title">Find Us in Placentia</h2>
-            <p className="fh-address">144 S Bradford Ave<br />Placentia, CA 92870</p>
-            <p>Mon–Fri 8AM–5PM · Sat 8AM–3PM · Sun Closed</p>
-            <a className="fh-btn fh-btn-dark" href={directionsUrl} target="_blank" rel="noopener noreferrer">📍 Get Directions →</a>
-          </div>
-          <div className="fh-map-wrap">
-            <img src="/photos/illustrated-map-v2.png" alt="Illustrated directions map to In & Out Smog Check on Bradford Avenue in Placentia" />
-          </div>
-        </section>
-
         <LocationVerify />
 
         <WhatToExpect />
