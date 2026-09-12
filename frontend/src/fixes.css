@@ -63,6 +63,23 @@
 .fh-feature-grid strong{color:#111!important}
 .fh-feature-grid small{color:#555!important;opacity:1!important}
 
+/* Mobile hero photo: keep the whole storefront visible and do not stretch the card
+   across the full text height. This removes the blank/gray area under the image. */
 @media(max-width:840px){
-  .mock-photo-card img{object-position:center 42%!important}
+  .final-home .mock-photo-card{
+    align-self:start!important;
+    height:auto!important;
+    min-height:0!important;
+    background:#fff!important;
+    overflow:hidden!important;
+  }
+  .final-home .mock-photo-card img{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    display:block!important;
+  }
 }
