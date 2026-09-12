@@ -1,4 +1,5 @@
 import Seo, { SITE_URL, OG_IMAGE } from "@/components/Seo";
+import SpeedTimeline from "@/components/SpeedTimeline";
 import WhatToExpect from "@/components/WhatToExpect";
 import WhyFaster from "@/components/WhyFaster";
 import TrustBadges from "@/components/TrustBadges";
@@ -88,12 +89,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="fh-process-strip" aria-label="10 minute smog check process">
-          <div><b>5</b><span><strong>Vehicle / Visual</strong><small>Inspection · 5 min</small></span></div>
-          <div><b>3</b><span><strong>Smog Test / OBD-II</strong><small>Testing · 3 min</small></span></div>
-          <div><b>2</b><span><strong>DMV Certificate</strong><small>Sent · 2 min</small></span></div>
-          <div><b>✓</b><span><strong>Get In. Get Out.</strong><small>About 10 minutes</small></span></div>
-        </section>
+        <SpeedTimeline />
 
         <section className="fh-main-grid" aria-labelledby="why-drivers-title">
           <figure className="fh-bay-photo">
