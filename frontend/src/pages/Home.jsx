@@ -7,7 +7,7 @@ import NearbyCities from "@/components/NearbyCities";
 import Reviews from "@/components/Reviews";
 import LocationVerify from "@/components/LocationVerify";
 
-const HERO_IMAGE = "/photos/storefront.jpg";
+const HERO_IMAGE = "/photos/storefront-hero.jpg";
 
 const businessJsonLd = {
   "@context": "https://schema.org",
