@@ -6,8 +6,9 @@ import TrustBadges from "@/components/TrustBadges";
 import NearbyCities from "@/components/NearbyCities";
 import Reviews from "@/components/Reviews";
 import LocationVerify from "@/components/LocationVerify";
+import heroBase64 from "@/approved-storefront-a";
 
-const HERO_IMAGE = "/photos/storefront-hero.jpg";
+const HERO_IMAGE = `data:image/jpeg;base64,${heroBase64}`;
 
 const businessJsonLd = {
   "@context": "https://schema.org",
