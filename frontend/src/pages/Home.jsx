@@ -84,7 +84,7 @@ export default function Home() {
           </div>
 
           <div className="mock-photo-card">
-            <img src="/photos/storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" />
+            <img src="/photos/approved-storefront.jpg" alt="In & Out Smog Check storefront in Placentia, California" />
           </div>
         </section>
 
