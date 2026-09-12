@@ -1,16 +1,5 @@
 /**
  * "Finding Us Is Easy" — full location section.
- * Order per spec:
- *   1) Illustrated map FIRST (image used AS-IS, no crop/redraw/overlay)
- *   2) Warning banner: OC Smog Lab by Valvoline is NOT us
- *   3) Google Map embed
- *   4) Large "Get Directions" CTA
- *   5) Address card
- *   6) Consolidated HOW TO SPOT US photo journey:
- *      Storefront → Bradford & Center → Tony's Deli → El Farolito
- *      → Senior Center / Old Library → California Licensed · STAR
- *      → Bay Entrance
- *   7) Step-by-step arrival list
  */
 export default function LocationVerify() {
   const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
@@ -39,10 +28,6 @@ export default function LocationVerify() {
           </p>
         </div>
 
-        {/* 1) ILLUSTRATED MAP — corrected v2, used exactly as provided.
-             Preserve full image (no crop/stretch/recolor). Aspect ratio held
-             so the El Farolito row and OC SMOG LAB warning at the top of
-             the map are never cut off. */}
         <figure className="lv-illmap" data-testid="lv-illmap">
           <img
             src="/photos/illustrated-map-v2.png"
@@ -55,20 +40,23 @@ export default function LocationVerify() {
           </figcaption>
         </figure>
 
-        {/* 2) WARNING BANNER */}
-        <div className="lv-warning" data-testid="lv-warning" role="note">
+        <div
+          className="lv-warning"
+          data-testid="lv-warning"
+          role="note"
+          style={{ background: "#fff", color: "#111", opacity: 1 }}
+        >
           <span className="lv-warning-icon" aria-hidden="true">⚠️</span>
-          <div>
-            <strong>
+          <div style={{ color: "#111", opacity: 1 }}>
+            <strong style={{ color: "#000", opacity: 1 }}>
               OC Smog Lab by Valvoline is NOT us. We are In &amp; Out Smog
               Check at Bradford &amp; Center.
             </strong>
-            {" "}Continue south on <strong>Bradford&nbsp;Ave</strong> to{" "}
-            <strong>Center&nbsp;St</strong>.
+            {" "}Continue south on <strong style={{ color: "#000", opacity: 1 }}>Bradford&nbsp;Ave</strong> to{" "}
+            <strong style={{ color: "#000", opacity: 1 }}>Center&nbsp;St</strong>.
           </div>
         </div>
 
-        {/* 3) REAL GOOGLE MAP */}
         <div className="lv-map" data-testid="lv-map">
           <iframe
             title="Google Map showing In & Out Smog Check at 144 S Bradford Ave, Placentia, CA"
@@ -83,7 +71,6 @@ export default function LocationVerify() {
           </div>
         </div>
 
-        {/* 4) LARGE GET DIRECTIONS CTA */}
         <div className="lv-directions-row" data-testid="lv-directions-row">
           <a
             href={MAPS_DIR}
@@ -111,7 +98,6 @@ export default function LocationVerify() {
           </a>
         </div>
 
-        {/* 5) ADDRESS CARD */}
         <div className="lv-address-card" data-testid="lv-address-card">
           <div className="lv-address-main">
             <div className="lv-pin" aria-hidden="true">📍</div>
@@ -122,17 +108,12 @@ export default function LocationVerify() {
               <div className="lv-address-line2">Placentia, CA 92870</div>
             </div>
           </div>
-          <div className="lv-verify-note-inline" data-testid="lv-verify-note">
+          <div className="lv-verify-note-inline" data-testid="lv-verify-note" style={{ color: "#222", opacity: 1 }}>
             ✅ Please verify <strong>&ldquo;144 S Bradford Ave&rdquo;</strong>{" "}
             in your GPS before driving over.
           </div>
         </div>
 
-        {/* 6) HOW TO SPOT US — one consolidated visual journey. Opens with
-             the wide storefront (replacing the old "This Is Our Shop"
-             section entirely), then walks the driver through the approach:
-             intersection → nearby landmarks → your block → our signage →
-             the bay entrance. No duplicate photos within this section. */}
         <div className="lv-photos-header" data-testid="lv-how-to-spot-heading">
           <h3>How to Spot Us</h3>
           <p>
