@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "@/site.css";
 import "@/red-theme.css";
+import "@/fixes.css";
 
 import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
