@@ -1,0 +1,58 @@
+/* Final contrast + mobile fixes for approved black/white/red homepage */
+
+/* 1) Hero storefront fallback: use a normal static asset so Safari always renders it. */
+.mock-photo-card{
+  background:#fff url('/photos/storefront.jpg') center/cover no-repeat!important;
+  min-height:360px;
+}
+.mock-photo-card img{opacity:0!important;visibility:hidden!important}
+
+/* 2) Workflow: remove old blue completely. */
+.speed-timeline{background:#0a0a0a!important;color:#fff!important}
+.speed-timeline .st-inner{background:#0a0a0a!important}
+.speed-timeline .st-eyebrow{background:#000!important;color:#fff!important;border:1px solid #fff!important}
+.speed-timeline h2,.speed-timeline h3,.speed-timeline p,.speed-timeline li{color:#fff!important}
+.speed-timeline .accent,.speed-timeline .st-time{color:#e00000!important}
+.speed-timeline .st-track:before{background:#444!important}
+.speed-timeline .st-dot{background:#111!important;border-color:#fff!important;box-shadow:none!important}
+.speed-timeline .st-dot.done{background:#111!important;border-color:#fff!important}
+.speed-timeline .st-lead,.speed-timeline .st-body p,.speed-timeline .st-footnote{color:#e7e7e7!important}
+
+/* 3) Black pills/boxes must always have white readable text. */
+.fh-eyebrow,.lv-eyebrow,.lv-map-pill,.lv-photo-tag,.lv-illmap-caption,.heritage-badge,.nc-eyebrow,.wf-eyebrow{
+  background:#000!important;color:#fff!important;border-color:#000!important;
+}
+.fh-eyebrow *, .lv-eyebrow *, .lv-map-pill *, .lv-photo-tag *, .lv-illmap-caption *, .heritage-badge *, .nc-eyebrow *, .wf-eyebrow *{color:#fff!important}
+
+/* 4 & 5) White cards / location verification must use dark text. */
+.lv-warning,.lv-address-card,.lv-map,.lv-photo,.lv-photos-header,.lv-header{
+  background:#fff!important;color:#111!important;
+}
+.lv-warning,.lv-warning *,.lv-address-card,.lv-address-card *,.lv-photos-header,.lv-photos-header *,.lv-header,.lv-header *{
+  color:#111!important;
+}
+.lv-warning{border:1px solid #ddd!important;box-shadow:0 8px 24px rgba(0,0,0,.05)!important}
+.lv-warning strong{color:#000!important}
+.lv-address-line1{color:#111!important;font-weight:900!important}
+.lv-address-line2{color:#333!important}
+.lv-verify-note-inline{background:#f7f7f7!important;color:#222!important;border:1px solid #ddd!important}
+.lv-verify-note-inline strong{color:#e00000!important}
+.lv-directions-btn{background:#000!important;color:#fff!important;border-color:#000!important}
+.lv-directions-btn *{color:#fff!important}
+.lv-directions-sub{color:#ddd!important}
+.lv-call-btn{background:#fff!important;color:#000!important;border:2px solid #000!important}
+.lv-lead,.lv-photos-header p,.lv-photo figcaption{color:#444!important}
+.location-verify h2,.lv-photos-header h3{color:#111!important}
+.location-verify h2 .accent,.lv-lead .hl{color:#e00000!important}
+
+/* Why drivers pill readability. */
+.fh-why-copy .fh-eyebrow{color:#fff!important}
+.fh-feature-grid strong{color:#111!important}
+.fh-feature-grid small{color:#555!important}
+
+@media(max-width:840px){
+  .mock-photo-card{min-height:330px!important;background-position:center 42%!important}
+}
+@media(max-width:520px){
+  .mock-photo-card{min-height:300px!important}
+}
