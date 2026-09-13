@@ -5,7 +5,7 @@
  * Mapping (source: In & Out Smog Master Photo Set):
  *   1. Inspection Bay      -> /photos/inspection-bay.jpg (real dyno interior)
  *   2. Waiting Area        -> /photos/waiting-area.jpg   (chairs + BAR signs)
- *   3. Storefront          -> /photos/storefront.jpg     (wide building + red SMOG CHECK sign)
+ *   3. Storefront          -> /photos/storefront-approved-final.jpg (approved storefront)
  *   4. Exterior on street  -> /photos/bradford-center.jpg (Bradford & Center intersection)
  *   5. Local landmark      -> /photos/el-farolito.jpg    (view across to El Farolito)
  */
@@ -61,7 +61,7 @@ export default function ShopGallery() {
 
           <figure className="sg-item" data-testid="sg-item-storefront">
             <img
-              src="/photos/storefront.jpg"
+              src="/photos/storefront-approved-final.jpg"
               alt="Wide exterior of In & Out Smog Check white brick building with the large red SMOG CHECK ONLY CENTER and STAR Certified sign"
               loading="lazy"
               decoding="async"
