@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://download-hub-281.preview.emergentagent.com/sitemap.xml
+Sitemap: https://in-out-smog-check.vercel.app/sitemap.xml
