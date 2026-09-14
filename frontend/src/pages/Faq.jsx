@@ -4,39 +4,39 @@ import Seo from "@/components/Seo";
 const FAQS = [
   {
     q: "How fast is a smog check at your Placentia shop?",
-    a: "Most gasoline vehicles are done in about 10 minutes. Older tailpipe (ASM) tests and diesel inspections can take a few minutes longer, but we’ll always give you a clear time estimate the moment you drive in.",
+    a: "Most gasoline vehicles are done in about 10 minutes. Older tailpipe tests and some diesel inspections can take longer, and we’ll give you a time estimate when you drive in.",
   },
   {
     q: "Do you transmit my smog result directly to the DMV?",
-    a: "Yes. As a STAR-Certified station, we electronically transmit every pass or fail result to the California DMV in real time — usually before you even leave the driveway. There’s no paper certificate to hand-carry, and no waiting for the DMV to process anything. If you renew your registration online right after your pass, the system will already see it.",
+    a: "Yes. We electronically transmit smog inspection results to the California DMV. There’s no paper certificate you need to hand-carry for the DMV transmission.",
   },
   {
     q: "Which vehicles are exempt from smog checks in California?",
-    a: "You do NOT need a smog check if your vehicle is: (1) gasoline-powered and 1975 or older, (2) diesel-powered and 1997 or older, (3) diesel with a GVWR over 14,000 lbs, (4) electric, (5) natural gas over 14,000 lbs GVWR, (6) a motorcycle, (7) a trailer, or (8) a gasoline vehicle within its 8-year new-car exemption (the first 8 model years after purchase, though the DMV charges a smog abatement fee those years). If you’re not sure, bring your DMV renewal notice — it will state exactly what’s required.",
+    a: "California smog exemptions depend on vehicle year, fuel type, weight, and registration situation. Your DMV renewal notice is the best source for what your specific vehicle requires. If you’re unsure, call us with the vehicle year and fuel type and we’ll help you understand what kind of inspection you need.",
   },
   {
     q: "What is a Test-Only station and why does it matter?",
-    a: "A Test-Only station is licensed to inspect vehicles but is NOT allowed to perform smog repairs. That’s a good thing for you: since we can’t make money by finding problems, we have zero incentive to fail your car. Some DMV notices — especially for STAR-directed and gross-polluter vehicles — actually require a Test-Only station.",
+    a: "A Test-Only station is licensed to perform smog inspections but does not perform smog repairs. Because our shop focuses on testing rather than repair work, there are no repair upsells tied to your inspection.",
   },
   {
     q: "Do I need an appointment?",
-    a: "No — walk-ins are welcome Monday through Friday 8AM to 5PM, and Saturday 8AM to 3PM. We rarely have a wait, but you’re welcome to call ahead at (714) 993-1660 to time your visit.",
+    a: "No — walk-ins are welcome Monday through Friday 8AM to 5PM, and Saturday 8AM to 3PM. You’re also welcome to call ahead at (714) 993-1660.",
   },
   {
     q: "What does a smog check cost?",
-    a: "Our pricing is competitive and includes the state certificate fee. Cost varies slightly by vehicle year, fuel type, and whether your DMV notice requires a STAR inspection. Call (714) 993-1660 for today’s exact rate — we’ll always tell you the total upfront before we start.",
+    a: "Our published pricing starts at $60 for 2000 and newer cars, with the certificate fee included. Prices vary by vehicle year and type. See our Pricing page for the full current price list.",
   },
   {
     q: "What if my car fails?",
-    a: "We’ll show you exactly which test it failed — OBD-II codes, tailpipe readings, visual issues, or readiness monitors — and hand you a printed report. Because we’re Test-Only, we don’t do the repair; that keeps our test result 100% independent. We’re happy to refer you to a trusted local smog repair shop, and California’s Consumer Assistance Program (CAP) can help cover repairs if you income-qualify.",
+    a: "We’ll give you the inspection result showing what caused the failure. Because we’re Test-Only, we don’t perform the repair. Our published pricing includes one free retest within 30 days after a failed inspection.",
   },
   {
     q: "Do you smog out-of-state vehicles?",
-    a: "Yes. Vehicles being registered in California for the first time require a STAR-Certified smog inspection. Bring the title and the current out-of-state registration and we’ll take care of it same-day.",
+    a: "Yes. Vehicles being registered in California may need a California smog inspection. If your DMV paperwork specifically directs you to a STAR-certified station, we can perform that inspection as well. Bring your registration paperwork so we can confirm what your vehicle needs.",
   },
   {
     q: "Do you accept credit cards?",
-    a: "Yes. Cash, debit, Visa, MasterCard, American Express, and Discover. We do not accept personal checks.",
+    a: "Yes. Cash, debit, Visa, MasterCard, American Express, and Discover are accepted. We do not accept personal checks.",
   },
 ];
 
