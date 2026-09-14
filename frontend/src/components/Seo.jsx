@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://download-hub-281.preview.emergentagent.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://in-out-smog-check.vercel.app";
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 export default function Seo({ title, description, path = "/", jsonLd }) {
