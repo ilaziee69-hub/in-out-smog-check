@@ -50,19 +50,18 @@ export default function Placentia() {
         <h2>Placentia’s Local Smog Check Station</h2>
         <p>
           We’re a family-feel shop in the heart of Placentia, just off
-          E Chapman Ave between Kraemer Memorial Park and the old Atchison
-          Topeka rail corridor. Whether you live in Old Town Placentia, near
+          E Chapman Ave. Whether you live in Old Town Placentia, near
           Tri-City Park, up toward the Yorba Linda border, or down by Valencia
-          High School, we’re minutes from your driveway.
+          High School, we’re a convenient drive from your neighborhood.
         </p>
 
         <h2>Why Placentia Drivers Choose Us</h2>
         <div className="cards">
           <div className="card">
-            <h3>5 Minutes from Anywhere in 92870</h3>
+            <h3>Easy to Reach from 92870</h3>
             <p>
-              Right off S Bradford Ave, easy in-and-out parking, no detour off
-              your way to Albertsons or the 57.
+              Right on S Bradford Ave with direct pull-in access and a simple
+              route from E Chapman Ave.
             </p>
           </div>
           <div className="card">
@@ -76,9 +75,8 @@ export default function Placentia() {
           <div className="card">
             <h3>Done in About 10 Minutes</h3>
             <p>
-              Most Placentia smog checks are completed in about 10 minutes.
-              Grab a coffee at Golden State Coffee Roasters across the way —
-              your car will be ready before you finish it.
+              Most standard Placentia smog checks are completed in about 10
+              minutes, depending on the vehicle and inspection type.
             </p>
           </div>
         </div>
@@ -87,32 +85,34 @@ export default function Placentia() {
         <ul className="check-list">
           <li>
             <strong>Biennial Registration Renewal</strong> — the standard
-            two-year smog check most 1976+ gas vehicles need.
+            two-year smog check most eligible vehicles need.
           </li>
           <li>
             <strong>Change of Ownership</strong> — buying or selling a car in
-            Placentia? We’ll get your transfer-of-title smog done same day.
+            Placentia? We can handle the required smog inspection.
           </li>
           <li>
             <strong>Out-of-State Registration</strong> — new to California?
-            Bring your title and we’ll handle the STAR-certified inspection.
+            Bring your registration paperwork and we can perform the required
+            California smog inspection. If your DMV notice directs you to a
+            STAR station, we can handle that too.
           </li>
           <li>
-            <strong>Diesel Smog Inspections</strong> — 1998+ diesels up to
-            14,000 lbs GVWR.
+            <strong>Diesel Smog Inspections</strong> — eligible diesel vehicles
+            within California smog-program requirements.
           </li>
           <li>
-            <strong>Hybrid &amp; Plug-In Hybrid</strong> inspections — yes, we
-            handle Priuses, Volts, and the rest.
+            <strong>Hybrid &amp; Plug-In Hybrid</strong> inspections — eligible
+            hybrid vehicles are welcome.
           </li>
         </ul>
 
         <h2>Easy to Find</h2>
         <p>
-          Look for the yellow mascot on the sign at{" "}
-          <strong>144 S Bradford Ave</strong>, between E Chapman Ave and
-          E Crowther Ave. Plenty of off-street parking, and we’re fully
-          accessible for trucks and larger SUVs.
+          Look for the large red <strong>SMOG CHECK ONLY CENTER</strong> sign at{" "}
+          <strong>144 S Bradford Ave</strong>, near Bradford &amp; Center St.
+          If you see the Valvoline plaza, keep going south on Bradford — that
+          smog shop is not us.
         </p>
 
         <h2>Hours &amp; Walk-Ins</h2>
