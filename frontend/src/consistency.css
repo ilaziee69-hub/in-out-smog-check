@@ -1,0 +1,55 @@
+/* Final site-wide visual consistency layer. Keep the selected palette: mostly black/white with restrained red accents. */
+:root{--brand-black:#090909;--brand-white:#fff;--brand-red:#d71920;--brand-gray:#4a4a4a;--brand-line:#dedede;--brand-soft:#f7f7f7}
+
+/* Sub-pages */
+.page-hero,.prose,.contact,.services,.seo-content,.nearby-cities,.reviews,.reviews-section,.location-verify,.what-to-expect,.why-faster,.trust-badges{background:#fff!important;color:var(--brand-black)!important}
+.page-hero h1,.prose h1,.prose h2,.prose h3,.contact h2,.contact h3{color:var(--brand-black)!important}
+.page-hero .lead,.prose p,.prose li,.contact p{color:var(--brand-gray)!important;opacity:1!important}
+.page-hero a:not(.primary):not(.secondary),.prose a:not(.primary):not(.secondary),.contact p a{color:var(--brand-red)!important}
+.page-hero-eyebrow,.lv-eyebrow,.rv-eyebrow,.wf-eyebrow,.sg-eyebrow,.nc-eyebrow,.pf-eyebrow{background:#000!important;color:#fff!important;border:1px solid #000!important;box-shadow:none!important}
+
+/* Buttons */
+.primary,.nav-cta,.loc-callout-btn,.lv-directions-btn,.rv-cta,.smn-primary{background:#000!important;color:#fff!important;border-color:#000!important;box-shadow:none!important}
+.primary:hover,.nav-cta:hover,.loc-callout-btn:hover,.lv-directions-btn:hover,.rv-cta:hover,.smn-primary:hover{background:#222!important;color:#fff!important}
+.secondary,.lv-call-btn{background:#fff!important;color:#000!important;border:2px solid #000!important}
+.secondary:hover,.lv-call-btn:hover{background:#f5f5f5!important;color:#000!important}
+
+/* FAQ cards — remove leftover blue theme */
+.faq-item,details.faq-item{background:#fff!important;color:#111!important;border:1px solid var(--brand-line)!important;box-shadow:0 8px 24px rgba(0,0,0,.04)!important}
+.faq-item.open,details.faq-item[open]{border-color:#111!important}
+.faq-q,details.faq-item summary{color:#111!important;background:#fff!important}
+.faq-q:hover,details.faq-item summary:hover{background:var(--brand-soft)!important}
+.faq-a,details.faq-item .faq-a{color:var(--brand-gray)!important;background:#fff!important}
+.faq-icon,details.faq-item .faq-icon{color:var(--brand-red)!important}
+
+/* Pricing */
+.price-featured,.price-group,.pricing-notes{background:#fff!important;color:#111!important;border-color:var(--brand-line)!important;box-shadow:0 8px 24px rgba(0,0,0,.04)!important}
+.price-featured h2,.price-featured h3,.price-group h3{color:#111!important}
+.pf-price,.pr-price,.pn-red{color:var(--brand-red)!important}
+.pf-highlights,.pf-highlights li,.pf-time,.pf-sub,.price-row,.pricing-notes li{color:var(--brand-gray)!important}
+.price-row.featured{background:var(--brand-soft)!important;border-color:#111!important}
+
+/* Contact/map */
+.contact-box>div,.map-wrap{background:#fff!important;color:#111!important;border:1px solid var(--brand-line)!important;box-shadow:0 10px 28px rgba(0,0,0,.05)!important}
+.map-wrap{overflow:hidden!important}
+
+/* Homepage/supporting section cleanup: eliminate leftover blue/gold accents */
+.location-verify h2 .accent,.why-faster h2 .accent,.reviews h2 .accent,.nearby-cities h2 .accent,.shop-gallery h2 .accent{color:#111!important}
+.lv-lead .hl{color:#111!important;background:#f1f1f1!important}
+.lv-verify-note,.lv-verify-note-inline{background:#fff!important;color:#222!important;border-color:#bbb!important}
+.lv-verify-note strong,.lv-verify-note-inline strong{color:#111!important}
+.lv-landmarks{background:#fff!important;border:1px solid var(--brand-line)!important}
+.lv-landmarks h3{color:#111!important}.lv-landmarks li{color:var(--brand-gray)!important}.lv-landmarks .lm-num{background:#000!important;color:#fff!important}
+.rv-highlight-tag,.nc-note,.nc-arrow{color:#111!important}
+.nc-card-home .nc-note,.nc-card-home .nc-arrow{color:var(--brand-red)!important}
+.wf-card::before{background:var(--brand-red)!important}
+
+/* Keep red restrained to useful emphasis */
+.stat-num,.stat-unit,.mock-rating strong,.mock-btn-call strong,.mock-nav-call strong,.st-time{color:var(--brand-red)!important}
+
+@media(max-width:840px){
+  .nav-links{background:#fff!important}
+  .hours-sheet{background:#fff!important;color:#111!important}
+  .hours-sheet-head h3,.hours-sheet-list li,.hours-sheet-foot{color:#222!important}
+  .hours-sheet-close{color:#222!important}
+}
