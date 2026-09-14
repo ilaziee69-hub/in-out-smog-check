@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Seo from "@/components/Seo";
+import Seo, { SITE_URL } from "@/components/Seo";
 
 export default function Fullerton() {
   return (
@@ -19,7 +19,7 @@ export default function Fullerton() {
             "@type": "AutomotiveBusiness",
             name: "In & Out Smog Check",
             telephone: "+1-714-993-1660",
-            url: "https://download-hub-281.preview.emergentagent.com/",
+            url: `${SITE_URL}/`,
             address: {
               "@type": "PostalAddress",
               streetAddress: "144 S Bradford Ave",
@@ -62,9 +62,6 @@ export default function Fullerton() {
       </section>
 
       <section className="prose">
-        {/* AEO / featured-snippet answer block — kept short so it doesn't
-            repeat the hero lead verbatim, while still answering "Is there a
-            STAR smog check near Fullerton?" for search snippets. */}
         <div className="aeo-answer" data-testid="fullerton-aeo">
           <p>
             <strong>Yes — Fullerton drivers can get a STAR smog check just
@@ -121,8 +118,7 @@ export default function Fullerton() {
             </h3>
             <p>
               We&rsquo;re a STAR-certified station, so we handle every
-              STAR-directed vehicle the DMV sends our way — including
-              out-of-state registrations and previously-flagged vehicles.
+              STAR-directed vehicle the DMV sends our way.
             </p>
           </div>
         </div>
