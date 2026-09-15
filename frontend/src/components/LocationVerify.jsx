@@ -55,7 +55,9 @@ export default function LocationVerify() {
 
           <figure className="lv-photo" data-testid="lv-photo-senior"><div className="lv-photo-inner"><img src="/photos/senior-center.jpg" alt="Placentia Senior Center / Old Library building near Bradford Avenue and Center Street, across from In & Out Smog Check" loading="lazy" decoding="async" /><span className="lv-photo-tag">SENIOR CENTER / OLD LIBRARY</span></div><figcaption>The Placentia Senior Center / Old Library is across from us near Bradford &amp; Center.</figcaption></figure>
 
-          <figure className="lv-photo" data-testid="lv-photo-licensed"><div className="lv-photo-inner"><img src="/photos/licensed-bay-sign.jpg" alt="Bay entrance at In & Out Smog Check, 144 S Bradford Ave in Placentia" loading="lazy" decoding="async" /><span className="lv-photo-tag">STOP RIGHT IN FRONT OF THE BAY DOOR</span></div><figcaption>and a technician will come greet you and begin the test.</figcaption></figure>
+          <figure className="lv-photo" data-testid="lv-photo-licensed"><div className="lv-photo-inner"><img src="/photos/licensed-bay-sign.jpg" alt="California Licensed Smog Check and STAR Certified Test-Only signage at In & Out Smog Check, 144 S Bradford Ave" loading="lazy" decoding="async" /><span className="lv-photo-tag">CALIFORNIA LICENSED &middot; STAR TEST-ONLY</span></div><figcaption>Confirm the California Licensed / STAR Test-Only signage</figcaption></figure>
+
+          <figure className="lv-photo" data-testid="lv-photo-bay-entrance"><div className="lv-photo-inner"><img src="/photos/bay-entrance.jpg" alt="Bay entrance at In & Out Smog Check, 144 S Bradford Ave in Placentia — where drivers pull in for their smog inspection" loading="lazy" decoding="async" /><span className="lv-photo-tag">BAY ENTRANCE</span></div><figcaption>Pull straight into the bay — you&rsquo;re here</figcaption></figure>
         </div>
       </div>
     </section>
