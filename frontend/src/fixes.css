@@ -53,19 +53,30 @@
 .lv-directions-btn{background:#000!important;color:#fff!important;border-color:#000!important}
 .lv-directions-btn *{color:#fff!important;opacity:1!important}
 .lv-directions-sub{color:#ddd!important}
-.lv-call-btn{background:#fff!important;color:#000!important;border:2px solid #000!important}
+.lv-call-btn{background:#fff!important;color:#e00000!important;border:2px solid #000!important}
+.lv-call-btn *{color:#e00000!important}
 .lv-lead,.lv-photos-header p,.lv-photo figcaption{color:#444!important;opacity:1!important}
 .location-verify h2,.lv-photos-header h3{color:#111!important}
 .location-verify h2 .accent,.lv-lead .hl{color:#e00000!important}
 
 /* Why drivers pill readability. */
-.fh-why-copy .fh-eyebrow{color:#fff!important;opacity:1!important}
+.fh-why-copy .fh-eyebrow{color:#fff!important;opacity:1!important;position:relative!important;z-index:2!important}
 .fh-feature-grid strong{color:#111!important}
 .fh-feature-grid small{color:#555!important;opacity:1!important}
 
-/* Mobile hero photo: keep the whole storefront visible and do not stretch the card
-   across the full text height. This removes the blank/gray area under the image. */
+/* Reviews: keep the 4.8 half-star in the approved red/black palette. */
+.reviews .star-row .star.full{color:#e00000!important}
+.reviews .star-row .star.half{
+  background:linear-gradient(90deg,#e00000 50%,#3d4d64 50%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+}
+
+/* Mobile quick actions: Directions is a red secondary CTA; Call remains primary. */
 @media(max-width:840px){
+  .sticky-mobile-nav .smn-item[data-testid="smn-directions"] .smn-icon,
+  .sticky-mobile-nav .smn-item[data-testid="smn-directions"] .smn-label{color:#e00000!important}
+
   .final-home .mock-photo-card{
     align-self:start!important;
     height:auto!important;
