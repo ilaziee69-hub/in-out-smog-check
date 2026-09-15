@@ -17,8 +17,13 @@
 /* Requested red emphasis + mobile call legibility */
 .lv-call-btn{color:var(--brand-red)!important}
 .lv-call-btn:hover{color:var(--brand-red)!important}
+.page-hero .secondary[href^="tel:"],.prose .secondary[href^="tel:"]{color:var(--brand-red)!important}
+.page-hero .secondary[href^="tel:"]:hover,.prose .secondary[href^="tel:"]:hover{color:var(--brand-red)!important}
 .star-row .star,.star-row .star.full,.star-row .star.half{color:var(--brand-red)!important}
 .sticky-mobile-nav .smn-primary,.sticky-mobile-nav .smn-primary .smn-icon,.sticky-mobile-nav .smn-primary .smn-label{color:#fff!important}
+
+/* Fix light/white text inherited inside content callouts */
+.prose .aeo-answer,.prose .aeo-answer p,.prose .aeo-answer strong{color:#111!important;opacity:1!important}
 
 /* FAQ cards — remove leftover blue theme */
 .faq-item,details.faq-item{background:#fff!important;color:#111!important;border:1px solid var(--brand-line)!important;box-shadow:0 8px 24px rgba(0,0,0,.04)!important}
