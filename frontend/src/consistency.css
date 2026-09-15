@@ -14,6 +14,12 @@
 .secondary,.lv-call-btn{background:#fff!important;color:#000!important;border:2px solid #000!important}
 .secondary:hover,.lv-call-btn:hover{background:#f5f5f5!important;color:#000!important}
 
+/* Requested red emphasis + mobile call legibility */
+.lv-call-btn{color:var(--brand-red)!important}
+.lv-call-btn:hover{color:var(--brand-red)!important}
+.star-row .star,.star-row .star.full,.star-row .star.half{color:var(--brand-red)!important}
+.sticky-mobile-nav .smn-primary,.sticky-mobile-nav .smn-primary .smn-icon,.sticky-mobile-nav .smn-primary .smn-label{color:#fff!important}
+
 /* FAQ cards — remove leftover blue theme */
 .faq-item,details.faq-item{background:#fff!important;color:#111!important;border:1px solid var(--brand-line)!important;box-shadow:0 8px 24px rgba(0,0,0,.04)!important}
 .faq-item.open,details.faq-item[open]{border-color:#111!important}
@@ -52,4 +58,5 @@
   .hours-sheet{background:#fff!important;color:#111!important}
   .hours-sheet-head h3,.hours-sheet-list li,.hours-sheet-foot{color:#222!important}
   .hours-sheet-close{color:#222!important}
+  .sticky-mobile-nav .smn-primary,.sticky-mobile-nav .smn-primary .smn-icon,.sticky-mobile-nav .smn-primary .smn-label{color:#fff!important}
 }
