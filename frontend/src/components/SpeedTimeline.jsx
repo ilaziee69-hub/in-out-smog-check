@@ -64,8 +64,8 @@ export default function SpeedTimeline() {
             <div className="st-time" style={timeStyle}>~8 min</div>
             <div className="st-dot" style={dotStyle} aria-hidden="true"><span>📄</span></div>
             <div className="st-body">
-              <h3 style={{ color: "#fff" }}>DMV Certificate Sent</h3>
-              <p style={{ color: "#e7e7e7" }}>We electronically transmit your result to the California DMV.</p>
+              <h3 style={{ color: "#fff" }}>DMV Result Sent</h3>
+              <p style={{ color: "#e7e7e7" }}>We electronically transmit your smog result to the California DMV.</p>
             </div>
           </li>
           <li className="st-step" data-testid="st-step-5">
@@ -73,7 +73,7 @@ export default function SpeedTimeline() {
             <div className="st-dot done" style={dotStyle} aria-hidden="true"><span>✅</span></div>
             <div className="st-body">
               <h3 style={{ color: "#fff" }}>Drive Away</h3>
-              <p style={{ color: "#e7e7e7" }}>Done. Renew your registration online the second you leave.</p>
+              <p style={{ color: "#e7e7e7" }}>Done. Your smog result has been transmitted electronically to the DMV.</p>
             </div>
           </li>
         </ol>
