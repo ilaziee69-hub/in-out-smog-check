@@ -5,7 +5,7 @@ const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
 const DIR_FROM_FULLERTON = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
   "Fullerton, CA"
 )}&destination=${encodeURIComponent(ADDRESS)}`;
-const CSUF_PHOTO = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg/1280px-Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg";
+const CSUF_PHOTO = "https://upload.wikimedia.org/wikipedia/commons/a/ab/Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg";
 const CSUF_SOURCE = "https://commons.wikimedia.org/wiki/File:Cal_State_Fullerton_Student_Recreation_Center_(Fullerton,_CA).jpg";
 
 export default function Fullerton() {
@@ -91,7 +91,7 @@ export default function Fullerton() {
             <a className="pl-btn pl-btn-red" href={DIR_FROM_FULLERTON} target="_blank" rel="noopener noreferrer">Directions from Fullerton →</a>
           </div>
           <figure>
-            <img src={CSUF_PHOTO} alt="Cal State Fullerton campus landmark in Fullerton, California" loading="lazy" />
+            <img src={CSUF_PHOTO} alt="Cal State Fullerton Student Recreation Center in Fullerton, California" loading="lazy" />
             <figcaption>CAL STATE FULLERTON · FULLERTON · PHOTO: SPATMS / CC BY-SA 4.0</figcaption>
           </figure>
         </section>
