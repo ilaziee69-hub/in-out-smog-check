@@ -4,6 +4,7 @@ import "@/final-home.css";
 import "@/mockup-theme.css";
 import "@/mobile-hero.css";
 import "@/placentia.css";
+import "@/fixes.css";
 import Layout from "@/components/Layout";
 
 export default function App({ Component, pageProps }) {
