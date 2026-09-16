@@ -18,14 +18,12 @@ const TAGS = [
   { label: "friendly technician", count: 4 },
   { label: "discount", count: 7 },
   { label: "cool staff", count: 2 },
-  { label: "cash only", count: 5 },
 ];
 
 // One real review to feature — from the Google listing screenshot the owner shared.
 const FEATURED_REVIEW = {
   author: "Denise Radford",
   stars: 5,
-  when: "a week ago",
   body: "This smog test facility opened a few minutes before it was even supposed to. I was the second one in line and I was out of there less than 15 minutes. Just made my day.",
 };
 
@@ -100,9 +98,7 @@ export default function Reviews() {
             </span>
             <div>
               <div className="rv-author">{FEATURED_REVIEW.author}</div>
-              <div className="rv-when">
-                Google review · {FEATURED_REVIEW.when}
-              </div>
+              <div className="rv-when">Google review</div>
             </div>
           </figcaption>
         </figure>
