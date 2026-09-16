@@ -1,42 +1,47 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
 
 const FAQS = [
   {
     q: "How fast is a smog check at your Placentia shop?",
-    a: "Most gasoline vehicles are done in about 10 minutes. Older tailpipe tests and some diesel inspections can take longer, and we’ll give you a time estimate when you drive in.",
+    a: "Most standard inspections are completed in about 10 minutes. Older vehicles, some diesel inspections, and vehicles that need additional testing can take longer.",
   },
   {
     q: "Do you transmit my smog result directly to the DMV?",
-    a: "Yes. We electronically transmit smog inspection results to the California DMV. There’s no paper certificate you need to hand-carry for the DMV transmission.",
+    a: "Yes. Smog inspection results are transmitted electronically to the California DMV after the inspection is completed.",
   },
   {
-    q: "Which vehicles are exempt from smog checks in California?",
-    a: "California smog exemptions depend on vehicle year, fuel type, weight, and registration situation. Your DMV renewal notice is the best source for what your specific vehicle requires. If you’re unsure, call us with the vehicle year and fuel type and we’ll help you understand what kind of inspection you need.",
+    q: "Which vehicles are exempt from California smog checks?",
+    a: "California exemptions depend on model year, fuel type, vehicle weight, and registration situation. For biennial renewal testing, gasoline, hybrid, and alternative-fuel vehicles eight model years and newer are generally exempt. Your DMV notice is the best guide for your specific vehicle.",
   },
   {
-    q: "What is a Test-Only station and why does it matter?",
-    a: "A Test-Only station is licensed to perform smog inspections but does not perform smog repairs. Because our shop focuses on testing rather than repair work, there are no repair upsells tied to your inspection.",
+    q: "What is a Test-Only station?",
+    a: "A Test-Only station performs Smog Check inspections but does not perform smog-related repairs. At our shop, the visit is focused on testing and certification rather than selling repair work.",
+  },
+  {
+    q: "What does STAR certified mean?",
+    a: "Some vehicles are directed by the California Smog Check Program to a STAR-certified station. If your DMV notice says a STAR station is required, our STAR-certified Test-Only station can perform the inspection.",
   },
   {
     q: "Do I need an appointment?",
-    a: "No — walk-ins are welcome Monday through Friday 8AM to 5PM, and Saturday 8AM to 3PM. You’re also welcome to call ahead at (714) 993-1660.",
+    a: "No. Walk-ins are welcome Monday through Friday from 8AM to 5PM and Saturday from 8AM to 3PM.",
   },
   {
     q: "What does a smog check cost?",
-    a: "Our published pricing starts at $60 for 2000 and newer cars, with the certificate fee included. Prices vary by vehicle year and type. See our Pricing page for the full current price list.",
+    a: "Our published pricing starts at $60 for 2000 and newer cars, with the certificate fee included. Prices vary by vehicle year and type, so check our Pricing page for the complete current list.",
   },
   {
-    q: "What if my car fails?",
-    a: "We’ll give you the inspection result showing what caused the failure. Because we’re Test-Only, we don’t perform the repair. Our published pricing includes one free retest within 30 days after a failed inspection.",
+    q: "What if my vehicle fails?",
+    a: "You’ll receive the inspection result showing the failure information. Because we are Test-Only, we do not perform the repair. Our current pricing includes one free retest within 30 days after a failed inspection.",
   },
   {
     q: "Do you smog out-of-state vehicles?",
-    a: "Yes. Vehicles being registered in California may need a California smog inspection. If your DMV paperwork specifically directs you to a STAR-certified station, we can perform that inspection as well. Bring your registration paperwork so we can confirm what your vehicle needs.",
+    a: "Yes. Vehicles being registered in California may require a California Smog Check. Bring your registration paperwork or DMV notice so we can see what type of inspection is required.",
   },
   {
-    q: "Do you accept credit cards?",
-    a: "Yes. Cash, debit, Visa, MasterCard, American Express, and Discover are accepted. We do not accept personal checks.",
+    q: "What vehicles can you inspect?",
+    a: "We inspect eligible 1976 and newer gasoline, hybrid, and alternative-fuel vehicles, plus eligible 1998 and newer diesel vehicles up to 14,000 lbs GVWR.",
   },
 ];
 
@@ -57,51 +62,59 @@ export default function Faq() {
     <>
       <Seo
         title="Smog Check FAQ | DMV, STAR & Exemptions | In & Out Smog"
-        description="Get answers about California smog checks, STAR requirements, pricing, exemptions, failed tests, free retests, and what to expect during your inspection."
+        description="Answers about California smog checks, STAR requirements, pricing, exemptions, failed inspections, free retests, and what to expect at our Placentia Test-Only station."
         path="/faq"
         jsonLd={jsonLd}
       />
 
-      <section className="page-hero">
-        <h1>Smog Check FAQ</h1>
-        <p className="lead">
-          Straight answers to what Orange County drivers actually ask us. If
-          you don’t see your question here, call us at{" "}
-          <a href="tel:+17149931660">(714) 993-1660</a>.
-        </p>
-      </section>
+      <main className="placentia-page">
+        <section className="pl-hero">
+          <div className="pl-hero-copy">
+            <p className="pl-kicker">SMOG CHECK ANSWERS · NO GUESSWORK</p>
+            <p className="pl-local">STAR CERTIFIED · TEST-ONLY</p>
+            <h1>Smog Check FAQ.<br /><span>Quick Answers Before You Drive In.</span></h1>
+            <p className="pl-lead">Questions about STAR, DMV transmission, exemptions, pricing or a failed inspection? Start here, or call us at <strong>(714) 993-1660</strong>.</p>
+            <div className="pl-actions">
+              <a className="pl-btn pl-btn-red" href="tel:+17149931660">Call (714) 993-1660</a>
+              <Link className="pl-btn pl-btn-outline" to="/smog-check-pricing">See Pricing →</Link>
+            </div>
+            <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
+          </div>
+          <figure className="pl-shop-photo">
+            <img src="/photos/inspection-bay.jpg" alt="Smog inspection bay at In & Out Smog Check in Placentia" />
+            <figcaption>FAST ANSWERS · FAST TEST-ONLY SERVICE</figcaption>
+          </figure>
+        </section>
 
-      <section className="prose">
-        <div className="faq-list" data-testid="faq-list">
-          {FAQS.map((item, i) => {
-            const isOpen = open === i;
-            return (
-              <div
-                key={i}
-                className={`faq-item ${isOpen ? "open" : ""}`}
-                data-testid={`faq-item-${i}`}
-              >
-                <button
-                  className="faq-q"
-                  onClick={() => setOpen(isOpen ? -1 : i)}
-                  aria-expanded={isOpen}
-                  data-testid={`faq-question-${i}`}
-                >
-                  <span>{item.q}</span>
-                  <span className="faq-icon">{isOpen ? "–" : "+"}</span>
-                </button>
-                <div
-                  className="faq-a"
-                  data-testid={`faq-answer-${i}`}
-                  hidden={!isOpen}
-                >
-                  {item.a}
+        <section className="pl-proof" aria-label="Smog check FAQ highlights">
+          <div><strong>★</strong><span>STAR<br />CERTIFIED</span></div>
+          <div><strong>~10</strong><span>MINUTE<br />STANDARD TESTS</span></div>
+          <div><strong>$60</strong><span>2000+ CARS<br />START HERE</span></div>
+          <div><strong>0</strong><span>REPAIR<br />UPSELLS</span></div>
+        </section>
+
+        <section className="prose">
+          <div className="faq-list" data-testid="faq-list">
+            {FAQS.map((item, i) => {
+              const isOpen = open === i;
+              return (
+                <div key={i} className={`faq-item ${isOpen ? "open" : ""}`} data-testid={`faq-item-${i}`}>
+                  <button className="faq-q" onClick={() => setOpen(isOpen ? -1 : i)} aria-expanded={isOpen} data-testid={`faq-question-${i}`}>
+                    <span>{item.q}</span>
+                    <span className="faq-icon">{isOpen ? "–" : "+"}</span>
+                  </button>
+                  <div className="faq-a" data-testid={`faq-answer-${i}`} hidden={!isOpen}>{item.a}</div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </div>
+
+          <div className="cta-row">
+            <Link to="/star-certified-smog" className="primary">STAR Smog Check Info</Link>
+            <Link to="/contact" className="secondary">Hours & Directions</Link>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
