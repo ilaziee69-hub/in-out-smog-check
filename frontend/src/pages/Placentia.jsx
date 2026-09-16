@@ -3,8 +3,6 @@ import Seo from "@/components/Seo";
 import waterTower from "@/waterTowerImage";
 
 const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870";
-const bradfordHouse = "https://commons.wikimedia.org/wiki/Special:Redirect/file/A.%20S.%20Bradford%20House.JPG";
-const citrusGrove = "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citrus%20groves%2C%20Golden%20Ave.%2C%20Placentia%2C%20June%201961.jpg";
 
 export default function Placentia() {
   return (
@@ -100,16 +98,13 @@ export default function Placentia() {
           <p className="pl-star-link">Need a DMV-required STAR inspection? <Link to="/star-certified-smog">Learn about our STAR-certified smog checks →</Link></p>
         </section>
 
-        <section className="pl-local-history">
+        <section className="pl-local-history pl-local-history-clean">
           <div className="pl-history-copy">
             <p className="pl-label">PROUDLY PLACENTIA</p>
             <h2>Local roots. Local service.</h2>
-            <p>Placentia has grown from its early citrus and railroad roots into the community we serve today. In &amp; Out Smog Check has been part of that local story since 1999.</p>
+            <p>Placentia grew from citrus and railroad roots into the community we serve today. In &amp; Out Smog Check has been part of that local story since 1999.</p>
+            <p className="pl-history-note"><strong>25+ years in Placentia.</strong> Same Bradford Ave neighborhood, straightforward smog testing, and no repair upsells.</p>
             <a className="pl-btn pl-btn-black" href={directionsUrl} target="_blank" rel="noopener noreferrer">Drive to the Smog Station →</a>
-          </div>
-          <div className="pl-history-images">
-            <figure><img src={bradfordHouse} alt="Historic A. S. Bradford House in Placentia" loading="lazy" /><figcaption>A. S. BRADFORD HOUSE · PLACENTIA</figcaption></figure>
-            <figure><img src={citrusGrove} alt="Historic citrus groves in Placentia" loading="lazy" /><figcaption>PLACENTIA CITRUS GROVES · 1961</figcaption></figure>
           </div>
         </section>
 
@@ -117,7 +112,7 @@ export default function Placentia() {
           <div>
             <p className="pl-label">EASY TO FIND</p>
             <h2>144 S Bradford Ave</h2>
-            <p>Look for In &amp; Out Smog Check between E Chapman Ave and E Crowther Ave. From Valencia High School, head south on Bradford Ave. The Placentia water tower is about a block from the shop.</p>
+            <p>Look for In & Out Smog Check between E Chapman Ave and E Crowther Ave. From Valencia High School, head south on Bradford Ave. The Placentia water tower is about a block from the shop.</p>
           </div>
           <div className="pl-find-actions">
             <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
@@ -127,7 +122,7 @@ export default function Placentia() {
 
         <section className="pl-seo">
           <h2>Placentia’s Local Smog Check Station</h2>
-          <p>In &amp; Out Smog Check provides STAR-certified Test-Only smog inspections for Placentia residents, including registration renewal, change-of-ownership, out-of-state registration, eligible diesel vehicles, hybrids and plug-in hybrids.</p>
+          <p>In & Out Smog Check provides STAR-certified Test-Only smog inspections for Placentia residents, including registration renewal, change-of-ownership, out-of-state registration, eligible diesel vehicles, hybrids and plug-in hybrids.</p>
           <p>We’re located at <strong>144 S Bradford Ave, Placentia, CA 92870</strong>. Open <strong>Monday–Friday 8AM–5PM</strong> and <strong>Saturday 8AM–3PM</strong>. No appointment needed. We also serve drivers from <Link to="/yorba-linda-smog-check">Yorba Linda</Link> and <Link to="/fullerton-smog-check">Fullerton</Link>.</p>
         </section>
       </main>
