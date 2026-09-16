@@ -5,6 +5,8 @@ const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
 const DIR_FROM_YL = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
   "Yorba Linda, CA"
 )}&destination=${encodeURIComponent(ADDRESS)}`;
+const NIXON_LIBRARY_PHOTO = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nixon_Presidential_Library_%26_Museum_%2830909063265%29.jpg/1280px-Nixon_Presidential_Library_%26_Museum_%2830909063265%29.jpg";
+const NIXON_LIBRARY_SOURCE = "https://commons.wikimedia.org/wiki/File:Nixon_Presidential_Library_%26_Museum_%2830909063265%29.jpg";
 
 const FAQS = [
   {
@@ -129,15 +131,15 @@ export default function YorbaLinda() {
 
         <section className="pl-water-tower">
           <div className="pl-water-copy">
-            <p className="pl-label">WHY MAKE THE SHORT DRIVE?</p>
-            <h2>Test-Only means no repair sales pitch.</h2>
-            <p>We only perform smog inspections. We do not sell repairs, so your visit stays focused on one thing: getting your emissions test completed quickly and clearly.</p>
-            <p>For Yorba Linda drivers who need a STAR station, registration-renewal smog, transfer smog, or an eligible diesel inspection, we can handle it at the same Bradford Ave location.</p>
-            <a className="pl-btn pl-btn-red" href={DIR_FROM_YL} target="_blank" rel="noopener noreferrer">Drive In from Yorba Linda →</a>
+            <p className="pl-label">A YORBA LINDA LANDMARK</p>
+            <h2>Know the Nixon Library? You’re already on the right side of town.</h2>
+            <p>The Richard Nixon Presidential Library is one of Yorba Linda’s most recognizable landmarks. From central Yorba Linda, the route to our shop stays simple: head west toward Placentia, continue onto Chapman Ave, then turn south on Bradford Ave.</p>
+            <p>That local route is why this page is built around Yorba Linda wayfinding instead of generic city copy.</p>
+            <a className="pl-btn pl-btn-red" href={DIR_FROM_YL} target="_blank" rel="noopener noreferrer">Directions from Yorba Linda →</a>
           </div>
           <figure>
-            <img src="/photos/storefront-approved-final.jpg" alt="In & Out Smog Check on Bradford Avenue near Yorba Linda" />
-            <figcaption>ONE SHOP · STAR CERTIFIED · TEST-ONLY</figcaption>
+            <img src={NIXON_LIBRARY_PHOTO} alt="Richard Nixon Presidential Library and Museum in Yorba Linda, California" loading="lazy" />
+            <figcaption>RICHARD NIXON PRESIDENTIAL LIBRARY · YORBA LINDA · PHOTO: JEREMY THOMPSON / CC BY 2.0</figcaption>
           </figure>
         </section>
 
@@ -185,6 +187,7 @@ export default function YorbaLinda() {
             ))}
           </div>
           <p>We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/fullerton-smog-check">Fullerton smog check</Link>.</p>
+          <p style={{fontSize:"12px",color:"#666"}}>Landmark photo source: <a href={NIXON_LIBRARY_SOURCE} target="_blank" rel="noopener noreferrer">Jeremy Thompson, Wikimedia Commons</a> · CC BY 2.0.</p>
         </section>
       </main>
     </>
