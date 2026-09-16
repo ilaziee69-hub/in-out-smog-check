@@ -4,15 +4,133 @@ import Seo from "@/components/Seo";
 const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870";
 const bradfordHouse = "https://commons.wikimedia.org/wiki/Special:Redirect/file/A.%20S.%20Bradford%20House.JPG";
 const citrusGrove = "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citrus%20groves%2C%20Golden%20Ave.%2C%20Placentia%2C%20June%201961.jpg";
-const waterTower = "data:image/jpeg;base64,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";
+const waterTower = "/photos/water-tower.svg";
 
-export default function Placentia(){return <><Seo title="Placentia Smog Check | STAR Test-Only | In & Out Smog" description="Fast STAR-certified Test-Only smog checks in Placentia. Walk-ins welcome, upfront pricing, no repair upsells, and one free retest within 30 days." path="/placentia-smog-check" jsonLd={{"@context":"https://schema.org","@type":"AutomotiveBusiness",name:"In & Out Smog Check — Placentia",telephone:"+1-714-993-1660",areaServed:"Placentia, CA",address:{"@type":"PostalAddress",streetAddress:"144 S Bradford Ave",addressLocality:"Placentia",addressRegion:"CA",postalCode:"92870",addressCountry:"US"}}}/><main className="placentia-page">
-<section className="pl-hero"><div className="pl-hero-copy"><p className="pl-kicker">STAR CERTIFIED · TEST-ONLY STATION</p><p className="pl-local">YOUR LOCAL SMOG STATION IN PLACENTIA</p><h1>Placentia Smog Check.<br/><span>In. Out. Done.</span></h1><p className="pl-lead">Fast, honest smog checks right here on S Bradford Ave. We don’t sell repairs, so there’s no incentive to fail your car — just straightforward testing from a local shop serving Placentia since 1999.</p><div className="pl-actions"><a className="pl-btn pl-btn-red" href={directionsUrl}>Get Directions →</a><a className="pl-btn pl-btn-outline" href="tel:+17149931660">Call (714) 993-1660</a></div><p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p></div><figure className="pl-shop-photo"><img src="/photos/storefront-approved-final.jpg" alt="In & Out Smog Check storefront on S Bradford Ave in Placentia"/><figcaption>144 S BRADFORD AVE · PLACENTIA</figcaption></figure></section>
-<section className="pl-proof"><div><strong>~10</strong><span>MINUTE<br/>SMOG CHECKS</span></div><div><strong>★</strong><span>STAR<br/>CERTIFIED</span></div><div><strong>25+</strong><span>YEARS SERVING<br/>LOCAL DRIVERS</span></div><div><strong>0</strong><span>REPAIR<br/>UPSELLS</span></div></section>
-<section className="pl-service-split pl-local-split"><figure><img src="/photos/inspection-bay.jpg" alt="Vehicle inspection bay at In & Out Smog Check in Placentia"/><figcaption>WHERE PLACENTIA RESIDENTS HAVE BEEN GETTING THEIR SMOG DONE FOR OVER 25 YEARS</figcaption></figure><div><p className="pl-label">RIGHT HERE IN PLACENTIA</p><h2>Smog checks in the heart of the city.</h2><p>Our shop sits on S Bradford Ave in Old Town Placentia, close to Chapman Ave and the city’s historic water tower. If you know the tower, you’re already almost here.</p><p>Instead of repeating the same reasons to choose us from our homepage, this page is built to help Placentia residents find their neighborhood smog station quickly.</p><div className="pl-local-points"><span><b>92870</b> Local Placentia service</span><span><b>1 BLOCK</b> From the historic water tower area</span><span><b>SINCE 1999</b> Serving local drivers for 25+ years</span></div></div></section>
-<section className="pl-water-tower"><div className="pl-water-copy"><p className="pl-label">A PLACENTIA LANDMARK</p><h2>See the water tower? We’re right nearby.</h2><p>The historic Placentia water tower is one of the city’s easiest landmarks to recognize. In & Out Smog Check is just about a block away at <strong>144 S Bradford Ave</strong>, making the tower a simple visual cue when you’re heading to the shop.</p><a className="pl-btn pl-btn-red" href={directionsUrl}>Get Directions →</a></div><figure><img src={waterTower} alt="Placentia water tower visible near In & Out Smog Check on Bradford Avenue"/><figcaption>PLACENTIA WATER TOWER · ABOUT A BLOCK FROM OUR SHOP</figcaption></figure></section>
-<section className="pl-services"><p className="pl-label">WHAT WE TEST</p><h2>Smog Check Services for Placentia Drivers</h2><div className="pl-service-grid"><article><span>01</span><h3>Registration Renewal</h3><p>The standard smog inspection required for many California registration renewals.</p></article><article><span>02</span><h3>Change of Ownership</h3><p>Buying or selling a vehicle? Get the required transfer smog handled locally.</p></article><article><span>03</span><h3>Out-of-State Vehicles</h3><p>New to California? Bring your vehicle in for its California emissions inspection.</p></article><article><span>04</span><h3>Diesel, Hybrid & More</h3><p>We inspect eligible diesel vehicles, hybrids, plug-in hybrids, cars, trucks and SUVs.</p></article></div><p className="pl-star-link">Need a DMV-required STAR inspection? <Link to="/star-certified-smog">Learn about our STAR-certified smog checks →</Link></p></section>
-<section className="pl-local-history"><div className="pl-history-copy"><p className="pl-label">PROUDLY PLACENTIA</p><h2>Local roots. Local service.</h2><p>Placentia has grown from its early citrus and railroad roots into the community we serve today. In & Out Smog Check has been part of that local story since 1999.</p><a className="pl-btn pl-btn-black" href={directionsUrl}>Drive to the Smog Station →</a></div><div className="pl-history-images"><figure><img src={bradfordHouse} alt="Historic A. S. Bradford House in Placentia"/><figcaption>A. S. BRADFORD HOUSE · PLACENTIA</figcaption></figure><figure><img src={citrusGrove} alt="Historic citrus groves in Placentia"/><figcaption>PLACENTIA CITRUS GROVES · 1961</figcaption></figure></div></section>
-<section className="pl-find"><div><p className="pl-label">EASY TO FIND</p><h2>144 S Bradford Ave</h2><p>Look for In & Out Smog Check near Old Town Placentia, between E Chapman Ave and E Crowther Ave.</p></div><div className="pl-find-actions"><a className="pl-btn pl-btn-red" href={directionsUrl}>Get Directions →</a><a className="pl-btn pl-btn-outline-dark" href="tel:+17149931660">Call Us</a></div></section>
-<section className="pl-seo"><h2>Placentia’s Local Smog Check Station</h2><p>In & Out Smog Check provides STAR-certified Test-Only smog inspections for Placentia residents, including registration renewal, change-of-ownership, out-of-state registration, eligible diesel vehicles, hybrids and plug-in hybrids.</p><p>We’re located at <strong>144 S Bradford Ave, Placentia, CA 92870</strong>. Open <strong>Monday–Friday 8AM–5PM</strong> and <strong>Saturday 8AM–3PM</strong>. No appointment needed. We also serve drivers from <Link to="/yorba-linda-smog-check">Yorba Linda</Link> and <Link to="/fullerton-smog-check">Fullerton</Link>.</p></section>
-</main></>}
+export default function Placentia() {
+  return (
+    <>
+      <Seo
+        title="Placentia Smog Check | STAR Test-Only | In & Out Smog"
+        description="Fast STAR-certified Test-Only smog checks in Placentia. Walk-ins welcome, upfront pricing, no repair upsells, and one free retest within 30 days."
+        path="/placentia-smog-check"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AutomotiveBusiness",
+          name: "In & Out Smog Check — Placentia",
+          telephone: "+1-714-993-1660",
+          areaServed: "Placentia, CA",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "144 S Bradford Ave",
+            addressLocality: "Placentia",
+            addressRegion: "CA",
+            postalCode: "92870",
+            addressCountry: "US",
+          },
+          sameAs: ["https://www.google.com/maps/search/?api=1&query=In+%26+Out+Smog+Check%2C+144+S+Bradford+Ave%2C+Placentia%2C+CA+92870"],
+        }}
+      />
+
+      <main className="placentia-page">
+        <section className="pl-hero">
+          <div className="pl-hero-copy">
+            <p className="pl-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
+            <p className="pl-local">YOUR LOCAL SMOG STATION IN PLACENTIA</p>
+            <h1>Placentia Smog Check.<br /><span>In. Out. Done.</span></h1>
+            <p className="pl-lead">Fast, honest smog checks right here on S Bradford Ave. We don’t sell repairs, so there’s no incentive to fail your car — just straightforward testing from a local shop serving Placentia since 1999.</p>
+            <div className="pl-actions">
+              <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
+              <a className="pl-btn pl-btn-outline" href="tel:+17149931660">Call (714) 993-1660</a>
+            </div>
+            <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
+          </div>
+          <figure className="pl-shop-photo">
+            <img src="/photos/storefront-approved-final.jpg" alt="In & Out Smog Check storefront on S Bradford Ave in Placentia" />
+            <figcaption>144 S BRADFORD AVE · PLACENTIA</figcaption>
+          </figure>
+        </section>
+
+        <section className="pl-proof" aria-label="Smog station highlights">
+          <div><strong>~10</strong><span>MINUTE<br />SMOG CHECKS</span></div>
+          <div><strong>★</strong><span>STAR<br />CERTIFIED</span></div>
+          <div><strong>25+</strong><span>YEARS SERVING<br />LOCAL DRIVERS</span></div>
+          <div><strong>0</strong><span>REPAIR<br />UPSELLS</span></div>
+        </section>
+
+        <section className="pl-service-split pl-local-split">
+          <figure>
+            <img src="/photos/inspection-bay.jpg" alt="Vehicle inspection bay at In & Out Smog Check in Placentia" />
+            <figcaption>WHERE PLACENTIA RESIDENTS HAVE BEEN GETTING THEIR SMOG DONE FOR OVER 25 YEARS</figcaption>
+          </figure>
+          <div>
+            <p className="pl-label">RIGHT HERE IN PLACENTIA</p>
+            <h2>Easy to find on Bradford Ave.</h2>
+            <p>Our shop is at 144 S Bradford Ave, close to Chapman Ave and just a few minutes south of Valencia High School. If you know Valencia High or the Placentia water tower, you already know the neighborhood.</p>
+            <div className="pl-local-points">
+              <span><b>VALENCIA HS</b> Just minutes north on Bradford Ave</span>
+              <span><b>WATER TOWER</b> About a block from our shop</span>
+              <span><b>SINCE 1999</b> Serving local drivers for 25+ years</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="pl-water-tower">
+          <div className="pl-water-copy">
+            <p className="pl-label">A PLACENTIA LANDMARK</p>
+            <h2>See the water tower? We’re right nearby.</h2>
+            <p>The Placentia water tower is one of the easiest local landmarks to recognize. In &amp; Out Smog Check is about a block away at <strong>144 S Bradford Ave</strong>.</p>
+            <p>Coming from Valencia High School? Head south on Bradford Ave and you’ll be at the shop in just a few minutes.</p>
+            <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
+          </div>
+          <figure>
+            <img src={waterTower} alt="Placentia water tower near In & Out Smog Check on Bradford Avenue" />
+            <figcaption>PLACENTIA WATER TOWER · ABOUT A BLOCK FROM OUR SHOP</figcaption>
+          </figure>
+        </section>
+
+        <section className="pl-services">
+          <p className="pl-label">WHAT WE TEST</p>
+          <h2>Smog Check Services for Placentia Drivers</h2>
+          <div className="pl-service-grid">
+            <article><span>01</span><h3>Registration Renewal</h3><p>The standard smog inspection required for many California registration renewals.</p></article>
+            <article><span>02</span><h3>Change of Ownership</h3><p>Buying or selling a vehicle? Get the required transfer smog handled locally.</p></article>
+            <article><span>03</span><h3>Out-of-State Vehicles</h3><p>New to California? Bring your vehicle in for its California emissions inspection.</p></article>
+            <article><span>04</span><h3>Gas, Hybrid & Diesel</h3><p>We inspect eligible 1976+ gasoline, hybrid and alternative-fuel vehicles, plus eligible 1998+ diesel vehicles up to 14,000 lbs GVWR.</p></article>
+          </div>
+          <p className="pl-star-link">Need a DMV-required STAR inspection? <Link to="/star-certified-smog">Learn about our STAR-certified smog checks →</Link></p>
+        </section>
+
+        <section className="pl-local-history">
+          <div className="pl-history-copy">
+            <p className="pl-label">PROUDLY PLACENTIA</p>
+            <h2>Local roots. Local service.</h2>
+            <p>Placentia has grown from its early citrus and railroad roots into the community we serve today. In &amp; Out Smog Check has been part of that local story since 1999.</p>
+            <a className="pl-btn pl-btn-black" href={directionsUrl} target="_blank" rel="noopener noreferrer">Drive to the Smog Station →</a>
+          </div>
+          <div className="pl-history-images">
+            <figure><img src={bradfordHouse} alt="Historic A. S. Bradford House in Placentia" loading="lazy" /><figcaption>A. S. BRADFORD HOUSE · PLACENTIA</figcaption></figure>
+            <figure><img src={citrusGrove} alt="Historic citrus groves in Placentia" loading="lazy" /><figcaption>PLACENTIA CITRUS GROVES · 1961</figcaption></figure>
+          </div>
+        </section>
+
+        <section className="pl-find">
+          <div>
+            <p className="pl-label">EASY TO FIND</p>
+            <h2>144 S Bradford Ave</h2>
+            <p>Look for In &amp; Out Smog Check between E Chapman Ave and E Crowther Ave. From Valencia High School, head south on Bradford Ave. The Placentia water tower is about a block from the shop.</p>
+          </div>
+          <div className="pl-find-actions">
+            <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
+            <a className="pl-btn pl-btn-outline-dark" href="tel:+17149931660">Call Us</a>
+          </div>
+        </section>
+
+        <section className="pl-seo">
+          <h2>Placentia’s Local Smog Check Station</h2>
+          <p>In &amp; Out Smog Check provides STAR-certified Test-Only smog inspections for Placentia residents, including registration renewal, change-of-ownership, out-of-state registration, eligible diesel vehicles, hybrids and plug-in hybrids.</p>
+          <p>We’re located at <strong>144 S Bradford Ave, Placentia, CA 92870</strong>. Open <strong>Monday–Friday 8AM–5PM</strong> and <strong>Saturday 8AM–3PM</strong>. No appointment needed. We also serve drivers from <Link to="/yorba-linda-smog-check">Yorba Linda</Link> and <Link to="/fullerton-smog-check">Fullerton</Link>.</p>
+        </section>
+      </main>
+    </>
+  );
+}
