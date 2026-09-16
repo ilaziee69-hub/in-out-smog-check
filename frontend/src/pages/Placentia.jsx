@@ -36,7 +36,7 @@ export default function Placentia() {
         <section className="pl-proof" aria-label="Smog station highlights"><div><strong>~10</strong><span>MINUTE<br/>SMOG CHECKS</span></div><div><strong>★</strong><span>STAR<br/>CERTIFIED</span></div><div><strong>25+</strong><span>YEARS SERVING<br/>LOCAL DRIVERS</span></div><div><strong>0</strong><span>REPAIR<br/>UPSELLS</span></div></section>
 
         <section className="pl-service-split">
-          <figure><img src="/photos/inspection-bay.jpg" alt="Vehicle inspection bay at In & Out Smog Check in Placentia" /><figcaption>WHERE PLACENTIA GETS SMOGGED</figcaption></figure>
+          <figure><img src="/photos/inspection-bay.jpg" alt="Vehicle inspection bay at In & Out Smog Check in Placentia" /><figcaption>WHERE PLACENTIA RESIDENTS HAVE BEEN GETTING THEIR SMOG DONE FOR OVER 25 YEARS</figcaption></figure>
           <div><p className="pl-label">SMOG STATION FIRST</p><h2>Fast service. Honest testing.</h2><p>We’re a STAR-certified Test-Only station in the heart of Placentia. Whether you live in Old Town, near Tri-City Park, by Valencia High School, or toward the Yorba Linda border, we make your required emissions inspection quick and simple.</p><div className="pl-mini-grid"><article><b>⚡</b><h3>About 10 Minutes</h3><p>Most inspections are completed quickly so you can get back on the road.</p></article><article><b>★</b><h3>STAR Certified</h3><p>If your DMV notice requires a STAR station, we’ve got you covered.</p></article><article><b>🚗</b><h3>Walk-Ins Welcome</h3><p>No appointment needed. Drive in during business hours.</p></article><article><b>✓</b><h3>No Repair Upsells</h3><p>Test-only means we focus on one thing: an honest emissions inspection.</p></article></div></div>
         </section>
 
