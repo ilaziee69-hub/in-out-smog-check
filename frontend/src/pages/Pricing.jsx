@@ -1,12 +1,6 @@
 import Seo from "@/components/Seo";
 
-/**
- * Smog Check Pricing page (/smog-check-pricing).
- *
- * Content is exact per the specified pricing sheet. Do not reinterpret,
- * round, or invent prices. Certificate fee is included in every listed
- * price; one free retest within 30 days after a failed inspection.
- */
+const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870";
 
 const priceGroups = [
   {
@@ -36,29 +30,6 @@ const priceGroups = [
       { label: "Diesel", price: "$80" },
       { label: "RV", price: "$120" },
     ],
-  },
-];
-
-const whyChoose = [
-  {
-    title: "Fast",
-    body: "Most standard inspections are completed in about 10 minutes.",
-  },
-  {
-    title: "Experienced",
-    body: "25+ years of smog industry experience and trusted locally since 1999.",
-  },
-  {
-    title: "Test-Only",
-    body: "We perform smog inspections, not repairs, so there are no repair upsells.",
-  },
-  {
-    title: "Upfront Pricing",
-    body: "Published prices with the certificate fee already included.",
-  },
-  {
-    title: "Free Retest",
-    body: "One free retest within 30 days following a failed inspection.",
   },
 ];
 
@@ -98,126 +69,90 @@ export default function Pricing() {
         jsonLd={priceSchema}
       />
 
-      <section className="page-hero" data-testid="pricing-hero">
-        <h1>Smog Check Pricing</h1>
-        <p className="lead">Upfront pricing. Fast service. No surprise add-ons.</p>
-        <p className="pricing-trustline" data-testid="pricing-trustline">
-          Trusted locally since 1999 &middot; 25+ years experience &middot; STAR
-          Test-Only &middot; Walk-ins welcome
-        </p>
-        <p className="pricing-reinforce" data-testid="pricing-reinforce">
-          Fast inspections &middot; No repair upsells &middot; Straightforward
-          pricing
-        </p>
-      </section>
-
-      <section className="prose pricing-body">
-        {/* Featured most-common price */}
-        <aside
-          className="price-featured"
-          aria-labelledby="pricing-featured-title"
-          data-testid="pricing-featured"
-        >
-          <p id="pricing-featured-title" className="pf-eyebrow">
-            2000 &amp; Newer — Cars
-          </p>
-          <p className="pf-price" data-testid="pricing-featured-price">
-            $60
-          </p>
-          <ul className="pf-highlights" data-testid="pricing-featured-highlights">
-            <li>
-              <span aria-hidden="true">✓</span> CERTIFICATE FEE INCLUDED
-            </li>
-            <li>
-              <span aria-hidden="true">✓</span> ONE FREE RETEST WITHIN 30 DAYS
-            </li>
-          </ul>
-          <p className="pf-time">
-            Most standard inspections completed in about 10 minutes.
-          </p>
-          <p className="pf-sub">
-            STAR Test-Only &middot; No repair upsells &middot; Walk-ins welcome
-          </p>
-          <div className="pf-actions" data-testid="pricing-featured-actions">
-            <a
-              href="tel:+17149931660"
-              className="btn primary"
-              data-testid="pricing-call-btn"
-            >
-              Call Now
-            </a>
-            <a
-              href="https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-              data-testid="pricing-directions-btn"
-            >
-              Get Directions
-            </a>
+      <main className="placentia-page">
+        <section className="pl-hero">
+          <div className="pl-hero-copy">
+            <p className="pl-kicker">UPFRONT PRICING · CERTIFICATE INCLUDED</p>
+            <p className="pl-local">NO SURPRISE ADD-ONS</p>
+            <h1>Smog Check Prices.<br /><span>Clear Before You Arrive.</span></h1>
+            <p className="pl-lead">Know the price before you pull into the bay. Our published prices include the certificate fee, and failed inspections include one free retest within 30 days.</p>
+            <div className="pl-actions">
+              <a className="pl-btn pl-btn-red" href="tel:+17149931660">Call (714) 993-1660</a>
+              <a className="pl-btn pl-btn-outline" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
+            </div>
+            <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
-        </aside>
+          <figure className="pl-shop-photo">
+            <img src="/photos/inspection-bay.jpg" alt="Smog inspection bay at In & Out Smog Check in Placentia" />
+            <figcaption>STAR CERTIFIED · TEST-ONLY · NO REPAIR UPSELLS</figcaption>
+          </figure>
+        </section>
 
-        {/* Full pricing */}
-        <h2>Full Pricing</h2>
-        <div className="price-grid" data-testid="pricing-grid">
-          {priceGroups.map((g) => (
-            <div className="price-group" key={g.heading}>
-              <h3>{g.heading}</h3>
-              <ul>
-                {g.rows.map((r) => (
-                  <li
-                    key={r.label}
-                    className={r.featured ? "price-row featured" : "price-row"}
-                    data-testid={`price-${g.heading.replace(/[^A-Za-z0-9]+/g, "-")}-${r.label.replace(/[^A-Za-z0-9]+/g, "-")}`}
-                  >
-                    <span className="pr-label">{r.label}</span>
-                    <span className="pr-price">{r.price}</span>
-                  </li>
-                ))}
-              </ul>
+        <section className="pl-proof" aria-label="Pricing highlights">
+          <div><strong>$60</strong><span>2000+ CARS<br />START HERE</span></div>
+          <div><strong>✓</strong><span>CERTIFICATE<br />FEE INCLUDED</span></div>
+          <div><strong>1</strong><span>FREE RETEST<br />WITHIN 30 DAYS</span></div>
+          <div><strong>0</strong><span>REPAIR<br />UPSELLS</span></div>
+        </section>
+
+        <section className="prose pricing-body">
+          <aside className="price-featured" aria-labelledby="pricing-featured-title" data-testid="pricing-featured">
+            <p id="pricing-featured-title" className="pf-eyebrow">MOST COMMON PRICE · 2000 &amp; NEWER CARS</p>
+            <p className="pf-price" data-testid="pricing-featured-price">$60</p>
+            <ul className="pf-highlights" data-testid="pricing-featured-highlights">
+              <li><span aria-hidden="true">✓</span> CERTIFICATE FEE INCLUDED</li>
+              <li><span aria-hidden="true">✓</span> ONE FREE RETEST WITHIN 30 DAYS</li>
+            </ul>
+            <p className="pf-time">Most standard inspections are completed in about 10 minutes.</p>
+            <p className="pf-sub">STAR Test-Only · Walk-ins welcome · No repair sales pitch</p>
+            <div className="pf-actions" data-testid="pricing-featured-actions">
+              <a href="tel:+17149931660" className="btn primary" data-testid="pricing-call-btn">Call Now</a>
+              <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="btn" data-testid="pricing-directions-btn">Get Directions</a>
             </div>
-          ))}
-        </div>
+          </aside>
 
-        <h2>Important Pricing Notes</h2>
-        <ul className="pricing-notes" data-testid="pricing-notes">
-          <li>
-            <span className="pn-red">Certificate fee included</span> in all listed
-            prices.
-          </li>
-          <li>
-            One <span className="pn-red">FREE retest within 30 days</span> after
-            a failed inspection.
-          </li>
-          <li>
-            STAR-directed vehicles are priced the same as their applicable
-            standard vehicle category above.
-          </li>
-        </ul>
+          <h2>Full Smog Check Pricing</h2>
+          <p>Choose your vehicle year and type below. Every listed price already includes the certificate fee.</p>
+          <div className="price-grid" data-testid="pricing-grid">
+            {priceGroups.map((g) => (
+              <div className="price-group" key={g.heading}>
+                <h3>{g.heading}</h3>
+                <ul>
+                  {g.rows.map((r) => (
+                    <li key={r.label} className={r.featured ? "price-row featured" : "price-row"}>
+                      <span className="pr-label">{r.label}</span>
+                      <span className="pr-price">{r.price}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-        <h2>Why Choose In &amp; Out Smog Check</h2>
-        <div className="cards" data-testid="why-choose-cards">
-          {whyChoose.map((w) => (
-            <div className="card" key={w.title}>
-              <h3>{w.title}</h3>
-              <p>{w.body}</p>
-            </div>
-          ))}
-        </div>
+          <h2>What’s Included</h2>
+          <ul className="pricing-notes" data-testid="pricing-notes">
+            <li><span className="pn-red">Certificate fee included</span> in every listed price.</li>
+            <li>One <span className="pn-red">FREE retest within 30 days</span> after a failed inspection.</li>
+            <li>STAR-directed vehicles use the same applicable vehicle-category pricing shown above.</li>
+            <li>No appointment required — walk-ins are welcome.</li>
+          </ul>
 
-        <p className="pricing-footer-cta">
-          Ready to get smogged?{" "}
-          <a href="tel:+17149931660" data-testid="pricing-tel-inline">
-            Call (714) 993-1660
-          </a>{" "}
-          or drive in — 144 S Bradford Ave, Placentia, CA 92870. Same STAR
-          Test-Only shop that&rsquo;s served{" "}
-          <a href="/placentia-smog-check">Placentia</a>,{" "}
-          <a href="/fullerton-smog-check">Fullerton</a>, and{" "}
-          <a href="/yorba-linda-smog-check">Yorba Linda</a> drivers since 1999.
-        </p>
-      </section>
+          <h2>Why Our Pricing Is Straightforward</h2>
+          <div className="cards" data-testid="why-choose-cards">
+            <div className="card"><h3>Test-Only</h3><p>We inspect vehicles; we do not sell repairs. That keeps the visit focused on your smog test.</p></div>
+            <div className="card"><h3>No Hidden Certificate Fee</h3><p>The certificate fee is already included in the prices shown on this page.</p></div>
+            <div className="card"><h3>Free Retest</h3><p>If your vehicle fails, you get one free retest within 30 days.</p></div>
+            <div className="card"><h3>Fast Walk-In Service</h3><p>Most standard inspections are completed in about 10 minutes, and no appointment is needed.</p></div>
+          </div>
+
+          <div className="cta-row">
+            <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="primary">Drive In Today</a>
+            <a href="tel:+17149931660" className="secondary">Call (714) 993-1660</a>
+          </div>
+
+          <p className="pricing-footer-cta">In &amp; Out Smog Check · <strong>144 S Bradford Ave, Placentia, CA 92870</strong> · STAR-Certified Test-Only · Serving local drivers since 1999.</p>
+        </section>
+      </main>
     </>
   );
 }
