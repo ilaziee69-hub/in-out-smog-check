@@ -5,8 +5,8 @@ const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
 const DIR_FROM_YL = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
   "Yorba Linda, CA"
 )}&destination=${encodeURIComponent(ADDRESS)}`;
-const NIXON_LIBRARY_PHOTO = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nixon_Presidential_Library_%26_Museum_%2830909063265%29.jpg/1280px-Nixon_Presidential_Library_%26_Museum_%2830909063265%29.jpg";
-const NIXON_LIBRARY_SOURCE = "https://commons.wikimedia.org/wiki/File:Nixon_Presidential_Library_%26_Museum_%2830909063265%29.jpg";
+const NIXON_LIBRARY_PHOTO = "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nixon_Presidential_Library_%26_Museum_%2830273078213%29.jpg";
+const NIXON_LIBRARY_SOURCE = "https://commons.wikimedia.org/wiki/File:Nixon_Presidential_Library_%26_Museum_%2830273078213%29.jpg";
 
 const FAQS = [
   {
@@ -138,8 +138,8 @@ export default function YorbaLinda() {
             <a className="pl-btn pl-btn-red" href={DIR_FROM_YL} target="_blank" rel="noopener noreferrer">Directions from Yorba Linda →</a>
           </div>
           <figure>
-            <img src={NIXON_LIBRARY_PHOTO} alt="Richard Nixon Presidential Library and Museum in Yorba Linda, California" loading="lazy" />
-            <figcaption>RICHARD NIXON PRESIDENTIAL LIBRARY · YORBA LINDA · PHOTO: JEREMY THOMPSON / CC BY 2.0</figcaption>
+            <img src={NIXON_LIBRARY_PHOTO} alt="Exterior of the Richard Nixon Presidential Library and Museum in Yorba Linda, California" loading="lazy" />
+            <figcaption>RICHARD NIXON PRESIDENTIAL LIBRARY · YORBA LINDA · EXTERIOR LANDMARK</figcaption>
           </figure>
         </section>
 
@@ -187,7 +187,7 @@ export default function YorbaLinda() {
             ))}
           </div>
           <p>We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/fullerton-smog-check">Fullerton smog check</Link>.</p>
-          <p style={{fontSize:"12px",color:"#666"}}>Landmark photo source: <a href={NIXON_LIBRARY_SOURCE} target="_blank" rel="noopener noreferrer">Jeremy Thompson, Wikimedia Commons</a> · CC BY 2.0.</p>
+          <p style={{fontSize:"12px",color:"#666"}}>Landmark photo source: <a href={NIXON_LIBRARY_SOURCE} target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
         </section>
       </main>
     </>
