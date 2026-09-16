@@ -78,7 +78,7 @@ export default function StarCertified() {
           <p className="pl-label">WHEN TO COME HERE</p>
           <h2>Bring your vehicle to a STAR station when your notice requires it.</h2>
           <div className="pl-service-grid">
-            <article><span>01</span><h3>STAR-Directed Renewal</h3><p>If your DMV renewal notice says STAR station required, we can perform the inspection.</p></article>
+            <article><span>01</span><h3>STAR-Directed Renewal</h3><p>Your vehicle may be selected by BAR for STAR certification based on its vehicle profile or as part of a random sample. If your DMV renewal notice says a STAR station is required, we can perform the inspection.</p></article>
             <article><span>02</span><h3>Gross Polluter Certification</h3><p>Vehicles identified as gross polluters must be certified at an authorized STAR station or BAR Referee.</p></article>
             <article><span>03</span><h3>Regular Smog Checks</h3><p>You do not have to be STAR-directed to use our Test-Only station. We also inspect standard eligible vehicles.</p></article>
             <article><span>04</span><h3>Gas, Hybrid & Diesel</h3><p>We inspect eligible 1976+ gasoline, hybrid and alternative-fuel vehicles, plus eligible 1998+ diesel vehicles up to 14,000 lbs GVWR.</p></article>
