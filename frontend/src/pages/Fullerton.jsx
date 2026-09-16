@@ -1,20 +1,26 @@
 import { Link } from "react-router-dom";
 import Seo, { SITE_URL } from "@/components/Seo";
 
+const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
+const DIR_FROM_FULLERTON = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
+  "Fullerton, CA"
+)}&destination=${encodeURIComponent(ADDRESS)}`;
+const CSUF_PHOTO = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg/1280px-Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg";
+const CSUF_SOURCE = "https://commons.wikimedia.org/wiki/File:Cal_State_Fullerton_Student_Recreation_Center_(Fullerton,_CA).jpg";
+
 export default function Fullerton() {
   return (
     <>
       <Seo
         title="Fullerton Smog Check | STAR Test-Only | In & Out Smog"
-        description="STAR-certified Test-Only smog checks for Fullerton drivers. In & Out Smog Check is in neighboring Placentia — walk-ins welcome, fast inspections."
+        description="Need a smog check near Fullerton? Visit our nearby STAR-Certified Test-Only station in Placentia for fast service, walk-ins, and no repair upsells."
         path="/fullerton-smog-check"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Service",
           name: "Fullerton Smog Check — STAR Certified Test-Only",
           serviceType: "STAR Certified Test-Only Smog Check",
-          description:
-            "STAR-Certified Test-Only smog inspections for Fullerton, CA drivers. Performed at In & Out Smog Check in neighboring Placentia — no separate Fullerton location.",
+          description: "STAR-Certified Test-Only smog inspections for Fullerton drivers at In & Out Smog Check in neighboring Placentia.",
           provider: {
             "@type": "AutomotiveBusiness",
             name: "In & Out Smog Check",
@@ -29,130 +35,107 @@ export default function Fullerton() {
               addressCountry: "US",
             },
           },
-          areaServed: {
-            "@type": "City",
-            name: "Fullerton",
-            containedInPlace: {
-              "@type": "AdministrativeArea",
-              name: "California",
-            },
-          },
+          areaServed: { "@type": "City", name: "Fullerton" },
         }}
       />
 
-      <section className="page-hero">
-        <h1>Fullerton Smog Check</h1>
-        <p className="lead">
-          In &amp; Out Smog Check is a{" "}
-          <strong>STAR-Certified Test-Only</strong> smog inspection station in
-          neighboring <strong>Placentia</strong>, convenient for drivers coming
-          from east Fullerton, Raymond Hills, Sunny Hills, and the{" "}
-          Cal State Fullerton (CSUF) area. Walk-ins are welcome, and most
-          inspections are quick — get in, get tested, get on with your day.
-        </p>
-        <a
-          className="primary"
-          href="https://www.google.com/maps/dir/?api=1&origin=Fullerton,+CA&destination=144+S+Bradford+Ave,+Placentia,+CA+92870"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-testid="fullerton-directions-btn"
-        >
-          Directions from Fullerton
-        </a>
-      </section>
-
-      <section className="prose">
-        <div className="aeo-answer" data-testid="fullerton-aeo">
-          <p>
-            <strong>Yes — Fullerton drivers can get a STAR smog check just
-            minutes away in Placentia.</strong> Take Chapman Ave east and
-            you&rsquo;re here. Walk-ins welcome, no appointment needed.
-          </p>
-        </div>
-
-        <h2>Convenient for Fullerton Drivers</h2>
-        <p>
-          Our Placentia shop sits right off E Chapman Ave, the same road that
-          runs through much of Fullerton. That makes us especially convenient
-          for drivers coming from <strong>east Fullerton</strong>,{" "}
-          <strong>Raymond Hills</strong>, <strong>Sunny Hills</strong>, and
-          the neighborhoods near Chapman Ave. If your DMV renewal notice
-          specifies a{" "}
-          <Link to="/star-certified-smog">STAR-certified station</Link>, we
-          can handle that too — same day, no appointment needed.
-        </p>
-
-        <h2>Near Cal State Fullerton (CSUF)</h2>
-        <p>
-          In &amp; Out Smog Check is a short drive east of{" "}
-          <strong>Cal State Fullerton</strong> along E Chapman Ave, making us
-          convenient for CSUF students, faculty, and staff — as well as
-          residents in the surrounding neighborhoods. Whether you&rsquo;re
-          renewing your registration between classes or handling a
-          change-of-ownership on a used car, our Test-Only station keeps
-          things straightforward: no repair upsells, just an honest smog
-          inspection.
-        </p>
-
-        <h2>Smog Check Services for Fullerton Drivers</h2>
-        <div className="cards">
-          <div className="card">
-            <h3>Registration Renewal Smog Check</h3>
-            <p>
-              The standard California DMV smog inspection required every two
-              years for most 1976+ gasoline vehicles and 1998+ diesel
-              vehicles up to 14,000 lbs GVWR.
-            </p>
+      <main className="placentia-page">
+        <section className="pl-hero">
+          <div className="pl-hero-copy">
+            <p className="pl-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
+            <p className="pl-local">SERVING FULLERTON DRIVERS SINCE 1999</p>
+            <h1>Fullerton Smog Check.<br /><span>Quick Drive. Quick Test.</span></h1>
+            <p className="pl-lead">Our shop is just east of Fullerton in neighboring Placentia at <strong>144 S Bradford Ave</strong>. Walk in for fast smog testing with no repair upsells.</p>
+            <div className="pl-actions">
+              <a className="pl-btn pl-btn-red" href={DIR_FROM_FULLERTON} target="_blank" rel="noopener noreferrer">Directions from Fullerton →</a>
+              <a className="pl-btn pl-btn-outline" href="tel:+17149931660">Call (714) 993-1660</a>
+            </div>
+            <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
-          <div className="card">
-            <h3>Change-of-Ownership Smog Check</h3>
-            <p>
-              Buying or selling a vehicle in Fullerton or the CSUF area? A
-              current smog certificate is required to complete title transfer
-              at the DMV.
-            </p>
+          <figure className="pl-shop-photo">
+            <img src="/photos/storefront-approved-final.jpg" alt="In & Out Smog Check storefront near Fullerton in Placentia" />
+            <figcaption>144 S BRADFORD AVE · JUST EAST OF FULLERTON</figcaption>
+          </figure>
+        </section>
+
+        <section className="pl-proof" aria-label="Smog station highlights">
+          <div><strong>~10</strong><span>MINUTE<br />SMOG CHECKS</span></div>
+          <div><strong>★</strong><span>STAR<br />CERTIFIED</span></div>
+          <div><strong>25+</strong><span>YEARS SERVING<br />LOCAL DRIVERS</span></div>
+          <div><strong>0</strong><span>REPAIR<br />UPSELLS</span></div>
+        </section>
+
+        <section className="pl-service-split pl-local-split">
+          <figure>
+            <img src="/photos/inspection-bay.jpg" alt="Vehicle inspection bay at In & Out Smog Check near Fullerton" />
+            <figcaption>FAST TEST-ONLY SERVICE FOR FULLERTON DRIVERS</figcaption>
+          </figure>
+          <div>
+            <p className="pl-label">EASY FROM EAST FULLERTON</p>
+            <h2>Chapman Ave brings you straight toward us.</h2>
+            <p>From east Fullerton and the Cal State Fullerton area, head east on Chapman Ave toward Placentia, then turn south on Bradford Ave. Our shop is right off that main route.</p>
+            <div className="pl-local-points">
+              <span><b>CSUF</b> A familiar starting point for east Fullerton drivers</span>
+              <span><b>CHAPMAN AVE</b> Main route east toward Placentia</span>
+              <span><b>BRADFORD AVE</b> Final turn to our smog station</span>
+            </div>
           </div>
-          <div className="card">
-            <h3>
-              <Link to="/star-certified-smog">STAR-Certified Test-Only</Link>
-            </h3>
-            <p>
-              We&rsquo;re a STAR-certified station, so we handle every
-              STAR-directed vehicle the DMV sends our way.
-            </p>
+        </section>
+
+        <section className="pl-water-tower">
+          <div className="pl-water-copy">
+            <p className="pl-label">A FULLERTON LANDMARK</p>
+            <h2>Coming from Cal State Fullerton? You’re already close.</h2>
+            <p>Cal State Fullerton is one of the easiest landmarks to recognize on the east side of Fullerton. From the CSUF area, stay on Chapman Ave heading east into Placentia, then turn south on Bradford Ave.</p>
+            <p>That makes our Test-Only station especially convenient for students, staff, faculty, and nearby residents who want a straightforward smog check without a repair sales pitch.</p>
+            <a className="pl-btn pl-btn-red" href={DIR_FROM_FULLERTON} target="_blank" rel="noopener noreferrer">Directions from Fullerton →</a>
           </div>
-        </div>
+          <figure>
+            <img src={CSUF_PHOTO} alt="Cal State Fullerton campus landmark in Fullerton, California" loading="lazy" />
+            <figcaption>CAL STATE FULLERTON · FULLERTON · PHOTO: SPATMS / CC BY-SA 4.0</figcaption>
+          </figure>
+        </section>
 
-        <h2>Driving Directions from Fullerton</h2>
-        <ol className="step-list">
-          <li>Head east on <strong>E Chapman Ave</strong> — the same road that runs through downtown Fullerton and past CSUF.</li>
-          <li>Continue past N Placentia Ave into the city of Placentia.</li>
-          <li>Turn right onto <strong>S Bradford Ave</strong>.</li>
-          <li>We&rsquo;re at <strong>144 S Bradford Ave</strong> on your left, next door to Tony&rsquo;s Deli — look for the red <strong>SMOG CHECK ONLY CENTER</strong> sign.</li>
-        </ol>
+        <section className="pl-services">
+          <p className="pl-label">WHAT WE TEST</p>
+          <h2>Smog Check Services for Fullerton Drivers</h2>
+          <div className="pl-service-grid">
+            <article><span>01</span><h3>Registration Renewal</h3><p>Bring your DMV renewal notice and we’ll handle the required smog inspection.</p></article>
+            <article><span>02</span><h3>STAR-Directed Vehicles</h3><p>If your DMV notice requires a STAR station, our STAR-Certified Test-Only shop can perform the inspection.</p></article>
+            <article><span>03</span><h3>Change of Ownership</h3><p>Buying or selling a vehicle? We handle California transfer smog inspections.</p></article>
+            <article><span>04</span><h3>Gas, Hybrid & Diesel</h3><p>We inspect eligible 1976+ gasoline, hybrid and alternative-fuel vehicles, plus eligible 1998+ diesel vehicles up to 14,000 lbs GVWR.</p></article>
+          </div>
+          <p className="pl-star-link">Need more information about STAR requirements? <Link to="/star-certified-smog">See our STAR-certified smog guide →</Link></p>
+        </section>
 
-        <h2>Why Fullerton Drivers Choose Us</h2>
-        <p>
-          No appointments and no repair upsells. As a Test-Only station, we
-          can only inspect — never repair — so we have zero incentive to fail
-          your car. You get a straight pass-or-fail smog inspection, an
-          electronic DMV transmission, and a friendly team that explains
-          exactly what your DMV notice needs. If you have a question before
-          driving over, our <Link to="/faq">smog check FAQ</Link> answers the
-          most common ones, or you can{" "}
-          <Link to="/contact">contact us for hours and directions</Link>.
-        </p>
+        <section className="pl-local-history">
+          <div className="pl-history-copy">
+            <p className="pl-label">SERVING NORTH ORANGE COUNTY</p>
+            <h2>Local shop. Short drive. No appointment.</h2>
+            <p>In & Out Smog Check has served drivers from Fullerton, Placentia, Yorba Linda and nearby communities since 1999. Drive in, get tested, and get back on the road.</p>
+            <a className="pl-btn pl-btn-black" href={DIR_FROM_FULLERTON} target="_blank" rel="noopener noreferrer">Get Directions →</a>
+          </div>
+        </section>
 
-        <h2>Also Serving Nearby Cities</h2>
-        <p>
-          We&rsquo;re a short drive from most of North Orange County. See our
-          dedicated guides for{" "}
-          <Link to="/placentia-smog-check">Placentia smog check</Link>{" "}
-          customers and{" "}
-          <Link to="/yorba-linda-smog-check">Yorba Linda smog check</Link>{" "}
-          customers as well.
-        </p>
-      </section>
+        <section className="pl-find">
+          <div>
+            <p className="pl-label">EASY TO FIND</p>
+            <h2>144 S Bradford Ave</h2>
+            <p>From Fullerton, take Chapman Ave east into Placentia, then turn south on Bradford Ave. Our shop is right off the main route.</p>
+          </div>
+          <div className="pl-find-actions">
+            <a className="pl-btn pl-btn-red" href={DIR_FROM_FULLERTON} target="_blank" rel="noopener noreferrer">Directions from Fullerton →</a>
+            <a className="pl-btn pl-btn-outline-dark" href="tel:+17149931660">Call Us</a>
+          </div>
+        </section>
+
+        <section className="pl-seo">
+          <h2>Fullerton’s Nearby STAR Test-Only Smog Station</h2>
+          <p>In & Out Smog Check serves Fullerton drivers from our Placentia shop at <strong>144 S Bradford Ave</strong>. We provide STAR-certified Test-Only inspections, registration-renewal smog checks, change-of-ownership inspections, and eligible gasoline, hybrid and diesel testing.</p>
+          <p>We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/yorba-linda-smog-check">Yorba Linda smog check</Link>.</p>
+          <p style={{fontSize:"12px",color:"#666"}}>Landmark photo source: <a href={CSUF_SOURCE} target="_blank" rel="noopener noreferrer">Spatms, Wikimedia Commons</a> · CC BY-SA 4.0.</p>
+        </section>
+      </main>
     </>
   );
 }
