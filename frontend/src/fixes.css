@@ -36,6 +36,14 @@
 }
 .fh-eyebrow *, .lv-eyebrow *, .lv-map-pill *, .lv-photo-tag *, .lv-illmap-caption *, .heritage-badge *, .nc-eyebrow *, .wf-eyebrow *{color:#fff!important;opacity:1!important}
 
+/* Header phone CTA: white label and red number on the black button. */
+.mock-nav-call,.nav-cta{background:#000!important;color:#fff!important;border-color:#000!important}
+.mock-nav-call span{color:#fff!important;opacity:1!important}
+.mock-nav-call strong{color:#e00000!important;opacity:1!important}
+
+/* Homepage rating stars use the brand red instead of black. */
+.mock-rating .mock-stars{color:#e00000!important;opacity:1!important}
+
 /* White cards / location verification must use dark text. */
 .lv-warning,.lv-address-card,.lv-map,.lv-photo,.lv-photos-header,.lv-header{
   background:#fff!important;color:#111!important;
