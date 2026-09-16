@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
 
+const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870";
+
 export default function StarCertified() {
   return (
     <>
@@ -12,115 +14,104 @@ export default function StarCertified() {
           "@context": "https://schema.org",
           "@type": "Service",
           serviceType: "STAR Certified Test-Only Smog Check",
-          provider: { "@type": "AutomotiveBusiness", name: "In & Out Smog Check" },
+          provider: {
+            "@type": "AutomotiveBusiness",
+            name: "In & Out Smog Check",
+            telephone: "+1-714-993-1660",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "144 S Bradford Ave",
+              addressLocality: "Placentia",
+              addressRegion: "CA",
+              postalCode: "92870",
+              addressCountry: "US",
+            },
+          },
           areaServed: "Orange County, California",
-          description:
-            "STAR-Certified Test-Only smog inspections required by the California DMV for renewal, change of ownership, and out-of-state vehicles.",
         }}
       />
 
-      <section className="page-hero">
-        <h1>STAR Certified · Test-Only Smog Station</h1>
-        <p className="lead">
-          Two credentials that matter — and we hold both. If your DMV renewal
-          notice says <em>&ldquo;STAR Certified Station Required&rdquo;</em> or <em>&ldquo;Test-Only
-          Station,&rdquo;</em> you&rsquo;re in the right place. California BAR-licensed and
-          proudly serving Placentia, Fullerton, Yorba Linda, Anaheim, and the
-          rest of Orange County.
-        </p>
-        <Link to="/contact" className="primary" data-testid="star-cta-visit">
-          Visit Us Today
-        </Link>
-      </section>
-
-      <section className="prose">
-        <h2>What "Test-Only" Means for You</h2>
-        <p>
-          A Test-Only station is licensed by the California Bureau of Automotive
-          Repair to <strong>inspect vehicles only</strong> — we cannot legally
-          perform smog repairs. That’s a huge advantage for you: since we don’t
-          profit from fixing anything, we have zero incentive to fail your car.
-          You get an inspection that’s completely independent, with your result
-          transmitted electronically to the DMV the moment your test finishes.
-        </p>
-
-        <h2>What is a STAR Certified Smog Station?</h2>
-        <p>
-          STAR is California’s program for high-performing smog test stations.
-          The DMV directs about 2% of vehicles to STAR stations each renewal
-          cycle — typically older vehicles, gross polluters, or vehicles flagged
-          by the Bureau of Automotive Repair (BAR). A regular smog check station
-          can’t finalize these inspections. We can.
-        </p>
-
-        <h2>When You Need a STAR Smog Check</h2>
-        <ul className="check-list">
-          <li>
-            Your DMV renewal notice specifies a <strong>STAR-certified
-            station</strong>.
-          </li>
-          <li>You’re registering an <strong>out-of-state vehicle</strong> in California.</li>
-          <li>Your vehicle was previously a <strong>gross polluter</strong>.</li>
-          <li>You’re completing a <strong>title transfer</strong> on certain vehicles.</li>
-          <li>Your car is <strong>6+ model years old</strong> and randomly directed.</li>
-        </ul>
-
-        <h2>What We Test</h2>
-        <div className="cards">
-          <div className="card">
-            <h3>OBD-II Inspection</h3>
-            <p>
-              Connect to your vehicle’s on-board diagnostics to verify emission
-              controls and readiness monitors for 2000+ gasoline vehicles.
-            </p>
+      <main className="placentia-page">
+        <section className="pl-hero">
+          <div className="pl-hero-copy">
+            <p className="pl-kicker">STAR CERTIFIED · TEST-ONLY</p>
+            <p className="pl-local">DMV-DIRECTED VEHICLES WELCOME</p>
+            <h1>STAR Smog Check.<br /><span>Fast. Clear. Test-Only.</span></h1>
+            <p className="pl-lead">If your DMV notice says a <strong>STAR station is required</strong>, you can bring it straight to us. We are a STAR-certified Test-Only smog station at <strong>144 S Bradford Ave in Placentia</strong>.</p>
+            <div className="pl-actions">
+              <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
+              <a className="pl-btn pl-btn-outline" href="tel:+17149931660">Call (714) 993-1660</a>
+            </div>
+            <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
-          <div className="card">
-            <h3>Tailpipe / ASM Test</h3>
-            <p>
-              Dyno-based emissions test for pre-2000 vehicles, diesels (1998+),
-              and any car the DMV flags for full tailpipe inspection.
-            </p>
-          </div>
-          <div className="card">
-            <h3>Visual Inspection</h3>
-            <p>
-              Certified inspectors verify your catalytic converter, EGR system,
-              gas cap, and all required smog control equipment.
-            </p>
-          </div>
-        </div>
+          <figure className="pl-shop-photo">
+            <img src="/photos/inspection-bay.jpg" alt="STAR-certified Test-Only smog inspection bay at In & Out Smog Check" />
+            <figcaption>STAR CERTIFIED · TEST-ONLY · SERVING LOCAL DRIVERS SINCE 1999</figcaption>
+          </figure>
+        </section>
 
-        <h2>How Long Does It Take?</h2>
-        <p>
-          Most STAR smog checks at our Placentia shop are done in about{" "}
-          <strong>10 minutes</strong>. We print your receipt and{" "}
-          <strong>electronically transmit your pass result to the California DMV
-          in real time</strong>, so you can renew your registration online the
-          moment you drive off.
-        </p>
+        <section className="pl-proof" aria-label="STAR smog check highlights">
+          <div><strong>★</strong><span>STAR<br />CERTIFIED</span></div>
+          <div><strong>0</strong><span>REPAIR<br />UPSELLS</span></div>
+          <div><strong>~10</strong><span>MINUTE<br />STANDARD TESTS</span></div>
+          <div><strong>25+</strong><span>YEARS SERVING<br />LOCAL DRIVERS</span></div>
+        </section>
 
-        <h2>Pricing</h2>
-        <p>
-          We publish our full price list up front — every price includes the
-          state certificate fee, and every failed inspection comes with one
-          free retest within 30 days. Most 2000 &amp; newer cars are{" "}
-          <strong>$60</strong>; trucks, SUVs &amp; vans, older year ranges,
-          diesels, and RVs are listed in full on our pricing page.
-        </p>
-        <p>
-          <Link
-            to="/smog-check-pricing"
-            className="btn primary"
-            data-testid="star-see-pricing-btn"
-          >
-            See Full Smog Check Pricing
-          </Link>
-        </p>
-        <p>
-          Cash, debit, and all major credit cards accepted. Questions? Call{" "}
-          <a href="tel:+17149931660">(714) 993-1660</a>.
-        </p>
-      </section>
+        <section className="pl-service-split pl-local-split">
+          <figure>
+            <img src="/photos/storefront-approved-final.jpg" alt="In & Out Smog Check storefront in Placentia" />
+            <figcaption>144 S BRADFORD AVE · PLACENTIA</figcaption>
+          </figure>
+          <div>
+            <p className="pl-label">WHAT STAR MEANS</p>
+            <h2>If the DMV directs you to STAR, a regular station may not be enough.</h2>
+            <p>California BAR allows STAR-certified stations to inspect and certify vehicles that are specifically directed to the STAR program, including identified gross polluters. STAR certification is available to both Test-Only and Test-and-Repair stations; ours is Test-Only.</p>
+            <div className="pl-local-points">
+              <span><b>STAR-DIRECTED</b> We can inspect DMV-directed vehicles</span>
+              <span><b>TEST-ONLY</b> We inspect — we do not sell smog repairs</span>
+              <span><b>WALK-INS</b> No appointment required</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="pl-services">
+          <p className="pl-label">WHEN TO COME HERE</p>
+          <h2>Bring your vehicle to a STAR station when your notice requires it.</h2>
+          <div className="pl-service-grid">
+            <article><span>01</span><h3>STAR-Directed Renewal</h3><p>If your DMV renewal notice says STAR station required, we can perform the inspection.</p></article>
+            <article><span>02</span><h3>Gross Polluter Certification</h3><p>Vehicles identified as gross polluters must be certified at an authorized STAR station or BAR Referee.</p></article>
+            <article><span>03</span><h3>Regular Smog Checks</h3><p>You do not have to be STAR-directed to use our Test-Only station. We also inspect standard eligible vehicles.</p></article>
+            <article><span>04</span><h3>Gas, Hybrid & Diesel</h3><p>We inspect eligible 1976+ gasoline, hybrid and alternative-fuel vehicles, plus eligible 1998+ diesel vehicles up to 14,000 lbs GVWR.</p></article>
+          </div>
+        </section>
+
+        <section className="pl-local-history">
+          <div className="pl-history-copy">
+            <p className="pl-label">TEST-ONLY MEANS TEST-ONLY</p>
+            <h2>No repair sales pitch after your inspection.</h2>
+            <p>A California Test-Only station is licensed to conduct Smog Check inspections only. That keeps your visit focused on testing and certification rather than selling repair work.</p>
+            <Link className="pl-btn pl-btn-black" to="/smog-check-pricing">See Smog Check Pricing →</Link>
+          </div>
+        </section>
+
+        <section className="pl-find">
+          <div>
+            <p className="pl-label">UPFRONT PRICING</p>
+            <h2>2000+ cars start at $60</h2>
+            <p>Our listed prices include the certificate fee, and a failed inspection includes one free retest within 30 days.</p>
+          </div>
+          <div className="pl-find-actions">
+            <Link className="pl-btn pl-btn-red" to="/smog-check-pricing">See Full Pricing →</Link>
+            <a className="pl-btn pl-btn-outline-dark" href="tel:+17149931660">Call Us</a>
+          </div>
+        </section>
+
+        <section className="pl-seo">
+          <h2>STAR-Certified Test-Only Smog Check in Placentia</h2>
+          <p>In &amp; Out Smog Check is a STAR-certified Test-Only station at <strong>144 S Bradford Ave, Placentia, CA 92870</strong>. We serve Placentia, Fullerton, Yorba Linda and nearby Orange County drivers who need STAR-directed or standard Smog Check inspections.</p>
+          <p>Need directions? <Link to="/contact">See our contact and location page</Link>, or view our <Link to="/smog-check-pricing">full smog check pricing</Link>.</p>
+        </section>
+      </main>
     </>
   );
 }
