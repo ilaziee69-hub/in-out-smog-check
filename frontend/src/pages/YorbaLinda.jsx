@@ -134,7 +134,6 @@ export default function YorbaLinda() {
             <p className="pl-label">A YORBA LINDA LANDMARK</p>
             <h2>Know the Nixon Library? You’re already on the right side of town.</h2>
             <p>The Richard Nixon Presidential Library is one of Yorba Linda’s most recognizable landmarks. From central Yorba Linda, the route to our shop stays simple: head west toward Placentia, continue onto Chapman Ave, then turn south on Bradford Ave.</p>
-            <p>That local route is why this page is built around Yorba Linda wayfinding instead of generic city copy.</p>
             <a className="pl-btn pl-btn-red" href={DIR_FROM_YL} target="_blank" rel="noopener noreferrer">Directions from Yorba Linda →</a>
           </div>
           <figure>
