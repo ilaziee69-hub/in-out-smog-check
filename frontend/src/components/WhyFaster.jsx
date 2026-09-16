@@ -44,8 +44,8 @@ export default function WhyFaster() {
       <div className="wf-inner">
         <span className="wf-eyebrow" data-testid="wf-eyebrow">⚡ The Speed Advantage</span>
         <h2 id="why-faster-heading" data-testid="wf-heading">
-          Why We&rsquo;re One of the{" "}
-          <span className="accent">Fastest Smog Checks</span> in Orange County
+          Fast Smog Checks in{" "}
+          <span className="accent">Orange County</span>
         </h2>
         <p className="wf-lead">
           Six reasons the average visit takes about ten minutes at 144 S
