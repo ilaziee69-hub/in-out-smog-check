@@ -100,7 +100,7 @@ export default function YorbaLinda() {
             <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/photos/storefront-approved-final.jpg" alt="In & Out Smog Check storefront near Yorba Linda in Placentia" />
+            <img src="/photos/storefront-approved-final.jpg" width="1147" height="828" alt="In & Out Smog Check storefront near Yorba Linda in Placentia" />
             <figcaption>144 S BRADFORD AVE · JUST WEST OF YORBA LINDA</figcaption>
           </figure>
         </section>
@@ -114,7 +114,7 @@ export default function YorbaLinda() {
 
         <section className="pl-service-split pl-local-split">
           <figure>
-            <img src="/photos/inspection-bay.jpg" alt="Vehicle inspection bay at In & Out Smog Check near Yorba Linda" />
+            <img src="/photos/inspection-bay.jpg" width="864" height="648" alt="Vehicle inspection bay at In & Out Smog Check near Yorba Linda" />
             <figcaption>FAST TEST-ONLY SERVICE FOR YORBA LINDA DRIVERS</figcaption>
           </figure>
           <div>
