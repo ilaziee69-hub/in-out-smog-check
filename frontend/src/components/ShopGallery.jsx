@@ -31,7 +31,9 @@ export default function ShopGallery() {
           <figure className="sg-item sg-large" data-testid="sg-item-bay">
             <img
               src="/photos/inspection-bay.jpg"
-              alt="Interior of In & Out Smog Check STAR-certified Test-Only inspection bay at 144 S Bradford Ave, showing the emissions analyzer and dyno station"
+              width="864"
+              height="648"
+              alt="STAR-certified Test-Only inspection bay at In & Out Smog Check"
               loading="lazy"
               decoding="async"
             />
@@ -46,7 +48,9 @@ export default function ShopGallery() {
           <figure className="sg-item" data-testid="sg-item-waiting">
             <img
               src="/photos/waiting-area.jpg"
-              alt="Waiting area at In & Out Smog Check with four black customer chairs and BAR customer-information signs"
+              width="923"
+              height="967"
+              alt="Customer waiting area at In & Out Smog Check in Placentia"
               loading="lazy"
               decoding="async"
             />
@@ -62,7 +66,9 @@ export default function ShopGallery() {
           <figure className="sg-item" data-testid="sg-item-storefront">
             <img
               src="/photos/storefront-approved-final.jpg"
-              alt="Wide exterior of In & Out Smog Check white brick building with the large red SMOG CHECK ONLY CENTER and STAR Certified sign"
+              width="1147"
+              height="828"
+              alt="In & Out Smog Check storefront and red SMOG CHECK ONLY CENTER sign"
               loading="lazy"
               decoding="async"
             />
@@ -78,7 +84,9 @@ export default function ShopGallery() {
           <figure className="sg-item" data-testid="sg-item-bradford">
             <img
               src="/photos/bradford-center.jpg"
-              alt="Street view of Bradford Ave and Center St intersection in Old Town Placentia, near In & Out Smog Check"
+              width="864"
+              height="648"
+              alt="Bradford Ave and Center St near In & Out Smog Check in Placentia"
               loading="lazy"
               decoding="async"
             />
@@ -94,7 +102,9 @@ export default function ShopGallery() {
           <figure className="sg-item" data-testid="sg-item-farolito">
             <img
               src="/photos/el-farolito.jpg"
-              alt="View from In & Out Smog Check across Center St toward El Farolito, an easy landmark to spot when arriving"
+              width="864"
+              height="648"
+              alt="El Farolito across Center St from In & Out Smog Check in Placentia"
               loading="lazy"
               decoding="async"
             />
