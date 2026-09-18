@@ -43,7 +43,7 @@ export default function Contact() {
             <p className="pl-hours">Mon–Fri 8AM–5PM · Sat 8AM–3PM · Sun Closed</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/photos/storefront-approved-final.jpg" alt="In & Out Smog Check storefront at 144 S Bradford Ave in Placentia" />
+            <img src="/photos/storefront-approved-final.jpg" width="1147" height="828" alt="In & Out Smog Check storefront at 144 S Bradford Ave in Placentia" />
             <figcaption>THIS IS OUR SHOP · 144 S BRADFORD AVE</figcaption>
           </figure>
         </section>
@@ -57,7 +57,7 @@ export default function Contact() {
 
         <section className="pl-service-split pl-local-split">
           <figure>
-            <img src="/photos/inspection-bay.jpg" alt="Inspection bay at In & Out Smog Check in Placentia" />
+            <img src="/photos/inspection-bay.jpg" width="864" height="648" alt="Inspection bay at In & Out Smog Check in Placentia" />
             <figcaption>FAST WALK-IN TEST-ONLY SERVICE</figcaption>
           </figure>
           <div>
