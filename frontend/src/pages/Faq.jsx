@@ -62,7 +62,7 @@ export default function Faq() {
     <>
       <Seo
         title="Smog Check FAQ | DMV, STAR & Exemptions | In & Out Smog"
-        description="Answers about California smog checks, STAR requirements, pricing, exemptions, failed inspections, free retests, and what to expect at our Placentia Test-Only station."
+        description="Answers about California smog checks, STAR requirements, pricing, exemptions, failed inspections, free retests, and our Placentia Test-Only station."
         path="/faq"
         jsonLd={jsonLd}
       />
@@ -81,7 +81,7 @@ export default function Faq() {
             <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/photos/inspection-bay.jpg" alt="Smog inspection bay at In & Out Smog Check in Placentia" />
+            <img src="/photos/inspection-bay.jpg" width="864" height="648" alt="Smog inspection bay at In & Out Smog Check in Placentia" />
             <figcaption>FAST ANSWERS · FAST TEST-ONLY SERVICE</figcaption>
           </figure>
         </section>
@@ -94,6 +94,7 @@ export default function Faq() {
         </section>
 
         <section className="prose">
+          <h2>Frequently Asked Smog Check Questions</h2>
           <div className="faq-list" data-testid="faq-list">
             {FAQS.map((item, i) => {
               const isOpen = open === i;
