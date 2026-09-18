@@ -91,7 +91,7 @@ export default function Fullerton() {
             <a className="pl-btn pl-btn-red" href={DIR_FROM_FULLERTON} target="_blank" rel="noopener noreferrer">Directions from Fullerton →</a>
           </div>
           <figure>
-            <img src={CSUF_PHOTO} alt="Cal State Fullerton Student Recreation Center in Fullerton, California" loading="lazy" />
+            <img src={CSUF_PHOTO} width="1000" height="750" alt="Cal State Fullerton Student Recreation Center in Fullerton, California" loading="lazy" />
             <figcaption>CAL STATE FULLERTON · FULLERTON · PHOTO: SPATMS / CC BY-SA 4.0</figcaption>
           </figure>
         </section>
