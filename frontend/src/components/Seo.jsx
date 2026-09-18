@@ -1,6 +1,15 @@
 import Head from "next/head";
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://inandoutsmogplacentia.com";
+const RAW_SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.inandoutsmogplacentia.com";
+
+export const SITE_URL = RAW_SITE_URL
+  .replace(
+    /^https?:\/\/(?:www\.)?inandoutsmogplacentia\.com\/?$/i,
+    "https://www.inandoutsmogplacentia.com"
+  )
+  .replace(/\/+$/, "");
+
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 export default function Seo({ title, description, path = "/", jsonLd }) {
@@ -20,7 +29,13 @@ export default function Seo({ title, description, path = "/", jsonLd }) {
       {title && <meta name="twitter:title" content={title} />}
       {description && <meta name="twitter:description" content={description} />}
       <meta name="twitter:image" content={OG_IMAGE} />
-      {schemas.map((s, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />)}
+      {schemas.map((s, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
+        />
+      ))}
     </Head>
   );
 }
