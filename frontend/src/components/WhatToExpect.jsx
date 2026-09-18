@@ -24,7 +24,9 @@ export default function WhatToExpect() {
             <div className="wte-photo">
               <img
                 src="/photos/waiting-area.jpg"
-                alt="Waiting area at In & Out Smog Check with four black customer chairs and BAR customer-information signs"
+                width="923"
+                height="967"
+                alt="Customer waiting area at In & Out Smog Check in Placentia"
                 loading="lazy"
                 decoding="async"
               />
@@ -40,7 +42,9 @@ export default function WhatToExpect() {
             <div className="wte-photo">
               <img
                 src="/photos/inspection-bay.jpg"
-                alt="Interior inspection bay and emissions testing equipment at In & Out Smog Check in Placentia"
+                width="864"
+                height="648"
+                alt="Smog inspection bay and testing equipment at In & Out Smog Check"
                 loading="lazy"
                 decoding="async"
               />
