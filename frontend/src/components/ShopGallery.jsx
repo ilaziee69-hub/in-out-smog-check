@@ -30,7 +30,7 @@ export default function ShopGallery() {
         <div className="sg-grid" data-testid="sg-grid">
           <figure className="sg-item sg-large" data-testid="sg-item-bay">
             <img
-              src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=70"
+              src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=75"
               width="864"
               height="648"
               alt="STAR-certified Test-Only inspection bay at In & Out Smog Check"
@@ -47,7 +47,7 @@ export default function ShopGallery() {
 
           <figure className="sg-item" data-testid="sg-item-waiting">
             <img
-              src="/_next/image?url=%2Fphotos%2Fwaiting-area.jpg&w=1080&q=70"
+              src="/_next/image?url=%2Fphotos%2Fwaiting-area.jpg&w=1080&q=75"
               width="923"
               height="967"
               alt="Customer waiting area at In & Out Smog Check in Placentia"
@@ -65,7 +65,7 @@ export default function ShopGallery() {
 
           <figure className="sg-item" data-testid="sg-item-storefront">
             <img
-              src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=1200&q=70"
+              src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=1200&q=75"
               width="1147"
               height="828"
               alt="In & Out Smog Check storefront and red SMOG CHECK ONLY CENTER sign"
@@ -83,7 +83,7 @@ export default function ShopGallery() {
 
           <figure className="sg-item" data-testid="sg-item-bradford">
             <img
-              src="/_next/image?url=%2Fphotos%2Fbradford-center.jpg&w=1080&q=70"
+              src="/_next/image?url=%2Fphotos%2Fbradford-center.jpg&w=1080&q=75"
               width="864"
               height="648"
               alt="Bradford Ave and Center St near In & Out Smog Check in Placentia"
@@ -101,7 +101,7 @@ export default function ShopGallery() {
 
           <figure className="sg-item" data-testid="sg-item-farolito">
             <img
-              src="/_next/image?url=%2Fphotos%2Fel-farolito.jpg&w=1080&q=70"
+              src="/_next/image?url=%2Fphotos%2Fel-farolito.jpg&w=1080&q=75"
               width="864"
               height="648"
               alt="El Farolito across Center St from In & Out Smog Check in Placentia"
