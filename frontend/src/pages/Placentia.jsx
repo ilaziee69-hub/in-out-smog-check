@@ -81,7 +81,7 @@ export default function Placentia() {
             <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
           </div>
           <figure>
-            <img src={`/_next/image?url=${encodeURIComponent(waterTower)}&w=1200&q=75`} width="1500" height="844" alt="Placentia water tower near In & Out Smog Check on Bradford Avenue" />
+            <img src={waterTower} width="1500" height="844" alt="Placentia water tower near In & Out Smog Check on Bradford Avenue" loading="lazy" referrerPolicy="no-referrer" />
             <figcaption>A PLACENTIA LANDMARK · JUST ABOUT A BLOCK FROM IN & OUT SMOG CHECK</figcaption>
           </figure>
         </section>
