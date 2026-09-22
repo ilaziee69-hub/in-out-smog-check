@@ -5,8 +5,6 @@ const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
 const DIR_FROM_FULLERTON = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
   "Fullerton, CA"
 )}&destination=${encodeURIComponent(ADDRESS)}`;
-const CSUF_PHOTO = "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg/640px-Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg";
-const CSUF_SOURCE = "https://commons.wikimedia.org/wiki/File:Cal_State_Fullerton_Student_Recreation_Center_(Fullerton,_CA).jpg";
 
 export default function Fullerton() {
   return (
@@ -91,8 +89,8 @@ export default function Fullerton() {
             <a className="pl-btn pl-btn-red" href={DIR_FROM_FULLERTON} target="_blank" rel="noopener noreferrer">Directions from Fullerton →</a>
           </div>
           <figure>
-            <img src={CSUF_PHOTO} width="1000" height="750" alt="Cal State Fullerton Student Recreation Center in Fullerton, California" loading="lazy" referrerPolicy="no-referrer" />
-            <figcaption>CAL STATE FULLERTON · FULLERTON · PHOTO: SPATMS / CC BY-SA 4.0</figcaption>
+            <img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75" width="864" height="648" alt="Inspection bay at In & Out Smog Check serving Fullerton drivers" loading="lazy" decoding="async" />
+            <figcaption>IN & OUT SMOG CHECK · A SHORT DRIVE FROM FULLERTON</figcaption>
           </figure>
         </section>
 
@@ -133,7 +131,6 @@ export default function Fullerton() {
           <h2>Fullerton’s Nearby STAR Test-Only Smog Station</h2>
           <p>In & Out Smog Check serves Fullerton drivers from our Placentia shop at <strong>144 S Bradford Ave</strong>. We provide STAR-certified Test-Only inspections, registration-renewal smog checks, change-of-ownership inspections, and eligible gasoline, hybrid and diesel testing.</p>
           <p>We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/yorba-linda-smog-check">Yorba Linda smog check</Link>.</p>
-          <p style={{fontSize:"12px",color:"#666"}}>Landmark photo source: <a href={CSUF_SOURCE} target="_blank" rel="noopener noreferrer">Spatms, Wikimedia Commons</a> · CC BY-SA 4.0.</p>
         </section>
       </main>
     </>
