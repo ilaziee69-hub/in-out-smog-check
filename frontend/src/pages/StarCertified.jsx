@@ -45,7 +45,7 @@ export default function StarCertified() {
             <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/photos/inspection-bay.jpg" width="864" height="648" alt="STAR-certified Test-Only smog inspection bay at In & Out Smog Check" />
+            <img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75" width="864" height="648" alt="STAR-certified Test-Only smog inspection bay at In & Out Smog Check" />
             <figcaption>STAR CERTIFIED · TEST-ONLY · SERVING LOCAL DRIVERS SINCE 1999</figcaption>
           </figure>
         </section>
@@ -59,7 +59,7 @@ export default function StarCertified() {
 
         <section className="pl-service-split pl-local-split">
           <figure>
-            <img src="/photos/storefront-approved-final.jpg" width="1147" height="828" alt="In & Out Smog Check storefront in Placentia" />
+            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=828&q=75" width="1147" height="828" alt="In & Out Smog Check storefront in Placentia" />
             <figcaption>144 S BRADFORD AVE · PLACENTIA</figcaption>
           </figure>
           <div>
