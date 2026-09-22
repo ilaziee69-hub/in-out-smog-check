@@ -43,7 +43,7 @@ export default function Placentia() {
             <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=1200&q=75" width="1147" height="828" alt="In & Out Smog Check storefront on S Bradford Ave in Placentia" />
+            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=828&q=75" width="1147" height="828" alt="In & Out Smog Check storefront on S Bradford Ave in Placentia" />
             <figcaption>144 S BRADFORD AVE · PLACENTIA</figcaption>
           </figure>
         </section>
@@ -57,7 +57,7 @@ export default function Placentia() {
 
         <section className="pl-service-split pl-local-split">
           <figure>
-            <img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=75" width="864" height="648" alt="Vehicle inspection bay at In & Out Smog Check in Placentia" />
+            <img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75" width="864" height="648" alt="Vehicle inspection bay at In & Out Smog Check in Placentia" />
             <figcaption>WHERE PLACENTIA RESIDENTS HAVE BEEN GETTING THEIR SMOG DONE FOR OVER 25 YEARS</figcaption>
           </figure>
           <div>
