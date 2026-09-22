@@ -8,8 +8,8 @@ export default function Placentia() {
   return (
     <>
       <Seo
-        title="Placentia Smog Check | STAR Test-Only | In & Out Smog"
-        description="Fast STAR-certified Test-Only smog checks in Placentia. Walk-ins welcome, upfront pricing, no repair upsells, and one free retest within 30 days."
+        title="STAR Test-Only Smog Station Placentia | In & Out Smog"
+        description="Visit our STAR-certified Test-Only station on S Bradford Ave in Placentia. Walk-ins welcome, no repair upsells, and straightforward emissions testing."
         path="/placentia-smog-check"
         jsonLd={{
           "@context": "https://schema.org",
@@ -34,7 +34,7 @@ export default function Placentia() {
           <div className="pl-hero-copy">
             <p className="pl-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
             <p className="pl-local">YOUR LOCAL SMOG STATION IN PLACENTIA</p>
-            <h1>Placentia Smog Check.<br /><span>In. Out. Done.</span></h1>
+            <h1>STAR Test-Only Smog Checks on Bradford Ave.<br /><span>In. Out. Done.</span></h1>
             <p className="pl-lead">Fast, honest smog checks right here on S Bradford Ave. We don’t sell repairs, so there’s no incentive to fail your car — just straightforward testing from a local shop serving Placentia since 1999.</p>
             <div className="pl-actions">
               <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
@@ -88,7 +88,7 @@ export default function Placentia() {
 
         <section className="pl-services">
           <p className="pl-label">WHAT WE TEST</p>
-          <h2>Smog Check Services for Placentia Drivers</h2>
+          <h2>Test-Only Inspection Services on Bradford Ave</h2>
           <div className="pl-service-grid">
             <article><span>01</span><h3>Registration Renewal</h3><p>The standard smog inspection required for many California registration renewals.</p></article>
             <article><span>02</span><h3>Change of Ownership</h3><p>Buying or selling a vehicle? Get the required transfer smog handled locally.</p></article>
@@ -121,7 +121,7 @@ export default function Placentia() {
         </section>
 
         <section className="pl-seo">
-          <h2>Placentia’s Local Smog Check Station</h2>
+          <h2>What to Expect at Our Bradford Ave Test-Only Station</h2>
           <p>In & Out Smog Check provides STAR-certified Test-Only smog inspections for Placentia residents, including registration renewal, change-of-ownership, out-of-state registration, eligible diesel vehicles, hybrids and plug-in hybrids.</p>
           <p>We’re located at <strong>144 S Bradford Ave, Placentia, CA 92870</strong>. Open <strong>Monday–Friday 8AM–5PM</strong> and <strong>Saturday 8AM–3PM</strong>. No appointment needed. We also serve drivers from <Link to="/yorba-linda-smog-check">Yorba Linda</Link> and <Link to="/fullerton-smog-check">Fullerton</Link>.</p>
         </section>
