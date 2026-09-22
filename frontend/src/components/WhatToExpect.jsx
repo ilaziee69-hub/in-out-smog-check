@@ -41,7 +41,7 @@ export default function WhatToExpect() {
           <figure className="wte-card" data-testid="wte-card-bay">
             <div className="wte-photo">
               <img
-                src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=75"
+                src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75"
                 width="864"
                 height="648"
                 alt="Smog inspection bay and testing equipment at In & Out Smog Check"
