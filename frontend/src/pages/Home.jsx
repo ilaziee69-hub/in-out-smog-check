@@ -63,11 +63,11 @@ export default function Home() {
             <p className="mock-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
             <div className="mock-badges" aria-label="Service highlights"><span>⚡ Most Visits ~10 Minutes</span><span>★ STAR Certified</span><span>🚗 Walk-Ins Welcome</span><span>▣ DMV Electronic Cert</span><span>👥 Local Family Owned</span></div>
           </div>
-          <div className="mock-photo-card"><img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=1200&q=70" width="1147" height="828" loading="eager" decoding="sync" alt="In & Out Smog Check storefront in Placentia, California" /></div>
+          <div className="mock-photo-card"><img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=1200&q=75" width="1147" height="828" loading="eager" decoding="sync" alt="In & Out Smog Check storefront in Placentia, California" /></div>
         </section>
         <SpeedTimeline />
         <section className="fh-main-grid" aria-labelledby="why-drivers-title">
-          <figure className="fh-bay-photo"><img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=70" width="864" height="648" alt="Interior inspection bay at In & Out Smog Check in Placentia" /><figcaption>INSPECTION BAY</figcaption></figure>
+          <figure className="fh-bay-photo"><img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=75" width="864" height="648" alt="Interior inspection bay at In & Out Smog Check in Placentia" /><figcaption>INSPECTION BAY</figcaption></figure>
           <div className="fh-why-panel">
             <div className="fh-why-copy"><p className="fh-eyebrow" style={{ background: "#000", color: "#fff", opacity: 1 }}>WHY DRIVERS CHOOSE US</p><h2 id="why-drivers-title">Fast service. Honest testing.</h2><p>We provide STAR-certified test-only smog checks with no repair upsells. Our goal is simple: get you in, tested, and back on the road quickly.</p></div>
             <div className="fh-feature-grid"><div><b>⌂</b><strong>Local & Family Owned</strong><small>Serving Placentia and nearby communities.</small></div><div><b>🛠</b><strong>No Repairs or Upsells</strong><small>Test-only service means straightforward testing.</small></div><div><b>🚗</b><strong>Gas, Hybrid & Diesel</strong><small>We test eligible gasoline, hybrid and diesel vehicles.</small></div><div><b>★</b><strong>Trusted for 25+ Years</strong><small>Serving local drivers since 1999.</small></div></div>
