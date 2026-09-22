@@ -23,7 +23,7 @@ export default function WhatToExpect() {
           <figure className="wte-card" data-testid="wte-card-waiting">
             <div className="wte-photo">
               <img
-                src="/photos/waiting-area.jpg"
+                src="/_next/image?url=%2Fphotos%2Fwaiting-area.jpg&w=1080&q=70"
                 width="923"
                 height="967"
                 alt="Customer waiting area at In & Out Smog Check in Placentia"
@@ -41,7 +41,7 @@ export default function WhatToExpect() {
           <figure className="wte-card" data-testid="wte-card-bay">
             <div className="wte-photo">
               <img
-                src="/photos/inspection-bay.jpg"
+                src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=70"
                 width="864"
                 height="648"
                 alt="Smog inspection bay and testing equipment at In & Out Smog Check"
