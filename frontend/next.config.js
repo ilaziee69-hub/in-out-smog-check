@@ -27,6 +27,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
+    qualities: [50, 60, 75],
     remotePatterns: [
       { protocol: "https", hostname: "i0.wp.com" },
       { protocol: "https", hostname: "upload.wikimedia.org" },
