@@ -43,7 +43,7 @@ export default function Placentia() {
             <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=828&q=75" width="1147" height="828" alt="In & Out Smog Check storefront on S Bradford Ave in Placentia" />
+            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=640&q=50" width="1147" height="828" alt="In & Out Smog Check storefront on S Bradford Ave in Placentia" />
             <figcaption>144 S BRADFORD AVE · PLACENTIA</figcaption>
           </figure>
         </section>
