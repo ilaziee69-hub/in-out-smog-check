@@ -5,7 +5,7 @@ const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
 const DIR_FROM_FULLERTON = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
   "Fullerton, CA"
 )}&destination=${encodeURIComponent(ADDRESS)}`;
-const CSUF_PHOTO = "https://upload.wikimedia.org/wikipedia/commons/a/ab/Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg";
+const CSUF_PHOTO = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg/640px-Cal_State_Fullerton_Student_Recreation_Center_%28Fullerton%2C_CA%29.jpg";
 const CSUF_SOURCE = "https://commons.wikimedia.org/wiki/File:Cal_State_Fullerton_Student_Recreation_Center_(Fullerton,_CA).jpg";
 
 export default function Fullerton() {
