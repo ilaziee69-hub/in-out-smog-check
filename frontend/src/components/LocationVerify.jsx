@@ -16,7 +16,7 @@ export default function LocationVerify() {
         </div>
 
         <figure className="lv-illmap" data-testid="lv-illmap">
-          <img src="/_next/image?url=%2Fphotos%2Fillustrated-map-v2.png&w=828&q=75" width="1536" height="1024" alt="Illustrated map showing In & Out Smog Check at Bradford Ave and Center St in Placentia" loading="lazy" decoding="async" />
+          <img src="/_next/image?url=%2Fphotos%2Fillustrated-map-v2.png&w=640&q=50" width="1536" height="1024" alt="Illustrated map showing In & Out Smog Check at Bradford Ave and Center St in Placentia" loading="lazy" decoding="async" />
           <figcaption className="lv-illmap-caption">Our own illustrated map — showing exactly where to go.</figcaption>
         </figure>
 
@@ -43,7 +43,7 @@ export default function LocationVerify() {
         <div className="lv-photos-header" data-testid="lv-how-to-spot-heading"><h3>How to Spot Us</h3><p>See our storefront, recognize the nearby landmarks, and pull into the correct bay.</p></div>
         <div className="lv-photos" data-testid="lv-photos">
           <figure className="lv-photo lv-photo-lead" data-testid="lv-photo-storefront">
-            <div className="lv-photo-inner"><img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=828&q=75" width="1147" height="828" alt="In & Out Smog Check storefront at 144 S Bradford Ave in Placentia" loading="lazy" decoding="async" /><span className="lv-photo-tag">LOOK FOR OUR SHOP</span></div>
+            <div className="lv-photo-inner"><img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=640&q=50" width="1147" height="828" alt="In & Out Smog Check storefront at 144 S Bradford Ave in Placentia" loading="lazy" decoding="async" /><span className="lv-photo-tag">LOOK FOR OUR SHOP</span></div>
             <figcaption>Look for our white brick building with the large red SMOG CHECK ONLY CENTER sign at 144 S Bradford Ave.</figcaption>
           </figure>
 
