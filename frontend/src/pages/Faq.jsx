@@ -81,7 +81,7 @@ export default function Faq() {
             <p className="pl-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/photos/inspection-bay.jpg" width="864" height="648" alt="Smog inspection bay at In & Out Smog Check in Placentia" />
+            <img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75" width="864" height="648" alt="Smog inspection bay at In & Out Smog Check in Placentia" />
             <figcaption>FAST ANSWERS · FAST TEST-ONLY SERVICE</figcaption>
           </figure>
         </section>
