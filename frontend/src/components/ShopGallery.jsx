@@ -30,7 +30,7 @@ export default function ShopGallery() {
         <div className="sg-grid" data-testid="sg-grid">
           <figure className="sg-item sg-large" data-testid="sg-item-bay">
             <img
-              src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=1080&q=75"
+              src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75"
               width="864"
               height="648"
               alt="STAR-certified Test-Only inspection bay at In & Out Smog Check"
@@ -65,7 +65,7 @@ export default function ShopGallery() {
 
           <figure className="sg-item" data-testid="sg-item-storefront">
             <img
-              src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=1200&q=75"
+              src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=828&q=75"
               width="1147"
               height="828"
               alt="In & Out Smog Check storefront and red SMOG CHECK ONLY CENTER sign"
