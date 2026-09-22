@@ -43,7 +43,7 @@ export default function Contact() {
             <p className="pl-hours">Mon–Fri 8AM–5PM · Sat 8AM–3PM · Sun Closed</p>
           </div>
           <figure className="pl-shop-photo">
-            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=828&q=75" width="1147" height="828" alt="In & Out Smog Check storefront at 144 S Bradford Ave in Placentia" />
+            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=640&q=50" width="1147" height="828" alt="In & Out Smog Check storefront at 144 S Bradford Ave in Placentia" />
             <figcaption>THIS IS OUR SHOP · 144 S BRADFORD AVE</figcaption>
           </figure>
         </section>
