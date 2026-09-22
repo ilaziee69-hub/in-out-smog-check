@@ -16,6 +16,14 @@ const FAQS = [
     a: "California exemptions depend on model year, fuel type, vehicle weight, and registration situation. For biennial renewal testing, gasoline, hybrid, and alternative-fuel vehicles eight model years and newer are generally exempt. Your DMV notice is the best guide for your specific vehicle.",
   },
   {
+    q: "What is Jay Leno’s Law (SB 1392), and does my classic car still need a smog check?",
+    a: "California’s SB 1392, commonly called Jay Leno’s Law, was signed in September 2026 and creates a phased-in Smog Check exemption for certain qualifying collector vehicles from model years 1976 through 1985. The exemption is not immediate. Until your vehicle qualifies under the phase-in and meets the collector-use requirements, normal California Smog Check rules still apply.",
+  },
+  {
+    q: "Are all 1976–1985 cars now smog exempt in California?",
+    a: "No. SB 1392 is limited to qualifying collector vehicles and is being phased in over time. The law applies to eligible collector vehicles in the 1976–1985 range that meet its limited-use requirements, including collector insurance or fewer than 1,000 miles driven per year. If you are unsure whether your car currently qualifies, check your DMV renewal notice before skipping a required inspection.",
+  },
+  {
     q: "What is a Test-Only station?",
     a: "A Test-Only station performs Smog Check inspections but does not perform smog-related repairs. At our shop, the visit is focused on testing and certification rather than selling repair work.",
   },
@@ -61,8 +69,8 @@ export default function Faq() {
   return (
     <>
       <Seo
-        title="Smog Check FAQ | DMV, STAR & Exemptions | In & Out Smog"
-        description="Answers about California smog checks, STAR requirements, pricing, exemptions, failed inspections, free retests, and our Placentia Test-Only station."
+        title="Smog Check FAQ | Jay Leno Law, DMV & STAR | In & Out Smog"
+        description="California Smog Check FAQ covering Jay Leno’s Law (SB 1392), DMV rules, STAR requirements, classic-car exemptions, pricing, and failed inspections."
         path="/faq"
         jsonLd={jsonLd}
       />
