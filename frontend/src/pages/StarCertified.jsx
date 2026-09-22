@@ -59,7 +59,7 @@ export default function StarCertified() {
 
         <section className="pl-service-split pl-local-split">
           <figure>
-            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=828&q=75" width="1147" height="828" alt="In & Out Smog Check storefront in Placentia" />
+            <img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=640&q=50" width="1147" height="828" alt="In & Out Smog Check storefront in Placentia" />
             <figcaption>144 S BRADFORD AVE · PLACENTIA</figcaption>
           </figure>
           <div>
