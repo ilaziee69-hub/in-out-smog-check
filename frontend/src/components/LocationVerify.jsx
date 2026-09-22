@@ -16,7 +16,7 @@ export default function LocationVerify() {
         </div>
 
         <figure className="lv-illmap" data-testid="lv-illmap">
-          <img src="/_next/image?url=%2Fphotos%2Fillustrated-map-v2.png&w=960&q=75" width="1536" height="1024" alt="Illustrated map showing In & Out Smog Check at Bradford Ave and Center St in Placentia" loading="lazy" decoding="async" />
+          <img src="/_next/image?url=%2Fphotos%2Fillustrated-map-v2.png&w=828&q=75" width="1536" height="1024" alt="Illustrated map showing In & Out Smog Check at Bradford Ave and Center St in Placentia" loading="lazy" decoding="async" />
           <figcaption className="lv-illmap-caption">Our own illustrated map — showing exactly where to go.</figcaption>
         </figure>
 
