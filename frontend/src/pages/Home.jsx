@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Seo, { SITE_URL, OG_IMAGE } from "@/components/Seo";
 import SpeedTimeline from "@/components/SpeedTimeline";
 import WhatToExpect from "@/components/WhatToExpect";
@@ -51,6 +52,14 @@ export default function Home() {
         path="/"
         jsonLd={businessJsonLd}
       />
+      <Head>
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=640&q=50"
+          fetchPriority="high"
+        />
+      </Head>
       <main className="final-home">
         <section className="mock-hero" aria-labelledby="mock-title">
           <div className="mock-copy">
@@ -63,7 +72,7 @@ export default function Home() {
             <p className="mock-hours">Walk-ins welcome · Mon–Fri 8AM–5PM · Sat 8AM–3PM</p>
             <div className="mock-badges" aria-label="Service highlights"><span>⚡ Most Visits ~10 Minutes</span><span>★ STAR Certified</span><span>🚗 Walk-Ins Welcome</span><span>▣ DMV Electronic Cert</span><span>👥 Local Family Owned</span></div>
           </div>
-          <div className="mock-photo-card"><img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=640&q=50" width="1147" height="828" loading="eager" decoding="sync" alt="In & Out Smog Check storefront in Placentia, California" /></div>
+          <div className="mock-photo-card"><img src="/_next/image?url=%2Fphotos%2Fstorefront-approved-final.jpg&w=640&q=50" width="1147" height="828" loading="eager" fetchPriority="high" decoding="async" alt="In & Out Smog Check storefront in Placentia, California" /></div>
         </section>
         <SpeedTimeline />
         <section className="fh-main-grid" aria-labelledby="why-drivers-title">
