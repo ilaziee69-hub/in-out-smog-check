@@ -35,6 +35,7 @@ function StarRow({ rating, size = 18 }) {
     <span
       className="star-row"
       style={{ fontSize: size }}
+      role="img"
       aria-label={`${rating} out of 5 stars`}
     >
       {[0, 1, 2, 3, 4].map((i) => {
