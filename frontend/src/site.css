@@ -1520,43 +1520,6 @@ details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
 .pr-price{color:#fff;font-weight:800;font-size:1.15rem;}
 .price-row.featured .pr-price{color:#7fd4ff;font-size:1.3rem;}
 
-/* Semantic pricing table */
-.price-table-wrap{
-  overflow-x:auto;margin:20px 0 30px;
-  border:1px solid rgba(127,212,255,.18);border-radius:16px;
-  background:#0c223b;
-}
-.price-table{
-  width:100%;border-collapse:collapse;min-width:560px;
-}
-.price-table caption{
-  text-align:left;padding:18px 20px 10px;color:#d8e8f7;
-  font-weight:700;font-size:.95rem;
-}
-.price-table th,.price-table td{
-  padding:15px 18px;text-align:left;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  color:#d8e8f7;
-}
-.price-table thead th{
-  color:#7fd4ff;font-size:.82rem;letter-spacing:.8px;
-  text-transform:uppercase;background:rgba(127,212,255,.05);
-}
-.price-table tbody th{
-  color:#fff;font-weight:800;vertical-align:top;
-  background:rgba(255,255,255,.02);
-}
-.price-table td:last-child,.price-table thead th:last-child{
-  text-align:right;
-}
-.price-table .pr-price{
-  color:#fff;font-weight:900;font-size:1.12rem;
-}
-.price-table tr.featured .pr-price{color:#7fd4ff;font-size:1.24rem;}
-.price-table tbody tr:last-child td,
-.price-table tbody tr:last-child th{border-bottom:0;}
-.pricing-faq{margin-top:42px;}
-
 /* Pricing notes with two red callouts */
 .pricing-notes{
   list-style:none;margin:0 0 40px;padding:20px 24px;
