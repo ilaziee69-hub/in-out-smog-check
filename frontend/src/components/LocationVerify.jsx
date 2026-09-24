@@ -25,10 +25,22 @@ export default function LocationVerify() {
           <div style={{ color: "#111", opacity: 1 }}><strong style={{ color: "#000", opacity: 1 }}>OC Smog Lab by Valvoline is NOT us. We are In &amp; Out Smog Check at Bradford &amp; Center.</strong>{" "}Continue south on <strong style={{ color: "#000", opacity: 1 }}>Bradford&nbsp;Ave</strong> to{" "}<strong style={{ color: "#000", opacity: 1 }}>Center&nbsp;St</strong>.</div>
         </div>
 
-        <div className="lv-map" data-testid="lv-map">
-          <iframe title="Google Map showing In & Out Smog Check at 144 S Bradford Ave, Placentia, CA" src={MAPS_EMBED} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+        <a
+          className="lv-map lv-map-link"
+          data-testid="lv-map"
+          href={MAPS_DIR}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open In & Out Smog Check in Google Maps"
+        >
+          <div className="lv-map-link-inner">
+            <span className="lv-map-link-icon" aria-hidden="true">📍</span>
+            <strong>Open In & Out Smog Check in Google Maps</strong>
+            <span>144 S Bradford Ave · Placentia, CA 92870</span>
+            <span className="lv-map-link-cta">View map & directions →</span>
+          </div>
           <div className="lv-map-pill" data-testid="lv-map-pill"><span className="dot" /> Look for the pin on{" "}<strong>S Bradford Ave</strong></div>
-        </div>
+        </a>
 
         <div className="lv-directions-row" data-testid="lv-directions-row">
           <a href={MAPS_DIR} target="_blank" rel="noopener noreferrer" className="lv-directions-btn" data-testid="lv-directions-cta"><span className="lv-directions-icon" aria-hidden="true">🧭</span><span><span className="lv-directions-title">Get Directions to In &amp; Out Smog Check</span><span className="lv-directions-sub">144 S Bradford Ave, Placentia, CA 92870</span></span></a>
