@@ -130,7 +130,7 @@ export default function Fullerton() {
         <section className="pl-seo">
           <h2>Fullerton’s Nearby STAR Test-Only Smog Station</h2>
           <p>In & Out Smog Check serves Fullerton drivers from our Placentia shop at <strong>144 S Bradford Ave</strong>. We provide STAR-certified Test-Only inspections, registration-renewal smog checks, change-of-ownership inspections, and eligible gasoline, hybrid and diesel testing.</p>
-          <p>We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/yorba-linda-smog-check">Yorba Linda smog check</Link>.</p>
+          <p>Want to know the cost before making the short drive? <Link to="/smog-check-pricing">See our current smog check prices</Link>. We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/yorba-linda-smog-check">Yorba Linda smog check</Link>.</p>
         </section>
       </main>
     </>
