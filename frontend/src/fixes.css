@@ -133,3 +133,37 @@
   font-weight:800;
 }
 .lv-map-pill .dot{animation:none!important;}
+
+
+/* Restore contrast in the Finding Us section after the accessibility pass. */
+.location-verify .lv-eyebrow,
+.location-verify .lv-eyebrow *{
+  background:#000!important;
+  color:#fff!important;
+  border-color:#000!important;
+}
+
+.location-verify .lv-map-link{
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255,49,56,.10), transparent 35%),
+    linear-gradient(135deg,#171717,#050505)!important;
+  color:#fff!important;
+  border-color:#222!important;
+}
+.location-verify .lv-map-link-inner,
+.location-verify .lv-map-link-inner strong{
+  color:#fff!important;
+}
+.location-verify .lv-map-link-inner > span:not(.lv-map-link-cta){
+  color:#e8e8e8!important;
+}
+.location-verify .lv-map-link-cta{
+  background:#fff!important;
+  color:#111!important;
+}
+
+.location-verify .lv-photo figcaption{
+  background:#000!important;
+  color:#fff!important;
+  border-color:#000!important;
+}
