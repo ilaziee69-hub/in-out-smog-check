@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Seo, { SITE_URL } from "@/components/Seo";
 
 const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870";
@@ -12,15 +13,29 @@ const priceGroups = [
 const pricingFaqs = [
   {
     q: "How much is a smog check in Placentia?",
-    a: "Our published prices start at $60 for 2000 and newer cars. Prices vary by vehicle year and type, and every listed price on this page includes the certificate fee.",
+    a: "Our published smog check prices start at $60 for 2000 and newer cars, making us an affordable option for drivers in Placentia and across Orange County. Every listed price includes the certificate fee.",
   },
   {
     q: "Why do smog check prices vary?",
-    a: "The inspection price can vary based on the vehicle year and type. Older vehicles, trucks, SUVs, vans, diesel vehicles, and RVs use the applicable category shown in our pricing table.",
+    a: "The inspection price can vary based on the vehicle year and type. Older vehicles, trucks, SUVs, vans, diesel vehicles, and RVs use the applicable category shown in our pricing list.",
   },
   {
     q: "What does the free retest cover?",
     a: "If your vehicle fails its inspection, our current pricing includes one free retest within 30 days.",
+  },
+  {
+    q: "Do I need an appointment?",
+    a: "No. Walk-ins are welcome Monday through Friday from 8AM to 5PM and Saturday from 8AM to 3PM. Most standard inspections are completed in about 10 minutes.",
+  },
+  {
+    q: "What should I bring to my smog check?",
+    a: "Bring your vehicle registration and your DMV renewal notice if you have it.",
+  },
+  {
+    q: "Do you test STAR-directed vehicles, and does it cost more?",
+    a: "Yes. We are a STAR-certified Test-Only station. STAR-directed vehicles use the same applicable vehicle-category pricing shown on this page.",
+    href: "/star-certified-smog",
+    linkLabel: "Learn more about our STAR-certified smog checks.",
   },
 ];
 
@@ -110,7 +125,7 @@ export default function Pricing() {
             {pricingFaqs.map((item) => (
               <details className="faq-item" key={item.q}>
                 <summary className="faq-q"><span>{item.q}</span><span className="faq-icon" aria-hidden="true">+</span></summary>
-                <div className="faq-a">{item.a}</div>
+                <div className="faq-a">{item.a}{item.href && <> <Link to={item.href}>{item.linkLabel}</Link></>}</div>
               </details>
             ))}
           </div>
