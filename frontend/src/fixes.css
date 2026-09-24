@@ -17,7 +17,7 @@
 .speed-timeline,.speed-timeline .st-inner{background:#0a0a0a!important;color:#fff!important}
 .speed-timeline .st-eyebrow{background:#000!important;color:#fff!important;border:1px solid #fff!important}
 .speed-timeline h2,.speed-timeline h3,.speed-timeline p,.speed-timeline li{color:#fff!important}
-.speed-timeline .accent,.speed-timeline .st-time{color:#e00000!important}
+.speed-timeline .accent,.speed-timeline .st-time{color:#ff3138!important}
 .speed-timeline .st-track::before{background:#555!important}
 .speed-timeline .st-dot,.speed-timeline .st-step:hover .st-dot{
   background:#111!important;
@@ -39,10 +39,10 @@
 /* Header phone CTA: white label and red number on the black button. */
 .mock-nav-call,.nav-cta{background:#000!important;color:#fff!important;border-color:#000!important}
 .mock-nav-call span{color:#fff!important;opacity:1!important}
-.mock-nav-call strong{color:#e00000!important;opacity:1!important}
+.mock-nav-call strong{color:#ff3138!important;opacity:1!important}
 
 /* Homepage rating stars use the brand red instead of black. */
-.mock-rating .mock-stars{color:#e00000!important;opacity:1!important}
+.mock-rating .mock-stars{color:#ff3138!important;opacity:1!important}
 
 /* White cards / location verification must use dark text. */
 .lv-warning,.lv-address-card,.lv-map,.lv-photo,.lv-photos-header,.lv-header{
@@ -57,14 +57,14 @@
 .lv-address-line2{color:#333!important}
 .lv-verify-note-inline{background:#f7f7f7!important;color:#222!important;border:1px solid #ddd!important;opacity:1!important}
 .lv-verify-note-inline *{opacity:1!important}
-.lv-verify-note-inline strong{color:#e00000!important}
+.lv-verify-note-inline strong{color:#ff3138!important}
 .lv-directions-btn{background:#000!important;color:#fff!important;border-color:#000!important}
 .lv-directions-btn *{color:#fff!important;opacity:1!important}
 .lv-directions-sub{color:#ddd!important}
 .lv-call-btn{background:#fff!important;color:#000!important;border:2px solid #000!important}
 .lv-lead,.lv-photos-header p,.lv-photo figcaption{color:#444!important;opacity:1!important}
 .location-verify h2,.lv-photos-header h3{color:#111!important}
-.location-verify h2 .accent,.lv-lead .hl{color:#e00000!important}
+.location-verify h2 .accent,.lv-lead .hl{color:#ff3138!important}
 
 /* Why drivers pill readability. */
 .fh-why-copy .fh-eyebrow{color:#fff!important;opacity:1!important}
@@ -72,9 +72,9 @@
 .fh-feature-grid small{color:#555!important;opacity:1!important}
 
 /* Reviews: keep full and partial stars in the approved red palette. */
-.reviews .star-row .star.full{color:#e00000!important}
+.reviews .star-row .star.full{color:#ff3138!important}
 .reviews .star-row .star.half{
-  background:linear-gradient(90deg,#e00000 50%,#3d4d64 50%)!important;
+  background:linear-gradient(90deg,#ff3138 50%,#3d4d64 50%)!important;
   -webkit-background-clip:text!important;background-clip:text!important;
   -webkit-text-fill-color:transparent!important;
 }
