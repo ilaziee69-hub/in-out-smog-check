@@ -1,9 +1,7 @@
-import { NavLink, Link, useLocation, useNavigationType } from "react-router-dom";
-import { useEffect, useState } from "react";
 import StickyMobileNav from "@/components/StickyMobileNav";
 
 const NAV = [
-  { to: "/", label: "Home", exact: true },
+  { to: "/", label: "Home" },
   { to: "/star-certified-smog", label: "STAR Certified" },
   { to: "/placentia-smog-check", label: "Placentia" },
   { to: "/fullerton-smog-check", label: "Fullerton" },
@@ -14,52 +12,40 @@ const NAV = [
 ];
 
 export default function Layout({ children }) {
-  const [open, setOpen] = useState(false);
-  const { pathname, hash } = useLocation();
-  const navType = useNavigationType();
-
-  useEffect(() => {
-    if (navType === "POP") return;
-    if (hash) return;
-    window.scrollTo(0, 0);
-    if (document.documentElement) document.documentElement.scrollTop = 0;
-    if (document.body) document.body.scrollTop = 0;
-  }, [pathname, hash, navType]);
-
   return (
     <>
       <div className="site-nav-wrap" data-testid="site-nav">
         <nav className="site-nav">
-          <Link to="/" className="logo text-logo" data-testid="nav-logo" aria-label="In & Out Smog Check home">
+          <a href="/" className="logo text-logo" data-testid="nav-logo" aria-label="In & Out Smog Check home">
             IN & OUT SMOG CHECK
-          </Link>
+          </a>
 
-          <button
-            className="nav-toggle"
+          <input
+            id="nav-menu-toggle"
+            className="nav-menu-toggle-input"
+            type="checkbox"
             aria-label="Toggle navigation"
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
+          />
+          <label
+            htmlFor="nav-menu-toggle"
+            className="nav-toggle"
             data-testid="nav-toggle-btn"
           >
             <span />
             <span />
             <span />
-          </button>
+          </label>
 
-          <div className={`nav-links ${open ? "open" : ""}`}>
+          <div className="nav-links">
             {NAV.map((item) => (
-              <NavLink
+              <a
                 key={item.to}
-                to={item.to}
-                end={item.exact}
-                onClick={() => setOpen(false)}
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active" : "")
-                }
+                href={item.to}
+                className="nav-link"
                 data-testid={`nav-link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 {item.label}
-              </NavLink>
+              </a>
             ))}
             <a className="nav-cta mock-nav-call" href="tel:+17149931660" data-testid="nav-call-cta">
               <span>Call </span><strong>(714) 993-1660</strong>
@@ -91,7 +77,7 @@ export default function Layout({ children }) {
             <h4>Explore</h4>
             <ul>
               {NAV.map((n) => (
-                <li key={n.to}><Link to={n.to}>{n.label}</Link></li>
+                <li key={n.to}><a href={n.to}>{n.label}</a></li>
               ))}
             </ul>
           </div>
