@@ -67,7 +67,7 @@ export default function Home() {
         </section>
         <SpeedTimeline />
         <section className="fh-main-grid" aria-labelledby="why-drivers-title">
-          <figure className="fh-bay-photo"><img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75" width="864" height="648" alt="Interior inspection bay at In & Out Smog Check in Placentia" /><figcaption>INSPECTION BAY</figcaption></figure>
+          <figure className="fh-bay-photo"><img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=640&q=65" width="864" height="648" alt="Interior inspection bay at In & Out Smog Check in Placentia" /><figcaption>INSPECTION BAY</figcaption></figure>
           <div className="fh-why-panel">
             <div className="fh-why-copy"><p className="fh-eyebrow" style={{ background: "#000", color: "#fff", opacity: 1 }}>WHY DRIVERS CHOOSE US</p><h2 id="why-drivers-title">Fast service. Honest testing.</h2><p>We provide STAR-certified test-only smog checks with no repair upsells. Our goal is simple: get you in, tested, and back on the road quickly.</p></div>
             <div className="fh-feature-grid"><div><b>⌂</b><strong>Local & Family Owned</strong><small>Serving Placentia and nearby communities.</small></div><div><b>🛠</b><strong>No Repairs or Upsells</strong><small>Test-only service means straightforward testing.</small></div><div><b>🚗</b><strong>Gas, Hybrid & Diesel</strong><small>We test eligible gasoline, hybrid and diesel vehicles.</small></div><div><b>★</b><strong>Trusted for 25+ Years</strong><small>Serving local drivers since 1999.</small></div></div>
