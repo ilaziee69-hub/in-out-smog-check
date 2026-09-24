@@ -167,3 +167,16 @@
   color:#fff!important;
   border-color:#000!important;
 }
+
+
+/* Final contrast fixes from Lighthouse failing elements. */
+/* Darker red on white backgrounds. */
+.location-verify .lv-lead .hl,
+.location-verify .lv-verify-note-inline strong{
+  color:#a60018!important;
+}
+
+/* Keep the small unit label high-contrast inside the dark heritage stats. */
+.heritage .stat-unit{
+  color:#fff!important;
+}
