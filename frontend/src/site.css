@@ -1549,7 +1549,8 @@ details.faq-item .faq-a{padding:0 26px 22px;color:#d8e8f7;line-height:1.65;}
   .pf-actions .btn{min-width:0;flex:1;}
   .price-grid{grid-template-columns:1fr;gap:16px;}
   .price-group{padding:18px 20px;}
-  .pricing-notes{padding:16px 18px;}
+  .pricing-notes{padding:18px 20px;text-align:center;}
+  .pricing-notes li{display:block;text-align:center;padding:10px 0;}
 }
 @media(max-width:420px){
   .price-featured .pf-price{font-size:4.4rem;}
