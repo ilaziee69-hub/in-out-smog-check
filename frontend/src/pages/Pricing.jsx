@@ -14,6 +14,8 @@ const pricingFaqs = [
   {
     q: "How much is a smog check in Placentia?",
     a: "Our published smog check prices start at $60 for 2000 and newer cars, making us an affordable option for drivers in Placentia and across Orange County. Every listed price includes the certificate fee.",
+    anchorHref: "#full-pricing",
+    anchorLabel: "See the full price list above.",
   },
   {
     q: "Why do smog check prices vary?",
@@ -98,7 +100,7 @@ export default function Pricing() {
       <section className="prose pricing-body">
         <aside className="price-featured" aria-labelledby="pricing-featured-title"><p id="pricing-featured-title" className="pf-eyebrow">MOST COMMON PRICE · 2000 &amp; NEWER CARS</p><p className="pf-price" style={{color:"#000000",WebkitTextFillColor:"#000000",opacity:1}}>$60</p><ul className="pf-highlights"><li style={{color:"#d71920",WebkitTextFillColor:"#d71920",opacity:1}}><span aria-hidden="true">✓</span> CERTIFICATE FEE INCLUDED</li><li style={{color:"#d71920",WebkitTextFillColor:"#d71920",opacity:1}}><span aria-hidden="true">✓</span> ONE FREE RETEST WITHIN 30 DAYS</li></ul><p className="pf-time">Most standard inspections are completed in about 10 minutes.</p><p className="pf-sub">STAR Test-Only · Walk-ins welcome · No repair sales pitch</p><div className="pf-actions"><a href="tel:+17149931660" className="btn primary">Call Now</a><a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="btn">Get Directions</a></div></aside>
 
-        <h2>Full Smog Check Pricing</h2>
+        <h2 id="full-pricing">Full Smog Check Pricing</h2>
         <p>Our affordable smog check prices are published upfront. Choose your vehicle year and type below; every listed price already includes the certificate fee.</p>
         <div className="price-grid">
           {priceGroups.map((group) => (
@@ -125,7 +127,7 @@ export default function Pricing() {
             {pricingFaqs.map((item) => (
               <details className="faq-item" key={item.q}>
                 <summary className="faq-q"><span>{item.q}</span><span className="faq-icon" aria-hidden="true">+</span></summary>
-                <div className="faq-a">{item.a}{item.href && <> <Link to={item.href}>{item.linkLabel}</Link></>}</div>
+                <div className="faq-a">{item.a}{item.anchorHref && <> <a href={item.anchorHref}>{item.anchorLabel}</a></>}{item.href && <> <Link to={item.href}>{item.linkLabel}</Link></>}</div>
               </details>
             ))}
           </div>
