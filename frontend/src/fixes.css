@@ -99,3 +99,37 @@
     display:block!important;
   }
 }
+
+
+/* Lightweight homepage Google Maps link: avoids loading the full Maps JS embed. */
+.lv-map-link{
+  text-decoration:none;
+  color:inherit;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(127,212,255,.16), transparent 35%),
+    linear-gradient(135deg,#0b223b,#071522);
+}
+.lv-map-link-inner{
+  padding:48px 28px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.lv-map-link-icon{font-size:2.5rem;line-height:1;margin-bottom:6px;}
+.lv-map-link-inner strong{font-size:1.35rem;color:#fff;}
+.lv-map-link-inner span{color:#c9d7e6;}
+.lv-map-link-cta{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 16px;
+  border-radius:999px;
+  background:#fff;
+  color:#111!important;
+  font-weight:800;
+}
+.lv-map-pill .dot{animation:none!important;}
