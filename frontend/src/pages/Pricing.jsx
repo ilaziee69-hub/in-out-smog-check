@@ -85,20 +85,20 @@ export default function Pricing() {
 
         <h2>Full Smog Check Pricing</h2>
         <p>Our affordable smog check prices are published upfront. Choose your vehicle year and type below; every listed price already includes the certificate fee.</p>
-        <div className="price-table-wrap">
-          <table className="price-table">
-            <caption>Current smog check prices by vehicle year and type</caption>
-            <thead><tr><th scope="col">Vehicle year</th><th scope="col">Vehicle type</th><th scope="col">Price</th></tr></thead>
-            <tbody>
-              {priceGroups.flatMap((group) => group.rows.map((row, index) => (
-                <tr key={`${group.heading}-${row.label}`} className={row.featured ? "featured" : ""}>
-                  {index === 0 && <th scope="rowgroup" rowSpan={group.rows.length}>{group.heading}</th>}
-                  <td>{row.label}</td>
-                  <td className="pr-price">{row.price}</td>
-                </tr>
-              )))}
-            </tbody>
-          </table>
+        <div className="price-grid">
+          {priceGroups.map((group) => (
+            <div className="price-group" key={group.heading}>
+              <h3>{group.heading}</h3>
+              <ul>
+                {group.rows.map((row) => (
+                  <li key={row.label} className={row.featured ? "price-row featured" : "price-row"}>
+                    <span className="pr-label">{row.label}</span>
+                    <span className="pr-price">{row.price}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <h2>What’s Included</h2><ul className="pricing-notes"><li><span className="pn-red">Certificate fee included</span> in every listed price.</li><li>One <span className="pn-red">FREE retest within 30 days</span> after a failed inspection.</li><li>STAR-directed vehicles use the same applicable vehicle-category pricing shown above.</li><li>No appointment required — walk-ins are welcome.</li></ul>
