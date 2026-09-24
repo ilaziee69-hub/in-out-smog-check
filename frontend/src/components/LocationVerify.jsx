@@ -3,7 +3,6 @@
  */
 export default function LocationVerify() {
   const ADDRESS = "144 S Bradford Ave, Placentia, CA 92870";
-  const MAPS_EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
   const MAPS_DIR = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(ADDRESS)}`;
 
   return (
