@@ -185,7 +185,7 @@ export default function YorbaLinda() {
               </details>
             ))}
           </div>
-          <p>We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/fullerton-smog-check">Fullerton smog check</Link>.</p>
+          <p>Want to know the cost before you drive over? <Link to="/smog-check-pricing">See our current smog check prices</Link>. We also serve drivers looking for a <Link to="/placentia-smog-check">Placentia smog check</Link> or <Link to="/fullerton-smog-check">Fullerton smog check</Link>.</p>
           <p style={{fontSize:"12px",color:"#666"}}>Landmark photo source: <a href={NIXON_LIBRARY_SOURCE} target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>.</p>
         </section>
       </main>
