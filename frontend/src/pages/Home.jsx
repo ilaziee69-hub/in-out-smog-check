@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Fast Smog Check Placentia | STAR Certified | In & Out Smog"
+        title="Smog Check Placentia, CA | STAR Certified | In & Out Smog Check"
         description="Fast STAR-certified smog checks in Placentia, CA. In & Out Smog Check offers quick, convenient emissions testing for local drivers."
         path="/"
         jsonLd={businessJsonLd}
