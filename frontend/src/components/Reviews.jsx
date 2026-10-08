@@ -20,11 +20,11 @@ const TAGS = [
   { label: "cool staff", count: 2 },
 ];
 
-// One real review to feature — from the Google listing screenshot the owner shared.
+// Featured real Google review.
 const FEATURED_REVIEW = {
-  author: "Denise Radford",
+  author: "Mayur Patel",
   stars: 5,
-  body: "This smog test facility opened a few minutes before it was even supposed to. I was the second one in line and I was out of there less than 15 minutes. Just made my day.",
+  body: "Anh is amazing! Fast, honest, and super easy smog check. Highly recommend.",
 };
 
 // Star row helper — renders 5 filled/half/empty stars from a decimal rating.
@@ -66,7 +66,13 @@ export default function Reviews() {
 
         {/* Big rating card with the REAL numbers */}
         <div className="rv-rating-card" data-testid="rv-rating-card">
-          <div className="rv-rating-num" data-testid="rv-rating-num">{RATING}</div>
+          <div
+            className="rv-rating-num"
+            data-testid="rv-rating-num"
+            style={{ color: "#e31b23", textShadow: "0 0 30px rgba(227,27,35,.22)" }}
+          >
+            {RATING}
+          </div>
           <div className="rv-rating-meta">
             <StarRow rating={RATING} size={26} />
             <div className="rv-rating-line">
@@ -104,6 +110,17 @@ export default function Reviews() {
           </figcaption>
         </figure>
 
+        <a
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="primary rv-cta"
+          data-testid="rv-google-cta"
+          style={{ marginTop: "-18px", marginBottom: "38px" }}
+        >
+          Read All {REVIEW_COUNT} Google Reviews →
+        </a>
+
         <p className="rv-lead">
           Two decades as the neighborhood smog shop — see what Placentia,
           Yorba Linda, Anaheim, and Fullerton drivers actually say about us on Google.
@@ -118,16 +135,6 @@ export default function Reviews() {
             </div>
           ))}
         </div>
-
-        <a
-          href={GOOGLE_REVIEWS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="primary rv-cta"
-          data-testid="rv-google-cta"
-        >
-          Read All {REVIEW_COUNT} Google Reviews →
-        </a>
       </div>
     </section>
   );
