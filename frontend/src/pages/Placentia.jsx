@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import Seo from "@/components/Seo";
-import waterTower from "@/waterTowerImage";
+import Reviews from "@/components/Reviews";
 
 const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=144+S+Bradford+Ave,+Placentia,+CA+92870";
+const mapEmbedUrl = "https://www.google.com/maps?q=144+S+Bradford+Ave,+Placentia,+CA+92870&output=embed";
 
 export default function Placentia() {
   return (
     <>
       <Seo
-        title="STAR Test-Only Smog Station Placentia | In & Out Smog"
-        description="Visit our STAR-certified Test-Only station on S Bradford Ave in Placentia. Walk-ins welcome, no repair upsells, and straightforward emissions testing."
+        title="Smog Check in Placentia, CA | STAR Test-Only | In & Out"
+        description="Smog check in Placentia. STAR-certified, test-only, walk-ins welcome, no repair upsells. Open Mon–Sat, about 10 minutes. Call (714) 993-1660."
         path="/placentia-smog-check"
         jsonLd={{
           "@context": "https://schema.org",
@@ -34,7 +35,8 @@ export default function Placentia() {
           <div className="pl-hero-copy">
             <p className="pl-kicker">STAR CERTIFIED · TEST-ONLY STATION</p>
             <p className="pl-local">YOUR LOCAL SMOG STATION IN PLACENTIA</p>
-            <h1>STAR Test-Only Smog Checks on Bradford Ave.<br /><span>In. Out. Done.</span></h1>
+            <h1>Smog Check in Placentia:<br /><span>STAR Test-Only, No Repair Upsells</span></h1>
+            <p className="pl-local">In. Out. Done.</p>
             <p className="pl-lead">Fast, honest smog checks right here on S Bradford Ave. We don’t sell repairs, so there’s no incentive to fail your car — just straightforward testing from a local shop serving Placentia since 1999.</p>
             <div className="pl-actions">
               <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
@@ -55,40 +57,27 @@ export default function Placentia() {
           <div><strong>0</strong><span>REPAIR<br />UPSELLS</span></div>
         </section>
 
-        <section className="pl-service-split pl-local-split">
+        <section className="pl-service-split">
           <figure>
             <img src="/_next/image?url=%2Fphotos%2Finspection-bay.jpg&w=828&q=75" width="864" height="648" alt="Vehicle inspection bay at In & Out Smog Check in Placentia" />
-            <figcaption>WHERE PLACENTIA RESIDENTS HAVE BEEN GETTING THEIR SMOG DONE FOR OVER 25 YEARS</figcaption>
+            <figcaption>WHERE PLACENTIA GETS SMOGGED</figcaption>
           </figure>
           <div>
-            <p className="pl-label">RIGHT HERE IN PLACENTIA</p>
-            <h2>Easy to find on Bradford Ave.</h2>
-            <p>Our shop is at 144 S Bradford Ave, close to Chapman Ave and just a few minutes south of Valencia High School. If you know Valencia High or the Placentia water tower, you already know the neighborhood.</p>
-            <div className="pl-local-points">
-              <span><b>VALENCIA HS</b> Just minutes north on Bradford Ave</span>
-              <span><b>WATER TOWER</b> About a block from our shop</span>
-              <span><b>SINCE 1999</b> Serving local drivers for 25+ years</span>
+            <p className="pl-label">SMOG STATION FIRST</p>
+            <h2>Fast service. Honest testing.</h2>
+            <p>We’re a STAR-certified Test-Only station in the heart of Placentia. Whether you live in Old Town, near Tri-City Park, by Valencia High School, or toward the Yorba Linda border, we make your required emissions inspection quick and simple.</p>
+            <div className="pl-mini-grid">
+              <article><b>⚡</b><h3>About 10 Minutes</h3><p>Most inspections are completed quickly so you can get back on the road.</p></article>
+              <article><b>★</b><h3>STAR Certified</h3><p>If your DMV notice requires a STAR station, we’ve got you covered.</p></article>
+              <article><b>🚗</b><h3>Walk-Ins Welcome</h3><p>No appointment needed. Drive in during business hours.</p></article>
+              <article><b>✓</b><h3>No Repair Upsells</h3><p>Test-only means we focus on one thing: an honest emissions inspection.</p></article>
             </div>
           </div>
         </section>
 
-        <section className="pl-water-tower">
-          <div className="pl-water-copy">
-            <p className="pl-label">A PLACENTIA LANDMARK</p>
-            <h2>See the water tower? We’re right nearby.</h2>
-            <p>The Placentia water tower is one of the easiest local landmarks to recognize. In &amp; Out Smog Check is about a block away at <strong>144 S Bradford Ave</strong>.</p>
-            <p>Coming from Valencia High School? Head south on Bradford Ave and you’ll be at the shop in just a few minutes.</p>
-            <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
-          </div>
-          <figure>
-            <img src={waterTower} width="1500" height="844" alt="Placentia water tower near In & Out Smog Check on Bradford Avenue" loading="lazy" referrerPolicy="no-referrer" />
-            <figcaption>A PLACENTIA LANDMARK · JUST ABOUT A BLOCK FROM IN & OUT SMOG CHECK</figcaption>
-          </figure>
-        </section>
-
         <section className="pl-services">
           <p className="pl-label">WHAT WE TEST</p>
-          <h2>Test-Only Inspection Services on Bradford Ave</h2>
+          <h2>Smog Check Services for Placentia Drivers</h2>
           <div className="pl-service-grid">
             <article><span>01</span><h3>Registration Renewal</h3><p>The standard smog inspection required for many California registration renewals.</p></article>
             <article><span>02</span><h3>Change of Ownership</h3><p>Buying or selling a vehicle? Get the required transfer smog handled locally.</p></article>
@@ -98,21 +87,13 @@ export default function Placentia() {
           <p className="pl-star-link">Need a DMV-required STAR inspection? <Link to="/star-certified-smog">Learn about our STAR-certified smog checks →</Link></p>
         </section>
 
-        <section className="pl-local-history pl-local-history-clean">
-          <div className="pl-history-copy">
-            <p className="pl-label">PROUDLY PLACENTIA</p>
-            <h2>Local roots. Local service.</h2>
-            <p>Placentia grew from citrus and railroad roots into the community we serve today. In &amp; Out Smog Check has been part of that local story since 1999.</p>
-            <p className="pl-history-note"><strong>25+ years in Placentia.</strong> Same Bradford Ave neighborhood, straightforward smog testing, and no repair upsells.</p>
-            <a className="pl-btn pl-btn-black" href={directionsUrl} target="_blank" rel="noopener noreferrer">Drive to the Smog Station →</a>
-          </div>
-        </section>
+        <Reviews />
 
         <section className="pl-find">
           <div>
             <p className="pl-label">EASY TO FIND</p>
             <h2>144 S Bradford Ave</h2>
-            <p>Look for In & Out Smog Check between E Chapman Ave and E Crowther Ave. From Valencia High School, head south on Bradford Ave. The Placentia water tower is about a block from the shop.</p>
+            <p>Close to Chapman Ave, about a block from the Placentia water tower. Look for the In &amp; Out Smog Check storefront on S Bradford Ave. Easy in-and-out access with room for cars, trucks and SUVs.</p>
           </div>
           <div className="pl-find-actions">
             <a className="pl-btn pl-btn-red" href={directionsUrl} target="_blank" rel="noopener noreferrer">Get Directions →</a>
@@ -120,9 +101,22 @@ export default function Placentia() {
           </div>
         </section>
 
+        <section aria-label="Map to In & Out Smog Check" style={{ padding: "0 20px 48px", maxWidth: "1180px", margin: "0 auto" }}>
+          <iframe
+            title="Map to In & Out Smog Check in Placentia"
+            src={mapEmbedUrl}
+            width="100%"
+            height="360"
+            style={{ border: 0, borderRadius: "16px" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </section>
+
         <section className="pl-seo">
-          <h2>What to Expect at Our Bradford Ave Test-Only Station</h2>
-          <p>In & Out Smog Check provides STAR-certified Test-Only smog inspections for Placentia residents, including registration renewal, change-of-ownership, out-of-state registration, eligible diesel vehicles, hybrids and plug-in hybrids.</p>
+          <h2>Placentia’s Local Smog Check Station</h2>
+          <p>In &amp; Out Smog Check provides STAR-certified Test-Only smog inspections for Placentia residents, including registration renewal, change-of-ownership, out-of-state registration, eligible diesel vehicles, hybrids and plug-in hybrids.</p>
           <p>We’re located at <strong>144 S Bradford Ave, Placentia, CA 92870</strong>. Open <strong>Monday–Friday 8AM–5PM</strong> and <strong>Saturday 8AM–3PM</strong>. No appointment needed. <Link to="/smog-check-pricing">See our current smog check prices</Link> before you drive in. We also serve drivers from <Link to="/yorba-linda-smog-check">Yorba Linda</Link> and <Link to="/fullerton-smog-check">Fullerton</Link>.</p>
         </section>
       </main>
