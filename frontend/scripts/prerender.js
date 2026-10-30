@@ -60,6 +60,8 @@ const ROUTES = [
   "/yorba-linda-smog-check",
   "/faq",
   "/contact",
+  "/privacy-policy",
+  "/terms-of-service",
 ];
 
 /**
@@ -112,6 +114,8 @@ function renderRoute(route) {
   const Faq = require(path.join(ROOT, "src/pages/Faq.jsx")).default;
   const Contact = require(path.join(ROOT, "src/pages/Contact.jsx")).default;
   const Pricing = require(path.join(ROOT, "src/pages/Pricing.jsx")).default;
+  const PrivacyPolicy = require(path.join(ROOT, "src/pages/PrivacyPolicy.jsx")).default;
+  const TermsOfService = require(path.join(ROOT, "src/pages/TermsOfService.jsx")).default;
   const NotFound = require(path.join(ROOT, "src/pages/NotFound.jsx")).default;
 
   let captured = null;
@@ -138,6 +142,8 @@ function renderRoute(route) {
         React.createElement(RRD.Route, { path: "/faq", element: React.createElement(Faq) }),
         React.createElement(RRD.Route, { path: "/contact", element: React.createElement(Contact) }),
         React.createElement(RRD.Route, { path: "/smog-check-pricing", element: React.createElement(Pricing) }),
+        React.createElement(RRD.Route, { path: "/privacy-policy", element: React.createElement(PrivacyPolicy) }),
+        React.createElement(RRD.Route, { path: "/terms-of-service", element: React.createElement(TermsOfService) }),
         React.createElement(RRD.Route, { path: "*", element: React.createElement(NotFound) })
       )
     )
