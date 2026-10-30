@@ -22,6 +22,8 @@ const ROUTES = [
   { path: "/yorba-linda-smog-check", priority: "0.8" },
   { path: "/faq", priority: "0.7" },
   { path: "/contact", priority: "0.7" },
+  { path: "/privacy-policy", priority: "0.3" },
+  { path: "/terms-of-service", priority: "0.3" },
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
