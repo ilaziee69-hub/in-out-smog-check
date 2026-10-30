@@ -98,6 +98,7 @@ export default function Layout({ children }) {
         </div>
         <div className="footer-bottom">
           Test-Only · No Repairs · Fast Service<br />
+          <Link to="/privacy-policy">Privacy Policy</Link> · <Link to="/terms-of-service">Terms of Service</Link><br />
           © 2026 In & Out Smog Check · 144 S Bradford Ave, Placentia, CA 92870 · All Rights Reserved
         </div>
       </footer>
