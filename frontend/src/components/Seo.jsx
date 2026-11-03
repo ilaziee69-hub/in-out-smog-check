@@ -10,7 +10,7 @@ export const SITE_URL = RAW_SITE_URL
   )
   .replace(/\/+$/, "");
 
-export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+export const OG_IMAGE = `${SITE_URL}/photos/storefront-approved-final.jpg?v=20261102`;\nexport const OG_IMAGE_ALT = "In & Out Smog Check storefront in Placentia, California";
 
 export default function Seo({ title, description, path = "/", jsonLd }) {
   const url = `${SITE_URL}${path === "/" ? "/" : path}`;
@@ -24,11 +24,11 @@ export default function Seo({ title, description, path = "/", jsonLd }) {
       {title && <meta property="og:title" content={title} />}
       {description && <meta property="og:description" content={description} />}
       <meta property="og:url" content={url} />
-      <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image" content={OG_IMAGE} />\n      <meta property="og:image:alt" content={OG_IMAGE_ALT} />\n      <meta property="og:site_name" content="In & Out Smog Check" />
       <meta name="twitter:card" content="summary_large_image" />
       {title && <meta name="twitter:title" content={title} />}
       {description && <meta name="twitter:description" content={description} />}
-      <meta name="twitter:image" content={OG_IMAGE} />
+      <meta name="twitter:image" content={OG_IMAGE} />\n      <meta name="twitter:image:alt" content={OG_IMAGE_ALT} />
       {schemas.map((s, i) => (
         <script
           key={i}
