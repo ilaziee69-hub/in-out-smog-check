@@ -172,7 +172,8 @@ function esc(s) {
  */
 function buildHeadInjection(seo) {
   const { title, description, url } = seo;
-  const ogImage = `${DEPLOYED_ORIGIN}/photos/storefront-approved-final.jpg?v=20261102`;\n  const ogImageAlt = "In & Out Smog Check storefront in Placentia, California";
+  const ogImage = `${DEPLOYED_ORIGIN}/photos/storefront-approved-final.jpg?v=20261102`;
+  const ogImageAlt = "In & Out Smog Check storefront in Placentia, California";
   const canonical = url || DEPLOYED_ORIGIN + "/";
   const lines = [];
   if (title) lines.push(`<title>${esc(title)}</title>`);
@@ -181,10 +182,13 @@ function buildHeadInjection(seo) {
   if (title) lines.push(`<meta property="og:title" content="${esc(title)}"/>`);
   if (description) lines.push(`<meta property="og:description" content="${esc(description)}"/>`);
   lines.push(`<meta property="og:url" content="${esc(canonical)}"/>`);
-  lines.push(`<meta property="og:image" content="${esc(ogImage)}"/>`);\n  lines.push(`<meta property="og:image:alt" content="${esc(ogImageAlt)}"/>`);\n  lines.push(`<meta property="og:site_name" content="In &amp; Out Smog Check"/>`);
+  lines.push(`<meta property="og:image" content="${esc(ogImage)}"/>`);
+  lines.push(`<meta property="og:image:alt" content="${esc(ogImageAlt)}"/>`);
+  lines.push(`<meta property="og:site_name" content="In &amp; Out Smog Check"/>`);
   if (title) lines.push(`<meta name="twitter:title" content="${esc(title)}"/>`);
   if (description) lines.push(`<meta name="twitter:description" content="${esc(description)}"/>`);
-  lines.push(`<meta name="twitter:image" content="${esc(ogImage)}"/>`);\n  lines.push(`<meta name="twitter:image:alt" content="${esc(ogImageAlt)}"/>`);
+  lines.push(`<meta name="twitter:image" content="${esc(ogImage)}"/>`);
+  lines.push(`<meta name="twitter:image:alt" content="${esc(ogImageAlt)}"/>`);
   return lines.join("");
 }
 
