@@ -1,7 +1,7 @@
 # In & Out Smog Check — Premium Multi-Page SEO Site
 
 ## Business
-- **Name (Google):** In & Out Smog Check (Test Only)
+- **Canonical public name:** In & Out Smog Check
 - **Address:** 144 S Bradford Ave, Placentia, CA 92870
 - **Phone:** (714) 993-1660 · tel:+17149931660
 - **Hours:** Mon–Fri 8AM–5PM · Sat 8AM–3PM · Sun Closed
@@ -43,13 +43,13 @@
 - react-helmet-async per-route tags
 - Structured data: AutomotiveBusiness + AggregateRating (4.8/160) + Review (Denise Radford) + FAQPage + Service
 - Sitemap.xml + robots.txt
-- Real storefront in OG image (1200×630)
+- Social preview uses the current storefront photo with a cache-busting URL so messaging/social apps do not reuse the retired site preview
 - Full favicon set + webmanifest
 
 ## Assets (real)
 - `/photos/storefront.webp` · `/photos/sign.webp` · `/photos/driveway.webp` · `/photos/inspection-bay.webp`
 - `/photos/illustrated-map.{png,webp}` — used AS-IS
-- `/mascot.png` — brand mascot (kept in hero; matches physical sign)
+- `/mascot.png` — legacy brand asset retained in the repository; not used as the social preview
 
 ## User Decisions
 - ❌ No coupon section
